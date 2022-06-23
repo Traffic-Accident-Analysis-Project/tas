@@ -1,0 +1,75 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- MyBatis에게 Mapper 경로를 적어야 한다. -->
+<mapper namespace="com.project.tas.mapper.StatMapper">
+	<!-- 법규위반별 -->
+	<select id="selectAllLawData" resultType="map">
+		SELECT
+			시점,
+			월별,
+			가해자법규위반,
+			사고건수,
+			사망자수,
+			부상자수,
+			month,
+			violation_of_law as violationOfLaw
+		FROM 교통사고_법규위반별
+	</select>
+	<!-- 사고유형별 -->
+	<select id="selectAllAccidentData" resultType="map">
+		SELECT
+			시점,
+			월별,
+			사고유형별1,
+			사고유형별2,
+			사고건수,
+			사망자수,
+			부상자수,
+			month,
+			accident_type1 as accidentType1,
+			accident_type2 as accidentType2
+		FROM 교통사고_사고유형별
+	</select>
+	<!-- 시도별 -->
+	<select id="selectAllCityData" resultType="map">
+		SELECT
+			시점,
+			월별,
+			시도별,
+			사고건수,
+			사망자수,
+			부상자수,
+			month,
+			region
+		FROM 교통사고_시도별
+	</select>
+	<!-- 도로종류별 -->
+	<select id="selectAllRoadData" resultType="map">
+		SELECT
+			시점,
+			월별,
+			요일별,
+			도로종류별,
+			사고건수,
+			사망자수,
+			부상자수,
+			month,
+			week,
+			road_type as roadType
+		FROM 교통사고_요일별
+	</select>
+	<!-- 음주운전별 -->
+	<select id="selectAllAlcoholData" resultType="map">
+		SELECT
+			시점,
+			월별,
+			가해자음주정도별1,
+			가해자음주정도별2,
+			사고건수,
+			사망자수,
+			부상자수,
+			month,
+			degree_of_drinking1 as degreeOfDrinking1,
+			degree_of_drinking2 as degreeOfDrinking2
+		FROM 교통사고_음주운전별
+	</select>
+</mapper>

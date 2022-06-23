@@ -19,5 +19,5 @@ CREATE TABLE IF NOT EXISTS tas_board (
 	board_date datetime DEFAULT CURRENT_TIMESTAMP COMMENT '작성일자',
 	board_cnt int default 0 COMMENT '조회수',
 	board_comment varchar(500) COMMENT '답변',
-	board_is_comment default false boolean COMMENT '코멘트 여부'
+	board_is_comment boolean default false COMMENT '코멘트 여부'
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

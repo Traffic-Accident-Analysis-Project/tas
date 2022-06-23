@@ -1,0 +1,54 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- MyBatis에게 Mapper 경로를 적어야 한다. -->
+<mapper namespace="com.project.tas.mapper.BoardMapper">
+	<insert id="insertSaveBoard">
+		INSERT INTO tas_board
+		(
+			board_category,
+			board_writer,
+			board_email,
+			board_content,
+			board_security,
+			board_password
+		)
+		VALUES
+		(
+			#{boardCategory},
+			#{boardWriter},
+			#{boardEmail},
+			#{boardContent},
+			#{isBoardSecurity},
+			#{boardPassword}
+		)
+	</insert>
+	<select id="selectBoardAllList" resultType="map">
+		SELECT
+			board_no as boardNo,
+			board_category as boardCategory,
+			board_writer as boardWriter,
+			board_email as boardEmail,
+			board_content as boardContent,
+			board_security as isBoardSecurity,
+			board_password as boardPassword,
+			board_date as boardDate,
+			board_cnt as boardCnt,
+			board_comment as boardComment,
+			board_is_comment as isBoardComment
+		FROM tas_board
+	</select>
+	<delete id="deleteRemoveBoard">
+		DELETE FROM tas_board
+		WHERE board_no = #{boardNo}
+	</delete>
+	<update id="UpdateBoard">
+		UPDATE tas_board
+		SET 
+			board_category = #{boardCategory},
+			board_writer = #{boardWriter},
+			board_email = #{boardEmail},
+			board_content = #{boardContent},
+			board_security = #{boardSecurity},
+			board_password = #{boardPassword}
+		WHERE board_no = #{boardNo}
+	</update>
+</mapper>
