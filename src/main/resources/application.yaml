@@ -1,0 +1,45 @@
+# 제목, 버전 설정
+application:
+   version: v0.0.1
+   title: JJ
+   
+# MyBatis 설정
+mybatis :
+   mapper-locations: classpath:/sqlmap/sqlmapper_*.xml
+   type-aliases-package: com.example.tas.vo
+
+pagehelper:
+   #helper-dialect : 사용할 데이터베이스
+   helper-dialect: mysql
+   #reasonable : 0페이지 요청이 들어오면 자동으로 1페이지로, 13페이지 까지 왔는데 14페이지 요청이 들어오면 자동으로 13페이지로 이동
+   reasonable: true
+   
+# MySQL 접속 정보 설정
+---
+# 개발 버전 설정
+spring: 
+   profiles:
+      active: dev # 이것만 운영/개발로 수정하며 사용
+# 여기까지는 공통yaml파일
+---
+spring:
+   profiles: env # 운영모드
+   datasource:
+      initialization-mode: always
+      schema: classpath:init.sql
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://여기에 아마존 서버 주소:3306/dw?useUnicode=true&charaterEncoding=utf-8&serverTimezone=UTC
+      username: admin
+      password: 비밀번호
+---
+spring:
+   profiles: dev # 개발모드
+   datasource:
+      initialization-mode: always
+      schema: classpath:init.sql
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/dw?useUnicode=true&charaterEncoding=utf-8&serverTimezone=UTC
+      username: root
+      password: 2188
+      # password: 5191 
+   
