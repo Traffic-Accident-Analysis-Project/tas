@@ -11,8 +11,10 @@ import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.github.pagehelper.PageInfo;
 import com.project.tas.service.BoardService;
 import com.project.tas.vo.BoardVO;
 
@@ -31,8 +33,10 @@ public class BoardController {
 	@CrossOrigin
 	@GetMapping("/board")
 	// 리턴타입을 List > PageInfo
-	public List<Map<String,Object>> callBoardAllList() {
-		return boardService.getBoardAllList();
+	public PageInfo<Map<String,Object>> callBoardAllList(@RequestParam("pageNum") int pageNum,
+			@RequestParam("pageSize") int pageSize) {
+		List<Map<String,Object>> list = boardService.getBoardAllList(pageNum, pageSize);
+		return new PageInfo<Map<String,Object>>(list);
 	}
 	// 고객센터 삭제 (D)
 	@CrossOrigin
@@ -45,6 +49,18 @@ public class BoardController {
 	@PatchMapping("/board/boardNo/{no}")
 	public int callUpdateBoard(@PathVariable("no") int boardNo, @RequestBody BoardVO vo) {
 		return boardService.getUpdateBoard(boardNo, vo);
+	}
+	// QnA 상세조회 (no로 조회)
+	@CrossOrigin
+	@GetMapping("/board/boardNo/{no}")
+	public Map<String,Object> callBoard(@PathVariable("no") int boardNo) {
+		return boardService.getBoard(boardNo);
+	}
+	// QnA 조회수 증가
+	@CrossOrigin
+	@PatchMapping("/board/views/boardNo/{no}")
+	public int callBoardViews(@PathVariable("no") int boardNo) {
+		return boardService.getUpdateBoardViews(boardNo);
 	}
 	
 }

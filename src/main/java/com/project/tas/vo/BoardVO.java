@@ -1,8 +1,11 @@
 package com.project.tas.vo;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
+@Getter
+@Setter
 public class BoardVO {
 	private int boardNo;
 	private String boardCategory;

@@ -14,4 +14,8 @@ public interface BoardMapper {
 	public List<Map<String,Object>> selectBoardAllList();
 	public int deleteRemoveBoard(int boardNo);
 	public int UpdateBoard(BoardVO vo);
+	// QnA 상세조회
+	public Map<String,Object> selectBoard(int BoardNo);
+	// 조회수 증가
+	public int updateBoardViews(Map<String,Object> vo);
 }

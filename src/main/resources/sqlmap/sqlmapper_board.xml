@@ -51,4 +51,28 @@
 			board_password = #{boardPassword}
 		WHERE board_no = #{boardNo}
 	</update>
+	<!-- 게시물 상세조회 -->
+	<select id="selectBoard" resultType="map">
+		SELECT
+			board_no as boardNo, 
+			board_category as boardCategory,
+			board_writer as boardWriter,
+			board_email as boardEmail,
+			board_content as boardContent,
+			board_security as isBoardSecurity,
+			board_password as boardPassword,
+			board_date as boardDate,
+			board_cnt as boardCnt,
+			board_comment as boardComment,
+			board_is_comment as isBoardComment
+		FROM tas_board
+		WHERE board_no = #{boardNo}
+	</select>
+	<!-- 조회수 증가 -->
+	<update id="updateBoardViews">
+		UPDATE tas_board
+		SET 
+			board_cnt = #{boardCnt}
+		WHERE board_no = #{boardNo}
+	</update>
 </mapper>
