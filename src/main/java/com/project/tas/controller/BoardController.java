@@ -56,7 +56,7 @@ public class BoardController {
 	public Map<String,Object> callBoard(@PathVariable("no") int boardNo) {
 		return boardService.getBoard(boardNo);
 	}
-	// QnA 조회수 증가!
+	// QnA 조회수 증가
 	@CrossOrigin
 	@PatchMapping("/board/views/boardNo/{no}")
 	public int callBoardViews(@PathVariable("no") int boardNo) {
