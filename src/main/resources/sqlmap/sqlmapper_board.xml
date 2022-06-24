@@ -30,7 +30,7 @@
 			board_content as boardContent,
 			board_security as isBoardSecurity,
 			board_password as boardPassword,
-			board_date as boardDate,
+			Date(board_date) as boardDate,
 			board_cnt as boardCnt,
 			board_comment as boardComment,
 			board_is_comment as isBoardComment
@@ -61,7 +61,7 @@
 			board_content as boardContent,
 			board_security as isBoardSecurity,
 			board_password as boardPassword,
-			board_date as boardDate,
+			DATE(board_date) as boardDate,
 			board_cnt as boardCnt,
 			board_comment as boardComment,
 			board_is_comment as isBoardComment
