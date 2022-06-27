@@ -12,7 +12,7 @@ import com.project.tas.service.StatService;
 
 @RestController
 @RequestMapping("/api/v1")
-public class StatController {
+public class StatRestController {
 	@Autowired
 	private StatService statService;
 	

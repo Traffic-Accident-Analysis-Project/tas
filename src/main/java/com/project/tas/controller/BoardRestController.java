@@ -21,7 +21,7 @@ import com.project.tas.vo.BoardVO;
 
 @RestController
 @RequestMapping("/api/v1")
-public class BoardController {
+public class BoardRestController {
 	@Autowired
 	private BoardService boardService;
 	
@@ -64,5 +64,4 @@ public class BoardController {
 	public int callBoardViews(@PathVariable("no") int boardNo) {
 		return boardService.getUpdateBoardViews(boardNo);
 	}
-	
 }
