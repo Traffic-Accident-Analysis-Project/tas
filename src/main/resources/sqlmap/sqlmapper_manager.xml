@@ -1,0 +1,24 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.project.tas.mapper.ManagerMapper">
+
+	<insert id="insertManager">
+		INSERT INTO tas_manager
+		(
+			manager_id,
+			manager_password
+		)
+		VALUES
+		(
+			#{managerId},
+			#{managerPassword}
+		)
+	</insert>
+
+	<select id="selectManager">
+		SELECT 
+			manager_id,
+			manager_password
+		FROM tas_manager
+		WHERE manager_id = #{managerId}
+	</select>
+</mapper>
