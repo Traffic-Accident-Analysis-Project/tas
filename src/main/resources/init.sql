@@ -2,10 +2,15 @@
 CREATE database IF NOT EXISTS dw DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 -- USE dw; -- TABLE 안만들었을 때
 
--- 관리자 Table
-CREATE TABLE IF NOT EXISTS tas_manager (
-	manager_id varchar(30) NOT NULL PRIMARY KEY COMMENT '관리자 ID',
-	manager_password varchar(100) COMMENT '관리자 비밀번호'
+-- user Table
+CREATE TABLE IF NOT EXISTS tas_user (
+	id int AUTO_INCREMENT NOT NULL PRIMARY KEY COMMENT 'ID',
+	user_id varchar(30) COMMENT 'user ID',
+	user_password varchar(100) COMMENT 'password',
+	user_admin boolean default false COMMENT 'false:user, true:manager',
+	user_email varchar(30) COMMENT '이메일',
+	user_gender varchar(10) COMMENT '성별',
+	user_address varchar(100) COMMENT '주소'
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- 고객센터 Table
@@ -30,6 +35,7 @@ CREATE TABLE IF NOT EXISTS tas_user( -- user 테이블
 	user_name VARCHAR(10) NOT NULL COMMENT '회원 이름',
 	user_password VARCHAR(200) NOT NULL COMMENT '회원 비밀번호',
 	user_gender VARCHAR(2) NOT NULL COMMENT '회원 성별',
+	user_email VARCHAR(100) NOT NULL COMMENT '회원 이메일',
 	user_addr VARCHAR(200) NOT NULL COMMENT '회원 주소',
-	autority VARCHAR(10) NOT NULL COMMENT '권한' -- 그럼 회원가입할 때 이걸 어떻게 보여주지????
+	autority boolean default false COMMENT 'false:user, true:manager'
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
