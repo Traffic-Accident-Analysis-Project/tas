@@ -48,7 +48,8 @@
 			board_email = #{boardEmail},
 			board_content = #{boardContent},
 			board_security = #{boardSecurity},
-			board_password = #{boardPassword}
+			board_password = #{boardPassword},
+			board_comment = #{boardComment}
 		WHERE board_no = #{boardNo}
 	</update>
 	<!-- 게시물 상세조회 -->
