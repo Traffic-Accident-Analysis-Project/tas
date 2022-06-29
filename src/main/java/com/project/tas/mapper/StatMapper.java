@@ -8,19 +8,40 @@ import org.apache.ibatis.annotations.Param;
 
 @Mapper
 public interface StatMapper {
-	// 법규위반별 전체 Data
+	/**
+	 * @return
+	 * @author : JeongSoo Na
+	 * @date : 2022. 6. 30.
+	 * comment : 법규위반별 전체 Data mapper 
+	 */
 	public List<Map<String, Object>> selectAllLawData();
-
-	// 사고유형별 전체 Data
+	/**
+	 * @return
+	 * @author : JeongSoo Na
+	 * @date : 2022. 6. 30.
+	 * comment : 사고유형별 전체 Data mapper 
+	 */
 	public List<Map<String, Object>> selectAllAccidentData();
-
-	// 지역별 전체 Data
+	/**
+	 * @return
+	 * @author : JeongSoo Na
+	 * @date : 2022. 6. 30.
+	 * comment : 지역별 전체 Data mapper
+	 */
 	public List<Map<String, Object>> selectAllCityData();
-
-	// 도로별 요일별 전체 Data
+	/**
+	 * @return
+	 * @author : JeongSoo Na
+	 * @date : 2022. 6. 30.
+	 * comment : 도로별 요일별 전체 Data mapper 
+	 */
 	public List<Map<String, Object>> selectAllRoadData();
-
-	// 음주측정별 Data
+	/**
+	 * @return
+	 * @author : JeongSoo Na
+	 * @date : 2022. 6. 30.
+	 * comment : 음주측정별 Data mapper
+	 */
 	public List<Map<String, Object>> selectAllAlcoholData();
 
 	/**

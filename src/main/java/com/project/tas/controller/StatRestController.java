@@ -18,35 +18,60 @@ public class StatRestController {
 	@Autowired
 	private StatService statService;
 
-	// 법규위반별 Data
+	/**
+	 * @return
+	 * @author : JeongSoo Na
+	 * @date : 2022. 6. 30.
+	 * comment : 법규위반별 Data 가져오기
+	 */
 	@CrossOrigin
 	@GetMapping("/law")
 	public List<Map<String, Object>> callAllLawData() {
 		return statService.getAllLawData();
 	}
 
-	// 사고유형별 Data
+	/**
+	 * @return
+	 * @author : JeongSoo Na
+	 * @date : 2022. 6. 30.
+	 * comment : 사고유형별 Data 가져오기 
+	 */
 	@CrossOrigin
 	@GetMapping("/accident")
 	public List<Map<String, Object>> callAllAccidentData() {
 		return statService.getAllAccidentData();
 	}
 
-	// 지역별 Data
+	/**
+	 * @return
+	 * @author : JeongSoo Na
+	 * @date : 2022. 6. 30.
+	 * comment : 지역별 Data 가져오기 
+	 */
 	@CrossOrigin
 	@GetMapping("/city")
 	public List<Map<String, Object>> callAllCityData() {
 		return statService.getAllCityData();
 	}
 
-	// 도로별/요일별 Data
+	/**
+	 * @return
+	 * @author : JeongSoo Na
+	 * @date : 2022. 6. 30.
+	 * comment : 도로별/요일별 Data 가져오기
+	 */
 	@CrossOrigin
 	@GetMapping("/road")
 	public List<Map<String, Object>> callAllRoadData() {
 		return statService.getAllRoadData();
 	}
 
-	// 음주측정별 Data
+	/**
+	 * @return
+	 * @author : JeongSoo Na
+	 * @date : 2022. 6. 30.
+	 * comment : 음주측정별 Data 가져오기 
+	 */
 	@CrossOrigin
 	@GetMapping("/alcohol")
 	public List<Map<String, Object>> callAllAlcoholData() {
