@@ -29,17 +29,30 @@
 		WHERE
 		시점 = #{year}
 		AND
-		<if test='#{month} != null and #{month}.equals("월별전체")'>
-			월별 != '전체'
-			AND
-		</if>
-		<if test='!#{month}.equals("월별전체")'>
-			월별 = #{month}
-			AND
-		</if>
+		월별 = #{month}
+		AND
 		가해자법규위반 = #{violation}
 	</select>
-
+	<select id="selectLawAllMonthData" resultType="map">
+		SELECT
+		시점,
+		월별,
+		가해자법규위반,
+		사고건수,
+		사망자수,
+		부상자수,
+		month,
+		violation_of_law as
+		violationOfLaw
+		FROM
+		교통사고_법규위반별
+		WHERE
+		시점 = #{year}
+		AND
+		월별 != '전체'
+		AND
+		가해자법규위반 = #{violation}
+	</select>
 
 	<!-- 사고유형별 -->
 	<select id="selectAllAccidentData" resultType="map">
@@ -79,7 +92,31 @@
 		AND
 		사고유형별2 = #{motion}
 	</select>
-
+	<select id="selectAccidentAllMonthData" resultType="map">
+		SELECT
+		시점,
+		월별,
+		사고유형별1,
+		사고유형별2,
+		사고건수,
+		사망자수,
+		부상자수,
+		month,
+		accident_type1 as
+		accidentType1,
+		accident_type2 as accidentType2
+		FROM 교통사고_사고유형별
+		WHERE
+		시점 =
+		#{year}
+		AND
+		월별 !=
+		'전체'
+		AND
+		사고유형별1 = #{type}
+		AND
+		사고유형별2 = #{motion}
+	</select>
 
 	<!-- 시도별 -->
 	<select id="selectAllCityData" resultType="map">
@@ -113,7 +150,25 @@
 		AND
 		시도별 = #{city}
 	</select>
-
+	<select id="selectCityAllMonthData" resultType="map">
+		SELECT
+		시점,
+		월별,
+		시도별,
+		사고건수,
+		사망자수,
+		부상자수,
+		month,
+		region
+		FROM 교통사고_시도별
+		WHERE
+		시점 = #{year}
+		AND
+		월별 !=
+		'전체'
+		AND
+		시도별 = #{city}
+	</select>
 
 	<!-- 도로종류별 -->
 	<select id="selectAllRoadData" resultType="map">
@@ -144,15 +199,32 @@
 		road_type as roadType
 		FROM 교통사고_요일별
 		WHERE
-		시점 = #{year}
+		시점 =
+		#{year}
 		AND
 		월별 =
 		#{month}
-		<if test='#{week} != "전체"'>
-			AND
-			요일별 =
-			#{week}
-		</if>
+		AND
+		도로종류별 = #{road}
+	</select>
+	<select id="selectRoadAllMonthData" resultType="map">
+		SELECT
+		시점,
+		월별,
+		요일별,
+		도로종류별,
+		사고건수,
+		사망자수,
+		부상자수,
+		month,
+		week,
+		road_type as roadType
+		FROM 교통사고_요일별
+		WHERE
+		시점 = #{year}
+		AND
+		월별 !=
+		'전체'
 		AND
 		도로종류별 = #{road}
 	</select>
@@ -195,6 +267,32 @@
 		시점 = #{year}
 		AND
 		월별 = #{month}
+		AND
+		가해자음주정도별1 = #{drink}
+		AND
+		가해자음주정도별2 = #{degree}
+	</select>
+	<select id="selectAlcoholAllMonthData" resultType="map">
+		SELECT
+		시점,
+		월별,
+		가해자음주정도별1,
+		가해자음주정도별2,
+		주야별,
+		사고건수,
+		사망자수,
+		부상자수,
+		month,
+		degree_of_drinking1 as
+		degreeOfDrinking1,
+		degree_of_drinking2 as degreeOfDrinking2
+		FROM
+		교통사고_음주운전별
+		WHERE
+		시점 = #{year}
+		AND
+		월별 !=
+		'전체'
 		AND
 		가해자음주정도별1 = #{drink}
 		AND
