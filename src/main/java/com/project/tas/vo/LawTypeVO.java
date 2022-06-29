@@ -3,7 +3,7 @@ package com.project.tas.vo;
 import lombok.Data;
 
 @Data
-public class LowTypeVO {
+public class LawTypeVO {
 	private int 시점;
 	private String 월별;
 	private String 가해자법규위반;
