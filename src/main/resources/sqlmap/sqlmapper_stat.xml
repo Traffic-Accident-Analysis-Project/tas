@@ -29,7 +29,7 @@
 		WHERE
 		시점 = #{year}
 		AND
-		<if test='#{month}.equals("월별전체")'>
+		<if test='#{month} != null and #{month}.equals("월별전체")'>
 			월별 != '전체'
 			AND
 		</if>
