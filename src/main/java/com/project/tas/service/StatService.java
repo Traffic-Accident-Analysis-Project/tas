@@ -56,6 +56,14 @@ public class StatService {
 
 	/**
 	 * @author : ji_U
+	 * @date : 2022. 6. 29. comment : 시도별
+	 */
+	public List<Map<String, Object>> getCityData(int year, String month, String city) {
+		return statMapper.selectCityData(year, month, city);
+	}
+
+	/**
+	 * @author : ji_U
 	 * @date : 2022. 6. 29. comment : 음주정도별
 	 */
 	public List<Map<String, Object>> getAlcoholData(int year, String month, String drink, String degree) {
@@ -69,4 +77,5 @@ public class StatService {
 	public List<Map<String, Object>> getRoadData(int year, String month, String week, String road) {
 		return statMapper.selectRoadData(year, month, week, road);
 	}
+	
 }

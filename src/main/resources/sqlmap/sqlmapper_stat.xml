@@ -29,11 +29,14 @@
 		WHERE
 		시점 = #{year}
 		AND
-		<if test='#{month} == "월별전체"'>
+		<if test='#{month}.equals("월별전체")'>
 			월별 != '전체'
+			AND
 		</if>
-		월별 = #{month}
-		AND
+		<if test='!#{month}.equals("월별전체")'>
+			월별 = #{month}
+			AND
+		</if>
 		가해자법규위반 = #{violation}
 	</select>
 
@@ -90,6 +93,25 @@
 		month,
 		region
 		FROM 교통사고_시도별
+	</select>
+	<select id="selectCityData" resultType="map">
+		SELECT
+		시점,
+		월별,
+		시도별,
+		사고건수,
+		사망자수,
+		부상자수,
+		month,
+		region
+		FROM 교통사고_시도별
+		WHERE
+		시점 = #{year}
+		AND
+		월별 =
+		#{month}
+		AND
+		시도별 = #{city}
 	</select>
 
 

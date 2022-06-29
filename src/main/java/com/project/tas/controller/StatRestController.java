@@ -24,24 +24,28 @@ public class StatRestController {
 	public List<Map<String, Object>> callAllLawData() {
 		return statService.getAllLawData();
 	}
+
 	// 사고유형별 Data
 	@CrossOrigin
 	@GetMapping("/accident")
 	public List<Map<String, Object>> callAllAccidentData() {
 		return statService.getAllAccidentData();
 	}
+
 	// 지역별 Data
 	@CrossOrigin
 	@GetMapping("/city")
 	public List<Map<String, Object>> callAllCityData() {
 		return statService.getAllCityData();
 	}
+
 	// 도로별/요일별 Data
 	@CrossOrigin
 	@GetMapping("/road")
 	public List<Map<String, Object>> callAllRoadData() {
 		return statService.getAllRoadData();
 	}
+
 	// 음주측정별 Data
 	@CrossOrigin
 	@GetMapping("/alcohol")
@@ -74,6 +78,17 @@ public class StatRestController {
 
 	/**
 	 * @author : ji_U
+	 * @date : 2022. 6. 29. comment : 지역별 select data
+	 */
+	@CrossOrigin
+	@GetMapping("/city/year/{year}/month/{month}/city/{city}")
+	public List<Map<String, Object>> callCityData(@PathVariable("year") int year, @PathVariable("month") String month,
+			@PathVariable("city") String city) {
+		return statService.getCityData(year, month, city);
+	}
+
+	/**
+	 * @author : ji_U
 	 * @date : 2022. 6. 29. comment : 도로별 요일별 select data
 	 */
 	@CrossOrigin
@@ -95,4 +110,5 @@ public class StatRestController {
 			@PathVariable("degree") String degree) {
 		return statService.getAlcoholData(year, month, drink, degree);
 	}
+	
 }

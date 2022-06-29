@@ -41,7 +41,8 @@ public interface StatMapper {
 	 * @author : ji_U
 	 * @date : 2022. 6. 29. comment : 시도별 데이터 조회
 	 */
-	public List<Map<String, Object>> selectCityData();
+	public List<Map<String, Object>> selectCityData(@Param("year") int year, @Param("month") String month,
+			@Param("city") String city);
 
 	/**
 	 * @author : ji_U
@@ -57,4 +58,5 @@ public interface StatMapper {
 	 */
 	public List<Map<String, Object>> selectAlcoholData(@Param("year") int year, @Param("month") String month,
 			@Param("drink") String drink, @Param("degree") String degree);
+	
 }
