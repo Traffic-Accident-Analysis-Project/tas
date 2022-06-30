@@ -135,5 +135,4 @@ public class StatRestController {
 			@PathVariable("degree") String degree) {
 		return statService.getAlcoholData(year, month, drink, degree);
 	}
-	
 }

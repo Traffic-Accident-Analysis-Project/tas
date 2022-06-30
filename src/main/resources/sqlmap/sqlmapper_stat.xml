@@ -193,7 +193,8 @@
 		longitude
 		FROM 교통사고_시도별
 		WHERE
-		시점 = #{year}
+		시점 =
+		#{year}
 		AND
 		월별 = #{month}
 	</select>
@@ -345,4 +346,5 @@
 		AND
 		가해자음주정도별2 = #{degree}
 	</select>
+
 </mapper>
