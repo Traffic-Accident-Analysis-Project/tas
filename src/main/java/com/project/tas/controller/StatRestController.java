@@ -135,4 +135,15 @@ public class StatRestController {
 			@PathVariable("degree") String degree) {
 		return statService.getAlcoholData(year, month, drink, degree);
 	}
+	@CrossOrigin
+	@GetMapping("/law/violation/{violation}")
+	public List<Map<String, Object>> callLawDataViolation(@PathVariable("violation") String violation) {
+		return statService.getLawDataViolation(violation);
+	}
+	@CrossOrigin
+	@GetMapping("/accident/type/{type}/motion/{motion}")
+	public List<Map<String, Object>> callAccidentDataType(@PathVariable("type") String type,
+			@PathVariable("motion") String motion) {
+		return statService.getAccidentDataType(type, motion);
+	}
 }

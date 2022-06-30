@@ -346,5 +346,40 @@
 		AND
 		가해자음주정도별2 = #{degree}
 	</select>
-
+	<!-- js-violation별 law Data -->
+	<select id="selectLawDataViolation" resultType="map">
+		SELECT
+		시점,
+		월별,
+		가해자법규위반,
+		사고건수,
+		사망자수,
+		부상자수,
+		month,
+		violation_of_law as
+		violationOfLaw
+		FROM
+		교통사고_법규위반별
+		WHERE
+		가해자법규위반 = #{violation}
+	</select>
+	<!-- js-type별 accident Data -->
+	<select id="selectAccidentDataType" resultType="map">
+		SELECT
+		시점,
+		월별,
+		사고유형별1,
+		사고유형별2,
+		사고건수,
+		사망자수,
+		부상자수,
+		month,
+		accident_type1 as accidentType1,
+		accident_type2 as accidentType2
+		FROM 교통사고_사고유형별
+		WHERE
+		사고유형별1 = #{type}
+		AND
+		사고유형별2 = #{motion}
+	</select>
 </mapper>

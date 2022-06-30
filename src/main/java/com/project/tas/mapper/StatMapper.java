@@ -124,5 +124,7 @@ public interface StatMapper {
 	 */
 	public List<Map<String, Object>> selectAlcoholAllMonthData(@Param("year") int year, @Param("drink") String drink,
 			@Param("degree") String degree);
-
+	public List<Map<String, Object>> selectLawDataViolation(String violation);
+	public List<Map<String, Object>> selectAccidentDataType(@Param("type") String type,
+			@Param("motion") String motion);
 }

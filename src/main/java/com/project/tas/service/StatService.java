@@ -99,5 +99,11 @@ public class StatService {
 		}
 		return statMapper.selectRoadData(year, month, week, road);
 	}
+	public List<Map<String, Object>> getLawDataViolation(String violation){
+		return statMapper.selectLawDataViolation(violation);
+	}
+	public List<Map<String, Object>> getAccidentDataType(String type, String motion){
+		return statMapper.selectAccidentDataType(type, motion);
+	}
 
 }
