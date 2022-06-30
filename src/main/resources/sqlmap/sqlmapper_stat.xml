@@ -133,7 +133,53 @@
 		longitude
 		FROM 교통사고_시도별
 	</select>
+	<!-- 월별o 시도별o -->
 	<select id="selectCityData" resultType="map">
+		SELECT
+		시점,
+		월별,
+		시도별,
+		사고건수,
+		사망자수,
+		부상자수,
+		month,
+		region,
+		latitude,
+		longitude
+		FROM 교통사고_시도별
+		WHERE
+		시점 =
+		#{year}
+		AND
+		월별 =
+		#{month}
+		AND
+		시도별 = #{city}
+	</select>
+	<!-- 월=월별전체 시도o -->
+	<select id="selectCityAllMonthData" resultType="map">
+		SELECT
+		시점,
+		월별,
+		시도별,
+		사고건수,
+		사망자수,
+		부상자수,
+		month,
+		region,
+		latitude,
+		longitude
+		FROM 교통사고_시도별
+		WHERE
+		시점 =
+		#{year}
+		AND
+		월별 !='전체'
+		AND
+		시도별 = #{city}
+	</select>
+	<!-- 월o 시도=전체 -->
+	<select id="selectAllCityMonthData" resultType="map">
 		SELECT
 		시점,
 		월별,
@@ -149,12 +195,10 @@
 		WHERE
 		시점 = #{year}
 		AND
-		월별 =
-		#{month}
-		AND
-		시도별 = #{city}
+		월별 = #{month}
 	</select>
-	<select id="selectCityAllMonthData" resultType="map">
+	<!-- 월=월별전체 시도=전체 -->
+	<select id="selectAllCityAllMonthData" resultType="map">
 		SELECT
 		시점,
 		월별,
@@ -172,10 +216,7 @@
 		AND
 		월별 !=
 		'전체'
-		AND
-		시도별 = #{city}
 	</select>
-
 	<!-- 도로종류별 -->
 	<select id="selectAllRoadData" resultType="map">
 		SELECT

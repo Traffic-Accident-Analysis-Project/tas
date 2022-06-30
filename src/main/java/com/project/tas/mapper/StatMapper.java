@@ -86,6 +86,18 @@ public interface StatMapper {
 
 	/**
 	 * @author : ji_U
+	 * @date : 2022. 6. 30. comment : 전체시도의 월별 데이터 조회
+	 */
+	public List<Map<String, Object>> selectAllCityMonthData(@Param("year") int year, @Param("month") String month);
+
+	/**
+	 * @author : ji_U
+	 * @date : 2022. 6. 30. comment : 전체시도 월별전체
+	 */
+	public List<Map<String, Object>> selectAllCityAllMonthData(@Param("year") int year);
+
+	/**
+	 * @author : ji_U
 	 * @date : 2022. 6. 29. comment : 도로별 요일별 데이터 조회
 	 */
 	public List<Map<String, Object>> selectRoadData(@Param("year") int year, @Param("month") String month,

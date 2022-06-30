@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.project.tas.mapper.StatMapper;
+import com.project.tas.vo.CityTypeVO;
 
 @Service
 public class StatService {
@@ -65,8 +66,14 @@ public class StatService {
 	 * @date : 2022. 6. 29. comment : 시도별
 	 */
 	public List<Map<String, Object>> getCityData(int year, String month, String city) {
-		if (month.equals("월별전체")) {
+		if(city.equals("전체") && month.equals("월별전체")) { // 월=월별전체, 시도=전체
+			return statMapper.selectAllCityAllMonthData(year);
+		}
+		if (month.equals("월별전체")) { // 월=월별전체 시도o
 			return statMapper.selectCityAllMonthData(year, city);
+		}
+		if(city.equals("전체")) { // 월o 시도=전체
+			return statMapper.selectAllCityMonthData(year, month);
 		}
 		return statMapper.selectCityData(year, month, city);
 	}
