@@ -128,7 +128,9 @@
 		사망자수,
 		부상자수,
 		month,
-		region
+		region,
+		latitude,
+		longitude
 		FROM 교통사고_시도별
 	</select>
 	<select id="selectCityData" resultType="map">
@@ -140,7 +142,9 @@
 		사망자수,
 		부상자수,
 		month,
-		region
+		region,
+		latitude,
+		longitude
 		FROM 교통사고_시도별
 		WHERE
 		시점 = #{year}
@@ -159,7 +163,9 @@
 		사망자수,
 		부상자수,
 		month,
-		region
+		region,
+		latitude,
+		longitude
 		FROM 교통사고_시도별
 		WHERE
 		시점 = #{year}

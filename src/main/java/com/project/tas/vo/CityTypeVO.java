@@ -12,4 +12,6 @@ public class CityTypeVO {
 	private int 부상자수;
 	private String month;
 	private String region;
+	private String latitude;
+	private String longitude;
 }
