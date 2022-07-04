@@ -17,4 +17,8 @@ public interface UserMapper {
 	 * @date : 2022. 7. 4. comment : 회원가입
 	 */
 	public int insertUsers(UserVO vo);
+	
+	public UserVO selectUserOne(UserVO vo);
+	
+	public UserVO callUser(String id);
 }

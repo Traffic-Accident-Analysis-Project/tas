@@ -30,6 +30,8 @@ dependencies {
 	implementation group: 'com.github.pagehelper', name: 'pagehelper-spring-boot-starter', version: '1.4.2'
 	// spirng security
 	implementation("org.springframework.boot:spring-boot-starter-security")
+	// session
+	implementation 'org.springframework.session:spring-session-core'
 }
 
 tasks.named('test') {

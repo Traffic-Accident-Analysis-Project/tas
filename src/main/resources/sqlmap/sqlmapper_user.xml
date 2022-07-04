@@ -32,4 +32,11 @@
 			#{autority}
 		)
 	</insert>
+	<!-- <select id="callUser" resultType="UserVO">
+		SELECT
+			user_id AS userId,
+			user_password AS userPassword
+		FROM tas_user
+		WHERE user_id = #{userId}
+	</select>-->
 </mapper>

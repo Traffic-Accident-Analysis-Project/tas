@@ -39,3 +39,13 @@ CREATE TABLE IF NOT EXISTS tas_user( -- user 테이블
 	user_addr VARCHAR(200) NOT NULL COMMENT '회원 주소',
 	autority boolean default false COMMENT 'false:user, true:manager'
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- 접속이력 테이블
+CREATE TABLE IF NOT EXISTS tas_logs
+(
+	log_id BIGINT(20) AUTO_INCREMENT NOT NULL PRIMARY KEY COMMENT '로그 아이디',
+	ip VARCHAR(50) COMMENT '아이피',
+	url VARCHAR(100) COMMENT '요청 url',
+	http_method VARCHAR(10) COMMENT 'http method',
+	create_at DATETIME COMMENT '접속 시간'
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
