@@ -47,8 +47,8 @@ public class UserRestController {
 	
 	@CrossOrigin
 	@PostMapping("/login")
-	public boolean callIsLogin(@RequestBody UserVO vo, HttpSession httpSession) {
-		boolean isLogin = userService.isUser(vo, httpSession);
+	public boolean callIsLogin(@RequestBody UserVO vo) {
+		boolean isLogin = userService.isUser(vo);
 		
 		return isLogin;
 	}
