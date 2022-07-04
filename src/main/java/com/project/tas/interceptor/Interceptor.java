@@ -10,6 +10,7 @@ import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
@@ -32,8 +33,9 @@ public class Interceptor implements HandlerInterceptor {
 		String url = request.getRequestURI();
 		String ip = request.getHeader("X-forwarded-For");
 		String httpMethod = request.getMethod();
-		if (ip == null)
+		if (ip == null) {
 			ip = request.getRemoteAddr();
+		}
 
 		logger.info("Hello World");
 		logger.info("client IP : "+ip);
