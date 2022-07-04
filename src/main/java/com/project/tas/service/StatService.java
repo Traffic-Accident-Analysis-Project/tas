@@ -105,5 +105,13 @@ public class StatService {
 	public List<Map<String, Object>> getAccidentDataType(String type, String motion){
 		return statMapper.selectAccidentDataType(type, motion);
 	}
-
+	public List<Map<String, Object>> getAlcoholDataDrink(String drink, String degree){
+		return statMapper.selectAlcoholDataDrink(drink, degree);
+	}
+	public List<Map<String, Object>> getRoadDataRoad(String week, String road){
+		return statMapper.selectRoadDataRoad(week, road);
+	}
+	public List<Map<String, Object>> getCityDataCity(String city){
+		return statMapper.selectCityDataCity(city);
+	}
 }

@@ -252,6 +252,10 @@
 		AND
 		월별 =
 		#{month}
+		<if test='!#{week}.equals("전체")'>
+			AND
+			요일별 = #{week}
+		</if>
 		AND
 		도로종류별 = #{road}
 	</select>
@@ -271,8 +275,11 @@
 		WHERE
 		시점 = #{year}
 		AND
-		월별 !=
-		'전체'
+		월별 !='전체'
+		<if test='!#{week}.equals("전체")'>
+			AND
+			요일별 = #{week}
+		</if>
 		AND
 		도로종류별 = #{road}
 	</select>
@@ -381,5 +388,61 @@
 		사고유형별1 = #{type}
 		AND
 		사고유형별2 = #{motion}
+	</select>
+	<!-- js-drink별 alcohol Data -->
+	<select id="selectAlcoholDataDrink" resultType="map">
+		SELECT
+		시점,
+		월별,
+		가해자음주정도별1,
+		가해자음주정도별2,
+		주야별,
+		사고건수,
+		사망자수,
+		부상자수,
+		month,
+		degree_of_drinking1 as
+		degreeOfDrinking1,
+		degree_of_drinking2 as degreeOfDrinking2
+		FROM
+		교통사고_음주운전별
+		WHERE
+		가해자음주정도별1 = #{drink}
+		AND
+		가해자음주정도별2 = #{degree}
+	</select>
+	<select id="selectRoadDataRoad" resultType="map">
+		SELECT
+		시점,
+		월별,
+		요일별,
+		도로종류별,
+		사고건수,
+		사망자수,
+		부상자수,
+		month,
+		week,
+		road_type as roadType
+		FROM 교통사고_요일별
+		WHERE
+		도로종류별 = #{road}
+		AND
+		요일별 = #{week}
+	</select>
+	<select id="selectCityDataCity" resultType="map">
+		SELECT
+		시점,
+		월별,
+		시도별,
+		사고건수,
+		사망자수,
+		부상자수,
+		month,
+		region,
+		latitude,
+		longitude
+		FROM 교통사고_시도별
+		WHERE
+		시도별 = #{city}
 	</select>
 </mapper>
