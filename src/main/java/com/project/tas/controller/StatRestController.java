@@ -21,8 +21,7 @@ public class StatRestController {
 	/**
 	 * @return
 	 * @author : JeongSoo Na
-	 * @date : 2022. 6. 30.
-	 * comment : 법규위반별 Data 가져오기
+	 * @date : 2022. 6. 30. comment : 법규위반별 Data 가져오기
 	 */
 	@CrossOrigin
 	@GetMapping("/law")
@@ -33,8 +32,7 @@ public class StatRestController {
 	/**
 	 * @return
 	 * @author : JeongSoo Na
-	 * @date : 2022. 6. 30.
-	 * comment : 사고유형별 Data 가져오기 
+	 * @date : 2022. 6. 30. comment : 사고유형별 Data 가져오기
 	 */
 	@CrossOrigin
 	@GetMapping("/accident")
@@ -45,8 +43,7 @@ public class StatRestController {
 	/**
 	 * @return
 	 * @author : JeongSoo Na
-	 * @date : 2022. 6. 30.
-	 * comment : 지역별 Data 가져오기 
+	 * @date : 2022. 6. 30. comment : 지역별 Data 가져오기
 	 */
 	@CrossOrigin
 	@GetMapping("/city")
@@ -57,8 +54,7 @@ public class StatRestController {
 	/**
 	 * @return
 	 * @author : JeongSoo Na
-	 * @date : 2022. 6. 30.
-	 * comment : 도로별/요일별 Data 가져오기
+	 * @date : 2022. 6. 30. comment : 도로별/요일별 Data 가져오기
 	 */
 	@CrossOrigin
 	@GetMapping("/road")
@@ -69,8 +65,7 @@ public class StatRestController {
 	/**
 	 * @return
 	 * @author : JeongSoo Na
-	 * @date : 2022. 6. 30.
-	 * comment : 음주측정별 Data 가져오기 
+	 * @date : 2022. 6. 30. comment : 음주측정별 Data 가져오기
 	 */
 	@CrossOrigin
 	@GetMapping("/alcohol")
@@ -135,33 +130,39 @@ public class StatRestController {
 			@PathVariable("degree") String degree) {
 		return statService.getAlcoholData(year, month, drink, degree);
 	}
+
 	// 여기서부터 SELECT BY COLUMN
 	@CrossOrigin
 	@GetMapping("/law/violation/{violation}")
 	public List<Map<String, Object>> callLawDataViolation(@PathVariable("violation") String violation) {
 		return statService.getLawDataViolation(violation);
 	}
+
 	@CrossOrigin
 	@GetMapping("/accident/type/{type}/motion/{motion}")
 	public List<Map<String, Object>> callAccidentDataType(@PathVariable("type") String type,
 			@PathVariable("motion") String motion) {
 		return statService.getAccidentDataType(type, motion);
 	}
+
 	@CrossOrigin
 	@GetMapping("/alcohol/drink/{drink}/degree/{degree}")
 	public List<Map<String, Object>> callAlcoholDataDrink(@PathVariable("drink") String drink,
 			@PathVariable("degree") String degree) {
 		return statService.getAlcoholDataDrink(drink, degree);
 	} // URL 입력할 때 encodingURL 사용하여 특수문자 입력
+
 	@CrossOrigin
 	@GetMapping("/road/week/{week}/road/{road}")
-	public List<Map<String, Object>> callRoadDataRoad(@PathVariable("week") String week, 
+	public List<Map<String, Object>> callRoadDataRoad(@PathVariable("week") String week,
 			@PathVariable("road") String road) {
 		return statService.getRoadDataRoad(week, road);
-	} 
+	}
+
 	@CrossOrigin
-	@GetMapping("/city/city/{city}")
-	public List<Map<String, Object>> callCityDataCity(@PathVariable("city") String city) {
-		return statService.getCityDataCity(city);
+	@GetMapping("/city/year/{year}/month/{month}")
+	public List<Map<String, Object>> callCityDataCity(@PathVariable("year") int year,
+			@PathVariable("month") String month) {
+		return statService.getCityDataCity(year,month);
 	}
 }

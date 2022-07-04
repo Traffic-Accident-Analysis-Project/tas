@@ -133,5 +133,12 @@ public interface StatMapper {
 			@Param("degree") String degree);
 
 	public List<Map<String, Object>> selectRoadDataRoad(@Param("week") String week, @Param("road") String road);
-	public List<Map<String, Object>> selectCityDataCity(String city);
+
+	public List<Map<String, Object>> selectRoadDataAllRoad(String road);
+
+	public List<Map<String, Object>> selectRoadDataAllWeek(@Param("year") int year, @Param("road") String road);
+
+	public List<Map<String, Object>> selectCityDataCityAll(int year);
+
+	public List<Map<String, Object>> selectCityDataCity(@Param("year") int year, @Param("month") String month);
 }
