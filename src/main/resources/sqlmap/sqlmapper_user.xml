@@ -1,0 +1,35 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.project.tas.mapper.UserMapper">
+
+	<select id="getCheckUserId" resultType="map">
+		SELECT user_id
+		FROM tas_user
+		WHERE user_id = #{id}
+	</select>
+	<insert id="insertUsers">
+		INSERT INTO tas_user
+		(
+			user_id,
+			user_name,
+			user_password,
+			user_gender,
+			user_email_id,
+			user_email_addr,
+			user_addr,
+			user_detail_addr,
+			autority
+		)
+		VALUES
+		(
+			#{userId},
+			#{userName},
+			#{userPassword},
+			#{userGender},
+			#{userEmailId},
+			#{userEmailAddr},
+			#{userAddr},
+			#{userDetailAddr},
+			#{autority}
+		)
+	</insert>
+</mapper>
