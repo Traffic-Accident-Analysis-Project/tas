@@ -24,4 +24,5 @@ public interface UserMapper {
 	 */
 	public UserVO selectUserOne(UserVO vo);
 
+	public List<Map<String,Object>> selectAllUserMap();
 }

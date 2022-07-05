@@ -45,11 +45,15 @@ public class UserRestController {
 		return userService.getAdminPasswordCheck(adminPassword);
 	}
 	
+	
 	@CrossOrigin
 	@PostMapping("/login")
-	public boolean callIsLogin(@RequestBody UserVO vo) {
-		
-		return userService.isUser(vo);
+	public boolean callIsLogin(@RequestBody UserVO vo, HttpSession httpSession) {
+		boolean isLogin = userService.isUser(vo,httpSession); 
+		return isLogin;
 	}
-	
+	@GetMapping("/user/map")
+	public List<Map<String,Object>> callUserListByMap(HttpSession httpSession){
+		return null;
+	}
 }
