@@ -31,6 +31,13 @@ spring:
       url: jdbc:mysql://여기에 아마존 서버 주소:3306/dw?useUnicode=true&charaterEncoding=utf-8&serverTimezone=UTC
       username: admin
       password: 비밀번호
+   # JSP 경로 설정
+   mvc: 
+      view: 
+         prefix: /WEB-INF/views/
+         suffix: .jsp
+      # css, js, images 폴더 위치 설정
+      static-path-pattern: /resources/static/**
 ---
 spring:
    profiles: dev # 개발모드
@@ -42,4 +49,11 @@ spring:
       username: root
       password: 2188
       #password: 5191 
+   # JSP 경로 설정
+   mvc: 
+      view: 
+         prefix: /WEB-INF/views/
+         suffix: .jsp
+      # css, js, images 폴더 위치 설정
+      static-path-pattern: /resources/static/*
    

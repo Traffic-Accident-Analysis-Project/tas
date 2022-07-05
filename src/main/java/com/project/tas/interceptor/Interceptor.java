@@ -54,7 +54,7 @@ public class Interceptor implements HandlerInterceptor {
 		HttpSession session = request.getSession();
 		if (session.getAttribute("userId") == null) {
 			// session 값이 없으면 다시 요청
-			response.sendRedirect("/login");
+//			response.sendRedirect("/login");
 		}
 
 		return true;

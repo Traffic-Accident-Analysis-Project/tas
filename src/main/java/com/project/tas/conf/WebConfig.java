@@ -26,7 +26,10 @@ public class WebConfig implements WebMvcConfigurer {
 				"/api/v1/city",
 				"/api/v1/road",
 				"/api/v1/alcohol",
-				"/api/v1/board");
-		
+				"/api/v1/board",
+				"/resources/static/css/*",
+				"/resources/static/js/*",
+				"/accident");
+		 
 	}
 }
