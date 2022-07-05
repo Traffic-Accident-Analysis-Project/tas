@@ -42,8 +42,9 @@ public class UserService {
 		return false;
 	}
 	
+	// login
 	@Transactional(rollbackFor = {Exception.class})
-	public boolean isUser(UserVO vo) {
+	public boolean isUser(UserVO vo, HttpSession httpSession) {
 		
 		UserVO user = userMapper.selectUserOne(vo);
 		
@@ -51,14 +52,20 @@ public class UserService {
 			return false;
 		}
 		
+		// 사용자가 입력한 pw
 		String inputPassword = vo.getUserPassword();
+		// 실제 pw
 		String password = (String)user.getUserPassword();
 		
 		if(!passwordEncoder.matches(inputPassword, password)) {
 			return false;
 		}
 				
-		
+		httpSession.setAttribute("userId", user.getUserId());
 		return true;
+	}
+	
+	public List<Map<String,Object>> getAllUserMap(){
+		return null;
 	}
 }

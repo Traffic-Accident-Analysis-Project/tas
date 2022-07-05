@@ -37,10 +37,16 @@
 	<select id="selectUserOne" resultType="UserVO">
 		SELECT 
 			user_id AS userId,
-			user_name AS userName,
 			user_password AS userPassword
 		FROM tas_user
 		WHERE 
 			user_id = #{userId}
+	</select>
+	
+	<select id="selectAllUserMap" resultType="map">
+		SELECT
+			user_id AS userId,
+			user_password AS userPassword
+		FROM tas_user
 	</select>
 </mapper>
