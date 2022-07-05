@@ -62,6 +62,7 @@ public class UserService {
 		}
 				
 		httpSession.setAttribute("userId", user.getUserId());
+		
 		return true;
 	}
 	
