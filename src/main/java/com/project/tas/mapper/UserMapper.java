@@ -10,15 +10,18 @@ import com.project.tas.vo.UserVO;
 @Mapper
 public interface UserMapper {
 
-	public List<Map<String,Object>> getCheckUserId(String id);
-	
+	public List<Map<String, Object>> getCheckUserId(String id);
+
 	/**
 	 * @author : ji_U
 	 * @date : 2022. 7. 4. comment : 회원가입
 	 */
 	public int insertUsers(UserVO vo);
-	
+
+	/**
+	 * @author : ji_U
+	 * @date : 2022. 7. 5. comment : 로그인
+	 */
 	public UserVO selectUserOne(UserVO vo);
-	
-	public UserVO callUser(String id);
+
 }

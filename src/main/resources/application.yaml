@@ -6,7 +6,7 @@ application:
 # MyBatis 설정
 mybatis :
    mapper-locations: classpath:/sqlmap/sqlmapper_*.xml
-   type-aliases-package: com.example.tas.vo
+   type-aliases-package: com.project.tas.vo
 
 pagehelper:
    #helper-dialect : 사용할 데이터베이스

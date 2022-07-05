@@ -43,26 +43,22 @@ public class UserService {
 	}
 	
 	@Transactional(rollbackFor = {Exception.class})
-	public boolean isUser(UserVO vo, HttpSession httpSession) {
+	public boolean isUser(UserVO vo) {
 		
 		UserVO user = userMapper.selectUserOne(vo);
 		
 		if(user == null) {
 			return false;
 		}
-		String inputPw = vo.getUserPassword();
-		String pw = user.getUserPassword();
 		
-		if(!passwordEncoder.matches(inputPw, pw)) {
+		String inputPassword = vo.getUserPassword();
+		String password = (String)user.getUserPassword();
+		
+		if(!passwordEncoder.matches(inputPassword, password)) {
 			return false;
 		}
-		
-		httpSession.setAttribute("userId", user.getUserId());
-		httpSession.setAttribute("userName", user.getUserName());
+				
 		
 		return true;
-	}
-	public UserVO call(String id) {
-		return userMapper.callUser(id);
 	}
 }
