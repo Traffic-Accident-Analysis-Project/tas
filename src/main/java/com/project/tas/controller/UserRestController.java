@@ -48,13 +48,8 @@ public class UserRestController {
 	@CrossOrigin
 	@PostMapping("/login")
 	public boolean callIsLogin(@RequestBody UserVO vo) {
-		boolean isLogin = userService.isUser(vo);
 		
-		return isLogin;
+		return userService.isUser(vo);
 	}
 	
-	@GetMapping("/id/{id}")
-	public UserVO call(@PathVariable("id") String id) {
-		return userService.call(id);
-	}
 }

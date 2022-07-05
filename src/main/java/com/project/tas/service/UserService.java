@@ -52,7 +52,7 @@ public class UserService {
 		}
 		
 		String inputPassword = vo.getUserPassword();
-		String password = user.getUserPassword();
+		String password = (String)user.getUserPassword();
 		
 		if(!passwordEncoder.matches(inputPassword, password)) {
 			return false;
@@ -60,8 +60,5 @@ public class UserService {
 				
 		
 		return true;
-	}
-	public UserVO call(String id) {
-		return userMapper.callUser(id);
 	}
 }
