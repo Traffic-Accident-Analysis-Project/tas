@@ -1,0 +1,39 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.project.tas.mapper.LogsMapper">
+	
+	<insert id="insertLogs">
+		INSERT INTO tas_logs
+		(
+		ip,
+		url,
+		http_method,
+		create_at
+		)
+		VALUES
+		(
+		<!-- 원래는 ip값으로 위도 경도를 알 수 있지만 현재는 학원(privateIP)에서 하는 것이기 때문에 임의로 데이터를 넣을 
+			것임 -->
+		#{ip},
+		#{url},
+		#{httpMethod},
+		#{createAt}
+		)
+	</insert>
+
+	<select id="selectBoardLogs" resultType="map">
+		SELECT
+		log_id,
+		ip,
+		url,
+		http_method,
+		create_at
+		FROM tas_logs
+		<!-- log id가 1이상이 파라미터로 넘어오면 실행해줘 -->
+		<if test='logId != 0'>
+			WHERE log_id = #{logId}
+		</if>
+	</select>
+
+
+
+</mapper>
