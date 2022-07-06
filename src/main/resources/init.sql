@@ -25,9 +25,11 @@ CREATE TABLE IF NOT EXISTS tas_user( -- user 테이블
 	user_name VARCHAR(10) NOT NULL COMMENT '회원 이름',
 	user_password VARCHAR(200) NOT NULL COMMENT '회원 비밀번호',
 	user_gender VARCHAR(2) NOT NULL COMMENT '회원 성별',
-	user_email VARCHAR(100) NOT NULL COMMENT '회원 이메일',
+	user_email_id VARCHAR(100) NOT NULL COMMENT '회원 이메일 ID',
+	user_email_addr VARCHAR(100) NOT NULL COMMENT '회원 이메일 ADDR',
 	user_addr VARCHAR(200) NOT NULL COMMENT '회원 주소',
-	autority boolean default false COMMENT 'false:user, true:manager'
+	autority VARCHAR(8) NOT NULL COMMENT 'false:user, true:manager',
+	user_status VARCHAR(1) DEFAULT 'y' NOT NULL COMMENT '회원여부'
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- 접속이력 테이블

@@ -410,12 +410,8 @@
 			success : function(response) {
 				if (response > 0) {
 					alert("설문조사에 참여해주셔서 감사합니다.")
-					window.close();
-					self.close();
-					window.opener = window.location.href;
-					self.close();
-					window.open('about:blank', '_self').close();
-					// VScode에서는 그냥 닫혔으나 JSP에서는 닫히지 않아 이게 최선?
+					//opener.location.href = '../joinAdmin.html';
+					//self.close();
 				}
 			}
 		})
