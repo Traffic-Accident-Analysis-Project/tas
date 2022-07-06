@@ -32,6 +32,10 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-security")
 	// session
 	implementation 'org.springframework.session:spring-session-core'
+	//JSP다운로드
+	implementation "org.apache.tomcat.embed:tomcat-embed-jasper"
+	implementation 'javax.servlet:jstl'
+	
 }
 
 tasks.named('test') {
