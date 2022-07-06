@@ -46,11 +46,11 @@
               <div class="category-link dropdown">
                 <div class="link-button">통계 자료실</div>
                 <div class="dropdown-content">
-                  <a href="statisticalData/law.html">법규 위반</a>
-                  <a href="statisticalData/alcohol.html">음주 정도</a>
-                  <a href="statisticalData/roadType.html">도로 종류</a>
-                  <a href="statisticalData/accidentType.html">사고 유형</a>
-                  <a href="statisticalData/cityType.html">시도 별</a>
+                  <a href="/law">법규 위반</a>
+                  <a href="/alcohol">음주 정도</a>
+                  <a href="/road">도로 종류</a>
+                  <a href="/accident">사고 유형</a>
+                  <a href="/city">시도 별</a>
                 </div>
               </div>
               <div class="category-link service-link">
@@ -106,6 +106,6 @@
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
     ></script>
-    <script src="index.js"></script>
+    <script src="/resources/static/js/index.js"></script>
   </body>
 </html>

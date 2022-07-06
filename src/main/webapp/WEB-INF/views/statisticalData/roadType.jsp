@@ -26,7 +26,7 @@
           <div class="circle-02"></div>
           <div class="circle-03"></div>
           <div class="row top">
-            <a href="main.html">home</a>
+            <a href="/tas/main">home</a>
             <i
               class="fa-solid fa-house-chimney"
               style="color: #eaeaea; margin-left: 5px; margin-top: 3px"
@@ -38,7 +38,7 @@
           </div>
           <div class="row header-category">
             <div class="logo">
-              <a href="../main.html">
+              <a href="/tas/main">
                 <img src="/resources/static/images/T.A.S-logo.png" alt="" />
               </a>
             </div>
@@ -46,21 +46,21 @@
               <div class="category-link dropdown">
                 <div class="link-button">통계 자료실</div>
                 <div class="dropdown-content">
-                  <a href="law.html">법규 위반</a>
-                  <a href="alcohol.html">음주 정도</a>
-                  <a href="roadType.html">도로 종류</a>
-                  <a href="accidentType.html">사고 유형</a>
-                  <a href="cityType.html">시도 별</a>
+                  <a href="/law">법규 위반</a>
+                  <a href="/alcohol">음주 정도</a>
+                  <a href="/road">도로 종류</a>
+                  <a href="/accident">사고 유형</a>
+                  <a href="/city">시도 별</a>
                 </div>
               </div>
               <div class="category-link service-link">
-                <a href="../introService.html">서비스 소개</a>
+                <a href="/tas/intro">서비스 소개</a>
               </div>
               <div class="category-link client-link">
-                <a href="../serviceCenter.html">고객 센터</a>
+                <a href="/service/center">고객 센터</a>
               </div>
               <div class="category-link login-link">
-                <a href="../login.html">로그인</a>
+                <a href="/login">로그인</a>
               </div>
             </div>
           </div>

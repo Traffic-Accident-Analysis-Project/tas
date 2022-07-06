@@ -46,11 +46,11 @@
             <div class="category-link dropdown">
               <div class="link-button">통계 자료실</div>
               <div class="dropdown-content">
-                <a href="statisticalData/law.html">법규 위반</a>
-                <a href="statisticalData/alcohol.html">음주 정도</a>
-                <a href="statisticalData/roadType.html">도로 종류</a>
-                <a href="statisticalData/accidentType.html">사고 유형</a>
-                <a href="statisticalData/cityType.html">시도 별</a>
+                <a href="/law">법규 위반</a>
+                <a href="/alcohol">음주 정도</a>
+                <a href="/road">도로 종류</a>
+                <a href="/accident">사고 유형</a>
+                <a href="/city">시도 별</a>
               </div>
             </div>
             <div class="category-link service-link">
@@ -62,7 +62,7 @@
             <div class="category-link login-link">
               <input id="loginSessionHidden" type="hidden" value="" />
               <a href="/login">로그인</a>
-              <a style="display: none" href="myPage.html">마이페이지</a>
+              <a style="display: none" href="/tas/my/info">마이페이지</a>
             </div>
           </div>
         </div>
@@ -346,7 +346,7 @@
   ></script>
   <!-- Chart.js -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="index.js"></script>
+  <script src="/resources/static/js/index.js"></script>
   <script>
     const swiper = new Swiper(".swiper", {
       // Optional parameters

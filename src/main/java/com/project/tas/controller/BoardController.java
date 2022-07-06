@@ -12,11 +12,12 @@ public class BoardController {
 	@Autowired
 	private BoardService boardService;
 	
+	// 고객센터
 	@GetMapping("/service/center")
 	public String callServiceCenter() {
 		return "serviceCenter";
 	}
-	
+	// 글 작성
 	@GetMapping("/tas/service/write")
 	public String callServiceWrite() {
 		return "seviceWrite";

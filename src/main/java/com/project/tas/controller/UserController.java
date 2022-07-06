@@ -12,6 +12,7 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 	
+	// 로그인
 	@GetMapping("/login")
 	public String callLoginPage() {
 		return "login";
@@ -39,6 +40,7 @@ public class UserController {
 		return "joinUser";
 	}
 	
+	// 마이페이지
 	@GetMapping("/tas/my/info")
 	public String callMyPage() {
 		return "myPage";

@@ -97,7 +97,7 @@
         }
 
         $.ajax({
-          url: "http://localhost:8080/api/v1/check/id/" + id,
+          url: "/api/v1/check/id/" + id,
           type: "GET",
           dataType: "json",
           success: function (response) {
@@ -167,7 +167,7 @@
           var result = confirm("회원가입 하시겠습니까?");
           if (result && checkOrNot) {
             $.ajax({
-              url: "http://localhost:8080/api/v1/user",
+              url: "/api/v1/user",
               type: "POST",
               contentType: "application/json", // 서버에 json타입으로 보낼 예정(요청)
               dataType: "json", // 서버에 결과를 json으로 응답 받겠다

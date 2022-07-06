@@ -47,8 +47,8 @@ spring:
       driver-class-name: com.mysql.cj.jdbc.Driver
       url: jdbc:mysql://localhost:3306/dw?useUnicode=true&charaterEncoding=utf-8&serverTimezone=UTC
       username: root
-      #password: 2188
-      password: 5191 
+      password: 2188
+      #password: 5191 
    # JSP 경로 설정
    mvc: 
       view: 
