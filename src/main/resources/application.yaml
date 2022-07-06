@@ -55,5 +55,5 @@ spring:
          prefix: /WEB-INF/views/
          suffix: .jsp
       # css, js, images 폴더 위치 설정
-      static-path-pattern: /resources/static/*
+      static-path-pattern: /resources/static/**
    

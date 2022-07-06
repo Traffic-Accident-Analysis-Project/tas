@@ -39,7 +39,7 @@
           <div class="row header-category">
             <div class="logo">
               <a href="../main.html">
-                <img src="../img/T.A.S-logo.png" alt="" />
+                <img src="/resources/static/images/T.A.S-logo.png" alt="" />
               </a>
             </div>
             <div class="row category">
@@ -212,7 +212,7 @@
         </div>
         <footer>
           <div class="footer-img">
-            <img src="../img/T.A.S-logo.png" alt="" />
+            <img src="/resources/static/images/T.A.S-logo.png" alt="" />
           </div>
           <div class="footer-info">
             <p>이용약관 | 개인정보처리방침 | 운영 관리 방침</p>
@@ -249,7 +249,7 @@
   ></script>
   <!-- Chart.js -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="index.js"></script>
+  <script src="/resources/static/js/index.js"></script>
   <script>
     var accidentYear = function (value) {
       $("#accidentYearHidden").val(value);

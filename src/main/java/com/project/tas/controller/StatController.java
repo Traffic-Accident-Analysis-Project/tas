@@ -14,6 +14,6 @@ public class StatController {
 	
 	@GetMapping("/accident")
 	public String callAccidentPage() {
-		return "accident";
+		return "statisticalData/accidentType";
 	}
 }
