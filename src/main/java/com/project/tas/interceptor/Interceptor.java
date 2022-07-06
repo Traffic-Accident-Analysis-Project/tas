@@ -8,6 +8,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
@@ -19,6 +22,8 @@ import com.project.tas.vo.LogsVO;
 @Component
 public class Interceptor implements HandlerInterceptor {
 
+	private static final Logger logger = LoggerFactory.getLogger(Interceptor.class);
+	
 	@Autowired
 	private LogsService logsService;
 
@@ -34,10 +39,10 @@ public class Interceptor implements HandlerInterceptor {
 			ip = request.getRemoteAddr();
 		}
 
-		System.out.println("ip : " + ip);
-		System.out.println("url :  " + url);
-		System.out.println("httpMethod : " + httpMethod);
-
+		logger.info("client IP : "+ip);
+		logger.info("request URL : "+url);
+		logger.info("request HTTPMethod : "+httpMethod);
+		
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.KOREA);
 		String time = formatter.format(Calendar.getInstance().getTime());
 		System.out.println("time : " + time);
