@@ -1,0 +1,24 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- MyBatis에게 Mapper 경로를 적어야 한다. -->
+<mapper namespace="com.project.tas.mapper.SurveyMapper">
+	<insert id="selectSaveSurvey">
+		INSERT INTO tas_survey
+		(
+			survey_gender,
+			survey_old,
+			survey_q1,
+			survey_q1_1,
+			survey_q2,
+			survey_q3
+		)
+		VALUES
+		(
+			#{surveyGender},
+			#{surveyOld},
+			#{surveyQ1},
+			#{surveyQ11},
+			#{surveyQ2},
+			#{surveyQ3}
+		)
+	</insert>
+</mapper>

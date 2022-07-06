@@ -1,3 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>T.A.S 법규위반</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/resources/static/css/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
@@ -29,13 +33,13 @@
             ></i>
             <select name="lang-selbox" id="">
               <option value="korea">한글</option>
-              <option value="eng">English</option>
+              <option value="eng">영어</option>
             </select>
           </div>
           <div class="row header-category">
             <div class="logo">
               <a href="../main.html">
-                <img src="../img/T.A.S-logo.png" alt="" />
+                <img src="/resources/static/images/T.A.S-logo.png" alt="" />
               </a>
             </div>
             <div class="row category">
@@ -199,7 +203,7 @@
         </div>
         <footer>
           <div class="footer-img">
-            <img src="../img/T.A.S-logo.png" alt="" />
+            <img src="/resources/static/images/T.A.S-logo.png" alt="" />
           </div>
           <div class="footer-info">
             <p>이용약관 | 개인정보처리방침 | 운영 관리 방침</p>
@@ -238,7 +242,7 @@
   ></script>
   <!-- Chart.js -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="index.js"></script>
+  <script src="/resources/static/js/statIndex.js"></script>
   <script>
     // option값을 input[hidden]에 넣기
     var lawYear = function (value) {

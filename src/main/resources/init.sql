@@ -39,3 +39,15 @@ CREATE TABLE IF NOT EXISTS tas_logs
 	http_method VARCHAR(10) COMMENT 'http method',
 	create_at DATETIME COMMENT '접속 시간'
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- 설문조사 테이블
+CREATE TABLE IF NOT EXISTS tas_survey
+(
+	survey_id INT(30) AUTO_INCREMENT NOT NULL PRIMARY KEY COMMENT '설문조사 아이디',
+	survey_gender VARCHAR(10) COMMENT '성별',
+	survey_old VARCHAR(100) COMMENT '요청 url',
+	survey_q1 VARCHAR(100) COMMENT '문항1',
+	survey_q1_1 VARCHAR(200) COMMENT '문항1-1',
+	survey_q2 VARCHAR(100) COMMENT '문항2',
+	survey_q3 VARCHAR(200) COMMENT '문항3'
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
