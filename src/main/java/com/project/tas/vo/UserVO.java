@@ -14,4 +14,5 @@ public class UserVO {
 	private String userAddr;
 	private String userDetailAddr;
 	private String autority;
+	private String userStatus; // 회원탈퇴여부
 }

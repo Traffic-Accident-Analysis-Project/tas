@@ -24,5 +24,20 @@ public interface UserMapper {
 	 */
 	public UserVO selectUserOne(UserVO vo);
 
-	public List<Map<String,Object>> selectAllUserMap();
+	public List<Map<String, Object>> selectAllUserMap();
+
+	/**
+	 * @author : ji_U
+	 * @date : 2022. 7. 6. comment : 내정보수정 회원정보 불러오기
+	 */
+	public Map<String, Object> selectMyInfo(String id);
+
+	/**
+	 * @author : ji_U
+	 * @date : 2022. 7. 6. comment : 내정보수정 update
+	 */
+	public int updateMyInfo(UserVO vo);
+	
+	public int updateSecession (UserVO vo);
+
 }

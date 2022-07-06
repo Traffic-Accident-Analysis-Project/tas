@@ -18,7 +18,8 @@
 			user_email_addr,
 			user_addr,
 			user_detail_addr,
-			autority
+			autority,
+			user_status
 		)
 		VALUES
 		(
@@ -30,7 +31,8 @@
 			#{userEmailAddr},
 			#{userAddr},
 			#{userDetailAddr},
-			#{autority}
+			#{autority},
+			#{userStatus}
 		)
 	</insert>
 	
@@ -49,4 +51,36 @@
 			user_password AS userPassword
 		FROM tas_user
 	</select>
+	
+	<select id="selectMyInfo" resultType="map">
+		SELECT 
+			user_id,
+			user_name,
+			user_email_id,
+			user_email_addr,
+			user_addr,
+			user_detail_addr
+		FROM tas_user
+		WHERE user_id = #{id}
+	</select>
+	
+	<update id="updateMyInfo">
+		UPDATE tas_user
+		SET
+			user_name = #{userName},
+			user_email_id = #{userEmailId},
+			user_password = #{userPassword},
+			user_email_addr = #{userEmailAddr},
+			user_addr = #{userAddr},
+			user_detail_addr = #{userDetailAddr}
+		WHERE user_id = #{userId}
+	</update>
+	
+	<update id="updateSecession">
+		UPDATE tas_user
+		SET
+			user_password = #{userPassword},
+			user_status = #{userStatus}
+		WHERE user_id = #{userId}
+	</update>
 </mapper>
