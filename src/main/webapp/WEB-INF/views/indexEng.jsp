@@ -81,10 +81,10 @@
               <i class="fa-regular fa-lightbulb fa-6x"></i>
             </div>
             <div class="emoji-text-wrap">
-              <p>하루에도 수 백 건 일어나며,</p>
-              <p>수많은 사상자를 내는</p>
-              <p>교통사고에 대한</p>
-              <p>경각심을 일깨우기 위해 제작되었습니다</p>
+              <p>It was created to raise awareness </p>
+              <p>about traffic accidents</p>
+              <p>that occur hundreds of times a day</p>
+              <p>and cause numerous casualties.</p>
             </div>
           </div>
           <div class="main-emoji-item">
