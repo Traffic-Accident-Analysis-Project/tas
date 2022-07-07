@@ -176,7 +176,7 @@
 									<canvas id="pieChart"></canvas>
 									<canvas id="new-pieChart" style="display: none"></canvas>
 								</div>
-								<button type="button">Excel Downlod</button>
+								<a href="/city/type/excel">Excel Downlod</a>
 							</div>
 						</div>
 					</div>
