@@ -76,7 +76,7 @@ label {
 			return false;
 		}
 		$.ajax({
-			url : "http://localhost:8080/api/v1/admin/check/" + hiddenVal,
+			url : "/api/v1/admin/check/" + hiddenVal,
 			type : "GET",
 			dataType : "json",
 			success : function(response) {
@@ -103,7 +103,7 @@ label {
 				return false;
 			}
 			$.ajax({
-				url : "http://localhost:8080/api/v1/admin/check/" + hiddenVal,
+				url : "/api/v1/admin/check/" + hiddenVal,
 				type : "GET",
 				dataType : "json",
 				success : function(response) {

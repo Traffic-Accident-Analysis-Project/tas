@@ -71,7 +71,7 @@
         userPassword: $("#password").val(),
       };
       $.ajax({
-        url: "http://localhost:8080/api/v1/user/secession",
+        url: "/api/v1/user/secession",
         type: "PATCH",
         contentType: "application/json", // 서버에 json타입으로 보낼 예정(요청)
         dataType: "json", // 서버에 결과를 json으로 응답 받겠다
@@ -94,7 +94,7 @@
           userPassword: $("#password").val(),
         };
         $.ajax({
-          url: "http://localhost:8080/api/v1/user/secession",
+          url: "/api/v1/user/secession",
           type: "PATCH",
           contentType: "application/json", // 서버에 json타입으로 보낼 예정(요청)
           dataType: "json", // 서버에 결과를 json으로 응답 받겠다
@@ -102,7 +102,7 @@
           success: function (response) {
             if (response > 0) {
               alert("회원탈퇴가 완료되었습니다. 감사합니다.");
-              opener.location.href = "../login.html";
+              opener.location.href = "/login";
               self.close();
             }
           },

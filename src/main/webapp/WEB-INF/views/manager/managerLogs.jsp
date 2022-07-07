@@ -95,6 +95,12 @@
               >
             </li>
             <li>
+              <a href="/tas/main">
+                <i class="fa-solid fa-t"></i>
+                T.A.S메인</a
+              >
+            </li>
+            <li>
               <a class="logout" href="#"
                 ><i class="fa-solid fa-arrow-right-from-bracket"></i>log-out</a
               >

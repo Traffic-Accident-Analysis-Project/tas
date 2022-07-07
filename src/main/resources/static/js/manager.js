@@ -89,7 +89,17 @@ function deleteBoardByNo(boardNo) {
 $(".logout").on("click", function () {
   var result = confirm("로그아웃 하시겠습니까?");
   if (result) {
-    location.replace("../login.html");
+    $.ajax({
+		url : "/api/v1/logout",
+		type : "GET",
+		success : function(response) {
+			console.log("성공")
+			location.href = "/login";
+		},
+		error : function(request, status, error) {
+			console.log("에러 내용은 : " + error);
+		},
+	});
   }
 });
 
@@ -306,14 +316,15 @@ function getLogsBoardList(pageNum, pageSize) {
 // log popup
 function getLogsPopup(log_id) {
   // JSP로 해보기
-  // var popup = window.open(
-  //   "manager-log-popup.html",
-  //   "logs",
-  //   "width=650px, height=500px, left=100, top=50"
-  // );
+  /*var popup = window.open(
+     "/manager/logs/popup",
+     "logs",
+     "width=650px, height=500px, left=100, top=50"
+   );*/
+  
   $(".popup-logs").css("display", "block");
   $.ajax({
-    url: "http://localhost:8080/api/v1/logs/logId/" + log_id,
+    url: "/api/v1/logs/logId/" + log_id,
     type: "GET",
     dataType: "json",
     success: function (response) {
@@ -327,5 +338,5 @@ function getLogsPopup(log_id) {
     error: function (request, status, error) {
       console.log("Error : " + error);
     },
-  }); //ajax end
+  }); //ajax end 
 }

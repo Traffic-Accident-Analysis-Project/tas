@@ -138,7 +138,7 @@
 		});
 		// 내정보수정이 실행되자마자 input에 값 들어가는 ajax
 		$.ajax({
-			url : "http://localhost:8080/api/v1/re/my/info",
+			url : "/api/v1/re/my/info",
 			type : "GET",
 			dataType : "json",
 			success : function(response) {
@@ -250,7 +250,7 @@
 			var result = confirm("회원정보를 수정하시겠습니까?");
 			if (result) {
 				$.ajax({
-					url : "http://localhost:8080/api/v1/re/my/info",
+					url : "/api/v1/re/my/info",
 					type : "PATCH",
 					contentType : "application/json",
 					dataType : "json",
@@ -277,7 +277,7 @@
 				function() {
 					var result = confirm("탈퇴하시겠습니까?");
 					if (result) {
-						var popup = window.open("popup/secessionPopup.html",
+						var popup = window.open("/tas/user/secession",
 								"password-check",
 								"width=470px, height=200px, left=100, top=50");
 					}

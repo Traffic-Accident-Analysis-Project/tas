@@ -57,7 +57,9 @@
 							<a href="/service/center">고객 센터</a>
 						</div>
 						<div class="category-link login-link">
-							<a href="/login">로그인</a>
+							<input id="loginSessionHidden" type="hidden" value="" /> 
+							<a id="loginTag" href="/login">로그인</a> 
+							<a id="infoTag" style="display: none" href="/tas/my/info">마이페이지</a>
 						</div>
 					</div>
 				</div>
@@ -780,5 +782,14 @@
 					});
 		},
 	});
+	// 로그인 여부(session) 확인
+	if("<%out.print(request.getSession().getAttribute("userId"));%>" !== "null"){
+		$('#loginTag').css("display","none");
+		$('#infoTag').css("display","block");
+	}
+	else{
+		$('#loginTag').css("display","block");
+		$('#infoTag').css("display","none");
+	}
 </script>
 </html>

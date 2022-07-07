@@ -280,12 +280,12 @@ header::before {
 }
 
 .swiper-button-next {
-  background: url(/HTML&CSS/img/next.png) no-repeat;
+  background: url(/resources/static/images/next.png) no-repeat;
   background-size: 200% auto;
   background-position: center;
 }
 .swiper-button-prev {
-  background: url(/HTML&CSS/img/pre.png) no-repeat;
+  background: url(/resources/static/images/pre.png) no-repeat;
   background-size: 200% auto;
   background-position: center;
 }
