@@ -403,7 +403,7 @@
                   borderWidth: 1,
                 },
                 {
-                  label: "부상자 수",
+                  label: "Number of Injured",
                   fill: false,
                   data: dataInjured,
                   backgroundColor: "rgba(255, 206, 86, 0.2)",
@@ -420,7 +420,7 @@
                 },
                 subtitle: {
                   display: true,
-                  text: "월별 히스토그램",
+                  text: "Histogram by Month",
                   color: "skyblue",
                 },
               },
@@ -550,7 +550,7 @@
               datasets: [
                 {
                   //데이터
-                  label: "사고 건수", //차트 제목
+                  label: "Number of Accidents", //차트 제목
                   fill: false, // line 형태일 때, 선 안쪽을 채우는지 안채우는지
                   data: dataAccidents,
                   backgroundColor: "rgba(255, 99, 132, 0.2)",
@@ -558,7 +558,7 @@
                   borderWidth: 1, //경계선 굵기
                 },
                 {
-                  label: "사망자 수",
+                  label: "Number of Deaths",
                   fill: false,
                   data: dataDeath,
                   backgroundColor: "rgba(54, 162, 235, 0.2)",
@@ -566,7 +566,7 @@
                   borderWidth: 1,
                 },
                 {
-                  label: "부상자 수",
+                  label: "Number of Injured",
                   fill: false,
                   data: dataInjured,
                   backgroundColor: "rgba(255, 206, 86, 0.2)",
@@ -584,7 +584,7 @@
                 },
                 subtitle: {
                   display: true,
-                  text: "년도별 그래프",
+                  text: "Chart by year",
                   color: "skyblue",
                 },
               },
@@ -734,7 +734,7 @@
             datasets: [
               {
                 //데이터
-                label: "사고 건수", //차트 제목
+                label: "Number of Accidents", //차트 제목
                 fill: false, // line 형태일 때, 선 안쪽을 채우는지 안채우는지
                 data: dataAccidents,
                 backgroundColor: "rgba(255, 99, 132, 0.2)",
@@ -742,7 +742,7 @@
                 borderWidth: 1, //경계선 굵기
               },
               {
-                label: "사망자 수",
+                label: "Number of Deaths",
                 fill: false,
                 data: dataDeath,
                 backgroundColor: "rgba(54, 162, 235, 0.2)",
@@ -750,7 +750,7 @@
                 borderWidth: 1,
               },
               {
-                label: "부상자 수",
+                label: "Number of Injured",
                 fill: false,
                 data: dataInjured,
                 backgroundColor: "rgba(255, 206, 86, 0.2)",
@@ -767,7 +767,7 @@
               },
               subtitle: {
                 display: true,
-                text: "월별 히스토그램",
+                text: "Histogram by Month",
                 color: "skyblue",
               },
             },
@@ -904,7 +904,7 @@
             datasets: [
               {
                 //데이터
-                label: "사고 건수", //차트 제목
+                label: "Number of Accidents", //차트 제목
                 fill: false, // line 형태일 때, 선 안쪽을 채우는지 안채우는지
                 data: dataAccidents,
                 backgroundColor: "rgba(255, 99, 132, 0.2)",
@@ -912,7 +912,7 @@
                 borderWidth: 1, //경계선 굵기
               },
               {
-                label: "사망자 수",
+                label: "Number of Deaths",
                 fill: false,
                 data: dataDeath,
                 backgroundColor: "rgba(54, 162, 235, 0.2)",
@@ -920,7 +920,7 @@
                 borderWidth: 1,
               },
               {
-                label: "부상자 수",
+                label: "Number of Injured",
                 fill: false,
                 data: dataInjured,
                 backgroundColor: "rgba(255, 206, 86, 0.2)",
@@ -938,7 +938,7 @@
               },
               subtitle: {
                 display: true,
-                text: "년도별 그래프",
+                text: "Chart by year",
                 color: "skyblue",
               },
             },
