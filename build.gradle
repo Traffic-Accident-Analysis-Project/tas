@@ -35,6 +35,8 @@ dependencies {
 	//JSP다운로드
 	implementation "org.apache.tomcat.embed:tomcat-embed-jasper"
 	implementation 'javax.servlet:jstl'
+	//excel
+	implementation group: 'org.apache.poi', name: 'poi-ooxml', version: '5.2.2'
 	
 }
 
