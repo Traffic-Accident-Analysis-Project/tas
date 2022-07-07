@@ -33,4 +33,30 @@ public class StatController {
 		return "statisticalData/roadType";
 	}
 	
+	// 사고유형 eng
+	@GetMapping("/accident/eng")
+	public String callAccidentEngPage() {
+		return "statisticalData/accidentTypeEng";
+	}
+	// 음주측정 eng
+	@GetMapping("/alcohol/eng")
+	public String callalcoholEngPage() {
+		return "statisticalData/alcoholEng";
+	}
+	// 시도별 eng
+	@GetMapping("/city/eng")
+	public String callcityEngPage() {
+		return "statisticalData/cityTypeEng";
+	}
+	// 법규위반 eng
+	@GetMapping("/law/eng")
+	public String calllawEngPage() {
+		return "statisticalData/lawEng";
+	}
+	// 도로유형 eng
+	@GetMapping("/road/eng")
+	public String callroadEngPage() {
+		return "statisticalData/roadTypeEng";
+	}
+	
 }

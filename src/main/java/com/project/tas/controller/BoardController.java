@@ -20,6 +20,6 @@ public class BoardController {
 	// 글 작성
 	@GetMapping("/tas/service/write")
 	public String callServiceWrite() {
-		return "seviceWrite";
+		return "serviceWrite";
 	}
 }

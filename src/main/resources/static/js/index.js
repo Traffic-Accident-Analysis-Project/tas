@@ -71,7 +71,7 @@ $(".service-write-registration").on("click", function () {
   };
   //ajax
   $.ajax({
-    url: "http://localhost:8080/api/v1/board",
+    url: "/api/v1/board",
     type: "POST",
     contentType: "application/json", // 서버에 json type으로 보낼 예정(요청)
     dataType: "json", // 서버 결과를 json으로 응답 받겠다.
@@ -91,7 +91,7 @@ $(".service-write-registration").on("click", function () {
 // 게시판 리스트 가져오는 함수(main, service-center) - JS
 function getBoardList(pageNum, pageSize) {
   var controllerUrl =
-    "http://localhost:8080/api/v1/board?pageNum=" +
+    "/api/v1/board?pageNum=" +
     pageNum +
     "&pageSize=" +
     pageSize;
@@ -194,7 +194,7 @@ function getBoardByNo(boardNo) {
   $(".main-popup").css("display", "block");
   // ajax 작성
   $.ajax({
-    url: "http://localhost:8080/api/v1/board/boardNo/" + boardNo,
+    url: "/api/v1/board/boardNo/" + boardNo,
     type: "GET",
     dataType: "json",
     success: function (response) {
@@ -218,7 +218,7 @@ function getBoardByNo(boardNo) {
 // 조회수 증가 함수
 function setBoardViews(boardNo) {
   $.ajax({
-    url: "http://localhost:8080/api/v1/board/views/boardNo/" + boardNo,
+    url: "/api/v1/board/views/boardNo/" + boardNo,
     type: "PATCH",
     contentType: "application/json",
     dataType: "json",
@@ -241,7 +241,7 @@ $("#btn-passwordForDelete").click(function () {
   var boardNo = 0;
   var boardPassword = "";
   $.ajax({
-    url: "http://localhost:8080/api/v1/board/boardNo/" + $("#number").val(),
+    url: "/api/v1/board/boardNo/" + $("#number").val(),
     type: "GET",
     dataType: "json",
     success: function (response) {
@@ -268,7 +268,7 @@ $("#btn-passwordForDelete").click(function () {
 // 삭제 함수
 function deleteBoardByNo(boardNo) {
   $.ajax({
-    url: "http://localhost:8080/api/v1/board/boardNo/" + boardNo,
+    url: "/api/v1/board/boardNo/" + boardNo,
     type: "DELETE",
     contentType: "application/json",
     dataType: "json",
@@ -292,7 +292,7 @@ $("#btn-passwordForUpdate").click(function () {
   var boardNo = 0;
   var boardPassword = "";
   $.ajax({
-    url: "http://localhost:8080/api/v1/board/boardNo/" + $("#number").val(),
+    url: "/api/v1/board/boardNo/" + $("#number").val(),
     type: "GET",
     dataType: "json",
     success: function (response) {
@@ -327,7 +327,7 @@ $("#btn-passwordForUpdate").click(function () {
 // 수정 함수
 function updateBoardByNo(boardNo, jsonData) {
   $.ajax({
-    url: "http://localhost:8080/api/v1/board/boardNo/" + boardNo,
+    url: "/api/v1/board/boardNo/" + boardNo,
     type: "PATCH",
     contentType: "application/json",
     dataType: "json",
@@ -347,7 +347,7 @@ function updateBoardByNo(boardNo, jsonData) {
 // 여기서부터 그래프 그리기 위한 Json Data 가져와 로직 구현
 // law : 법규위반별 Data
 $.ajax({
-  url: "http://localhost:8080/api/v1/law",
+  url: "/api/v1/law",
   type: "GET",
   dataType: "json",
   success: function (response) {
@@ -358,7 +358,7 @@ $.ajax({
 });
 // accident : 사고유형별 Data
 $.ajax({
-  url: "http://localhost:8080/api/v1/accident",
+  url: "/api/v1/accident",
   type: "GET",
   dataType: "json",
   success: function (response) {
@@ -369,7 +369,7 @@ $.ajax({
 });
 // city : 시도별 Data
 $.ajax({
-  url: "http://localhost:8080/api/v1/city",
+  url: "/api/v1/city",
   type: "GET",
   dataType: "json",
   success: function (response) {
@@ -380,7 +380,7 @@ $.ajax({
 });
 // road : 도로별/요일별 Data
 $.ajax({
-  url: "http://localhost:8080/api/v1/road",
+  url: "/api/v1/road",
   type: "GET",
   dataType: "json",
   success: function (response) {
@@ -391,7 +391,7 @@ $.ajax({
 });
 // alcohol : 음주측정별 Data
 $.ajax({
-  url: "http://localhost:8080/api/v1/alcohol",
+  url: "/api/v1/alcohol",
   type: "GET",
   dataType: "json",
   success: function (response) {
