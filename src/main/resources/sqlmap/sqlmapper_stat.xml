@@ -4,16 +4,17 @@
 	<!-- 법규위반별 -->
 	<select id="selectAllLawData" resultType="map">
 		SELECT
-		시점,
-		월별,
-		가해자법규위반,
-		사고건수,
-		사망자수,
-		부상자수,
-		month,
-		violation_of_law as violationOfLaw
+			시점,
+			월별,
+			가해자법규위반,
+			사고건수,
+			사망자수,
+			부상자수,
+			month,
+			violation_of_law as violationOfLaw
 		FROM 교통사고_법규위반별
 	</select>
+	
 	<select id="selectLawData" resultType="map">
 		SELECT
 		시점,
@@ -289,6 +290,7 @@
 		월별,
 		가해자음주정도별1,
 		가해자음주정도별2,
+		주야별,
 		사고건수,
 		사망자수,
 		부상자수,
