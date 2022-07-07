@@ -70,51 +70,51 @@ public class UserController {
 	// 로그인
 	@GetMapping("/login/eng")
 	public String callLoginPageEng() {
-		return "login";
+		return "loginEng";
 	}
 	// 로그아웃
 //		@GetMapping("/logout/eng")
 //		public String callLoginoutEng(HttpSession httpSession) {
 //			httpSession.invalidate();
-//			return "login";
+//			return "loginEng";
 //		}
 
 	// 관리자 / 일반회원 선택
 	@GetMapping("tas/join/select/eng")
 	public String callJoinSelectEng() {
-		return "checkAdminUser";
+		return "checkAdminUserEng";
 	}
 
 	// 관리자코드 입력팝업
 	@GetMapping("/tas/admin/code/eng")
 	public String callCheckAdminCodeEng() {
-		return "popup/checkAdminPopup";
+		return "popup/checkAdminPopupEng";
 	}
 
 	@GetMapping("/tas/join/admin/eng")
 	public String callJoinAdminEng() {
-		return "joinAdmin";
+		return "joinAdminEng";
 	}
 
 	@GetMapping("/tas/join/user/eng")
 	public String callJoinUserEng() {
-		return "joinUser";
+		return "joinUserEng";
 	}
 
 	// 마이페이지
 	@GetMapping("/tas/my/info/eng")
 	public String callMyPageEng() {
-		return "myPage";
+		return "myPageEng";
 	}
 
 	// 회원 수정 페이지
 	@GetMapping("/tas/my/info/update/eng")
 	public String callUpdateMyInfoEng() {
-		return "reMyInfo";
+		return "reMyInfoEng";
 	}
 
 	@GetMapping("/tas/user/secession/eng")
 	public String callSecessionEng() {
-		return "popup/secessionPopup";
+		return "popup/secessionPopupEng";
 	}
 }

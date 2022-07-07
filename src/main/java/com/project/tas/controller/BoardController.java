@@ -28,12 +28,12 @@ public class BoardController {
 	// 고객센터
 	@GetMapping("/service/center/eng")
 	public String callServiceCenterEng() {
-		return "serviceCenter";
+		return "serviceCenterEng";
 	}
 
 	// 글 작성
 	@GetMapping("/tas/service/write/eng")
 	public String callServiceWriteEng() {
-		return "serviceWrite";
+		return "serviceWriteEng";
 	}
 }
