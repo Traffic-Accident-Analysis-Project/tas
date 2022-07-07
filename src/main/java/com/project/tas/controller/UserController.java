@@ -64,4 +64,57 @@ public class UserController {
 	public String callSecession() {
 		return "popup/secessionPopup";
 	}
+
+	
+	// 영어페이지
+	// 로그인
+	@GetMapping("/login/eng")
+	public String callLoginPageEng() {
+		return "login";
+	}
+	// 로그아웃
+//		@GetMapping("/logout/eng")
+//		public String callLoginoutEng(HttpSession httpSession) {
+//			httpSession.invalidate();
+//			return "login";
+//		}
+
+	// 관리자 / 일반회원 선택
+	@GetMapping("tas/join/select/eng")
+	public String callJoinSelectEng() {
+		return "checkAdminUser";
+	}
+
+	// 관리자코드 입력팝업
+	@GetMapping("/tas/admin/code/eng")
+	public String callCheckAdminCodeEng() {
+		return "popup/checkAdminPopup";
+	}
+
+	@GetMapping("/tas/join/admin/eng")
+	public String callJoinAdminEng() {
+		return "joinAdmin";
+	}
+
+	@GetMapping("/tas/join/user/eng")
+	public String callJoinUserEng() {
+		return "joinUser";
+	}
+
+	// 마이페이지
+	@GetMapping("/tas/my/info/eng")
+	public String callMyPageEng() {
+		return "myPage";
+	}
+
+	// 회원 수정 페이지
+	@GetMapping("/tas/my/info/update/eng")
+	public String callUpdateMyInfoEng() {
+		return "reMyInfo";
+	}
+
+	@GetMapping("/tas/user/secession/eng")
+	public String callSecessionEng() {
+		return "popup/secessionPopup";
+	}
 }

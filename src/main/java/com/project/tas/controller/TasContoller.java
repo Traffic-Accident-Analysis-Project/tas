@@ -21,4 +21,16 @@ public class TasContoller {
 	}
 	
 	
+	//영어페이지
+	// 메인
+	@GetMapping("/tas/main/eng")
+	public String tasMainEng(HttpSession session) {
+		return "index";
+	}
+
+	// 서비스 소개
+	@GetMapping("/tas/intro/eng")
+	public String tasIntroEng() {
+		return "introService";
+	}
 }
