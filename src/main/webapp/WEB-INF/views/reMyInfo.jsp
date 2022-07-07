@@ -1,309 +1,298 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>T.A.S 내 정보 수정</title>
-    <link rel="stylesheet" href="/resources/static/css/reMyInfo.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
-  <body>
-    <div class="container">
-      <div class="top-background-color">
-        <header>
-          <div class="circle-01"></div>
-          <div class="circle-02"></div>
-          <div class="circle-03"></div>
-          <div class="row top">
-            <a href="/tas/main">home</a>
-            <i
-              class="fa-solid fa-house-chimney"
-              style="color: #eaeaea; margin-left: 5px; margin-top: 3px"
-            ></i>
-            <select name="lang-selbox" id="">
-              <option value="korea">한글</option>
-              <option value="eng">English</option>
-            </select>
-          </div>
-          <div class="row header-category">
-            <div class="logo">
-              <a href="/tas/main">
-                <img src="/resources/static/images/T.A.S-logo.png" alt="" />
-              </a>
-            </div>
-            <div class="row category">
-              <div class="category-link dropdown">
-                <div class="link-button">통계 자료실</div>
-                <div class="dropdown-content">
-                  <a href="statisticalData/law.html">법규 위반</a>
-                  <a href="statisticalData/alcohol.html">음주 정도</a>
-                  <a href="statisticalData/roadType.html">도로 종류</a>
-                  <a href="statisticalData/accidentType.html">사고 유형</a>
-                  <a href="statisticalData/cityType.html">시도 별</a>
-                </div>
-              </div>
-              <div class="category-link service-link">
-                <a href="/tas/intro">서비스 소개</a>
-              </div>
-              <div class="category-link client-link">
-                <a href="/service/center">고객 센터</a>
-              </div>
-              <div class="category-link login-link">
-                <a href="/login">로그인</a>
-              </div>
-            </div>
-          </div>
-        </header>
-      </div>
-      <!-- header end -->
-      <div class="bottom-background-color">
-        <div class="re-my-info-wrap">
-          <h1>내 정보 수정</h1>
-          <!-- 기존 정보가 적혀있어야 함-->
-          <label for="userName">이름</label>
-          <input id="userName" type="text" />
-          <label for="password">비밀번호</label>
-          <input id="password" type="password" />
-          <label for="rePassword">비밀번호 재확인</label>
-          <input id="rePassword" type="password" />
-          <label for="email-id">e-mail주소</label>
-          <div class="row re-email-wrap">
-            <input id="email-id" type="text" />
-            <input type="hidden" id="emailAddrHidden" />
-            <select
-              name="email-addr"
-              id="email-addr"
-              onchange="emailAddrVal(this.value)"
-            >
-              <option value="">이메일주소</option>
-              <option value="email-user-write">직접입력</option>
-              <option value="@gmail">@gmail.com</option>
-              <option value="@google">@google.com</option>
-              <option value="@naver">@naver.com</option>
-              <option value="@hanmail">@hanmail.net</option>
-              <option value="@daum">@daum.net</option>
-              <option value="@hotmail">@hotmail.com</option>
-            </select>
-          </div>
-          <input
-            id="email-user-write-box"
-            type="text"
-            style="display: none"
-            placeholder="ex) @email.com"
-          />
-          <label for="addr">주소</label>
-          <div class="re-addr-wrap">
-            <div class="addr-btn-wrap">
-              <input id="addr" type="text" onclick="getPostCode()" />
-              <button type="button" onclick="getPostCode()">도로명 주소</button>
-            </div>
-            <input id="user-detail-addr" type="text" placeholder="  상세주소" />
-          </div>
-          <div class="re-my-info-btn">
-            <button id="btn-cancle" type="button">취소</button>
-            <button id="btn-save" type="button" onclick="saveInfo()">
-              저장
-            </button>
-          </div>
-        </div>
-        <footer>
-          <div class="footer-img">
-            <img src="/resources/static/images/T.A.S-logo.png" alt="" />
-          </div>
-          <div class="footer-info">
-            <p>이용약관 | 개인정보처리방침 | 운영 관리 방침</p>
-            <p>email : jyg12770@google.com | email : skwjdtn3171@naver.com</p>
-            <p>
-              (우)34838 대전 중구 중앙로 121번길 20 | 대표전화 : 042-222-2402
-            </p>
-          </div>
-          <div class="footer-btn">
-            <button
-              type="button"
-              style="cursor: pointer"
-              onclick="window.scrollTo({top:0, left:0, behavior:'smooth'});"
-            >
-              top
-            </button>
-            <i class="fa-solid fa-angle-up"></i>
-          </div>
-        </footer>
-      </div>
-    </div>
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-    <script>
-      $("#btn-cancle").on("click", function () {
-        var result = confirm("내 정보수정을 취소하시겠습니까?");
-        if (result) {
-          location.href = "/tas/my/info";
-        }
-      });
-      // 내정보수정이 실행되자마자 input에 값 들어가는 ajax
-      $.ajax({
-        url: "http://localhost:8080/api/v1/re/my/info",
-        type: "GET",
-        dataType: "json",
-        success: function (response) {
-          console.log(response);
-          $("#email-user-write-box").css("display", "block");
-          $("input[id=userName]").attr("value", response.user_name);
-          $("input[id=email-id]").attr("value", response.user_email_id);
-          $("input[id=email-user-write-box]").attr(
-            "value",
-            response.user_email_addr
-          );
-          $("input[id=addr]").attr("value", response.user_addr);
-          $("input[id=user-detail-addr]").attr(
-            "value",
-            response.user_detail_addr
-          );
-        },
-      });
-      var emailAddrVal = function (value) {
-        $("#emailAddrHidden").val(value);
-        if ($("#emailAddrHidden").val() == "email-user-write") {
-          $("#email-user-write-box").css("display", "block");
-        }
-        if ($("#emailAddrHidden").val() != "email-user-write") {
-          $("#email-user-write-box").css("display", "none");
-        }
-      };
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>T.A.S 내 정보 수정</title>
+<link rel="stylesheet" href="/resources/static/css/reMyInfo.css" />
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+	integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+	crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+	<div class="container">
+		<div class="top-background-color">
+			<header>
+				<div class="circle-01"></div>
+				<div class="circle-02"></div>
+				<div class="circle-03"></div>
+				<div class="row top">
+					<a href="/tas/main">home</a> <i class="fa-solid fa-house-chimney"
+						style="color: #eaeaea; margin-left: 5px; margin-top: 3px"></i>
+					<select name="lang-selbox" id="">
+						<option value="korea">한글</option>
+						<option value="eng">English</option>
+					</select>
+				</div>
+				<div class="row header-category">
+					<div class="logo">
+						<a href="/tas/main"> <img
+							src="/resources/static/images/T.A.S-logo.png" alt="" />
+						</a>
+					</div>
+					<div class="row category">
+						<div class="category-link dropdown">
+							<div class="link-button">통계 자료실</div>
+							<div class="dropdown-content">
+								<a href="/law">법규 위반</a> <a
+									href="/alcohol">음주 정도</a> <a
+									href="/road">도로 종류</a> <a
+									href="/accident">사고 유형</a> <a
+									href="/city">시도 별</a>
+							</div>
+						</div>
+						<div class="category-link service-link">
+							<a href="/tas/intro">서비스 소개</a>
+						</div>
+						<div class="category-link client-link">
+							<a href="/service/center">고객 센터</a>
+						</div>
+						<div class="category-link login-link">
+							<input id="loginSessionHidden" type="hidden" value="" /> 
+							<a id="loginTag" href="/login">로그인</a> 
+							<a id="infoTag" style="display: none" href="/tas/my/info">마이페이지</a>
+						</div>
+					</div>
+				</div>
+			</header>
+		</div>
+		<!-- header end -->
+		<div class="bottom-background-color">
+			<div class="re-my-info-wrap">
+				<h1>내 정보 수정</h1>
+				<!-- 기존 정보가 적혀있어야 함-->
+				<label for="userName">이름</label> <input id="userName" type="text" />
+				<label for="password">비밀번호</label> <input id="password"
+					type="password" /> <label for="rePassword">비밀번호 재확인</label> <input
+					id="rePassword" type="password" /> <label for="email-id">e-mail주소</label>
+				<div class="row re-email-wrap">
+					<input id="email-id" type="text" /> <input type="hidden"
+						id="emailAddrHidden" /> <select name="email-addr" id="email-addr"
+						onchange="emailAddrVal(this.value)">
+						<option value="">이메일주소</option>
+						<option value="email-user-write">직접입력</option>
+						<option value="@gmail">@gmail.com</option>
+						<option value="@google">@google.com</option>
+						<option value="@naver">@naver.com</option>
+						<option value="@hanmail">@hanmail.net</option>
+						<option value="@daum">@daum.net</option>
+						<option value="@hotmail">@hotmail.com</option>
+					</select>
+				</div>
+				<input id="email-user-write-box" type="text" style="display: none"
+					placeholder="ex) @email.com" /> <label for="addr">주소</label>
+				<div class="re-addr-wrap">
+					<div class="addr-btn-wrap">
+						<input id="addr" type="text" onclick="getPostCode()" />
+						<button type="button" onclick="getPostCode()">도로명 주소</button>
+					</div>
+					<input id="user-detail-addr" type="text" placeholder="  상세주소" />
+				</div>
+				<!-- 회원탈퇴 추가 -->
+				<button id="secession-btn" type="button">회원탈퇴</button>
+				<div class="re-my-info-btn">
+					<button id="btn-cancle" type="button">취소</button>
+					<button id="btn-save" type="button" onclick="saveInfo()">
+						저장</button>
+				</div>
+			</div>
+			<footer>
+				<div class="footer-img">
+					<img src="/resources/static/images/T.A.S-logo.png" alt="" />
+				</div>
+				<div class="footer-info">
+					<p>이용약관 | 개인정보처리방침 | 운영 관리 방침</p>
+					<p>email : jyg12770@google.com | email : skwjdtn3171@naver.com</p>
+					<p>(우)34838 대전 중구 중앙로 121번길 20 | 대표전화 : 042-222-2402</p>
+				</div>
+				<div class="footer-btn">
+					<button type="button" style="cursor: pointer"
+						onclick="window.scrollTo({top:0, left:0, behavior:'smooth'});">
+						top</button>
+					<i class="fa-solid fa-angle-up"></i>
+				</div>
+			</footer>
+		</div>
+	</div>
+	<script type="module"
+		src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule
+		src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+		crossorigin="anonymous"></script>
+	<script
+		src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+	<script>
+		$("#btn-cancle").on("click", function() {
+			var result = confirm("내 정보수정을 취소하시겠습니까?");
+			if (result) {
+				location.href = "/tas/my/info";
+			}
+		});
+		// 내정보수정이 실행되자마자 input에 값 들어가는 ajax
+		$.ajax({
+			url : "http://localhost:8080/api/v1/re/my/info",
+			type : "GET",
+			dataType : "json",
+			success : function(response) {
+				//console.log(response);
+				$("#email-user-write-box").css("display", "block");
+				$("input[id=userName]").attr("value", response.user_name);
+				$("input[id=email-id]").attr("value", response.user_email_id);
+				$("input[id=email-user-write-box]").attr("value",
+						response.user_email_addr);
+				$("input[id=addr]").attr("value", response.user_addr);
+				$("input[id=user-detail-addr]").attr("value",
+						response.user_detail_addr);
+			},
+		});
+		var emailAddrVal = function(value) {
+			$("#emailAddrHidden").val(value);
+			if ($("#emailAddrHidden").val() == "email-user-write") {
+				$("#email-user-write-box").css("display", "block");
+			}
+			if ($("#emailAddrHidden").val() != "email-user-write") {
+				$("#email-user-write-box").css("display", "none");
+			}
+		};
 
-      // 도로명주소
-      function getPostCode() {
-        // daum클래스는 위에 script cdn에서 불러옴
-        new daum.Postcode({
-          // oncomplete : 내가 주소를 입력했다면 실행 해
-          oncomplete: function (data) {
-            // 도로명 주소의 노출 규칙에 따라 주소를 조합한다.
-            // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
-            var fullRoadAddr = data.roadAddress; // 도로명 주소 변수
-            var extraRoadAddr = ""; // 도로명 조합형 주소 변수
+		// 도로명주소
+		function getPostCode() {
+			// daum클래스는 위에 script cdn에서 불러옴
+			new daum.Postcode({
+				// oncomplete : 내가 주소를 입력했다면 실행 해
+				oncomplete : function(data) {
+					// 도로명 주소의 노출 규칙에 따라 주소를 조합한다.
+					// 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+					var fullRoadAddr = data.roadAddress; // 도로명 주소 변수
+					var extraRoadAddr = ""; // 도로명 조합형 주소 변수
 
-            // 법정동명이 있을 경우 추가한다. (법정리는 제외)
-            // 법정동의 경우 마지막 문자가 "동/로/가"로 끝난다.
-            if (data.bname !== "" && /[동|로|가]$/g.test(data.bname)) {
-              extraRoadAddr += data.bname;
-            }
-            // 건물명이 있고, 공동주택일 경우 추가한다.
-            if (data.buildingName !== "" && data.apartment === "Y") {
-              extraRoadAddr +=
-                extraRoadAddr !== ""
-                  ? ", " + data.buildingName
-                  : data.buildingName;
-            }
-            // 도로명, 지번 조합형 주소가 있을 경우, 괄호까지 추가한 최종 문자열을 만든다.
-            if (extraRoadAddr !== "") {
-              extraRoadAddr = " (" + extraRoadAddr + ")";
-            }
-            // 도로명, 지번 주소의 유무에 따라 해당 조합형 주소를 추가한다.
-            if (fullRoadAddr !== "") {
-              fullRoadAddr += extraRoadAddr;
-            }
-            addr = $("#addr").val(data.zonecode + ", " + fullRoadAddr);
-            addr = addr[0].value;
-            //data.zoncode = 우편번호
-            // 만약 우편번호까지 나오게 하고 싶으면 밑에 zonecode포함된걸 하기
-          },
-        }).open();
-      }
+					// 법정동명이 있을 경우 추가한다. (법정리는 제외)
+					// 법정동의 경우 마지막 문자가 "동/로/가"로 끝난다.
+					if (data.bname !== "" && /[동|로|가]$/g.test(data.bname)) {
+						extraRoadAddr += data.bname;
+					}
+					// 건물명이 있고, 공동주택일 경우 추가한다.
+					if (data.buildingName !== "" && data.apartment === "Y") {
+						extraRoadAddr += extraRoadAddr !== "" ? ", "
+								+ data.buildingName : data.buildingName;
+					}
+					// 도로명, 지번 조합형 주소가 있을 경우, 괄호까지 추가한 최종 문자열을 만든다.
+					if (extraRoadAddr !== "") {
+						extraRoadAddr = " (" + extraRoadAddr + ")";
+					}
+					// 도로명, 지번 주소의 유무에 따라 해당 조합형 주소를 추가한다.
+					if (fullRoadAddr !== "") {
+						fullRoadAddr += extraRoadAddr;
+					}
+					addr = $("#addr").val(data.zonecode + ", " + fullRoadAddr);
+					addr = addr[0].value;
+					//data.zoncode = 우편번호
+					// 만약 우편번호까지 나오게 하고 싶으면 밑에 zonecode포함된걸 하기
+				},
+			}).open();
+		}
 
-      function saveInfo() {
-        var name = $("#userName").val();
-        var password = $("#password").val();
-        var rePassword = $("#rePassword").val();
-        var emailId = $("#email-id").val();
-        var emailAddr = $("#emailAddrHidden").val();
-        var detailAddr = $("#user-detailAddr").val();
-        // 사용자가 직접메일주소를 입력했을 경우
-        var directlyEmailAddr = $("#email-user-write-box").val();
-        if (password !== rePassword) {
-          alert("입력한 비밀번호가 다릅니다");
-          $("#rePassword").focus();
-          return false;
-        }
+		function saveInfo() {
+			var name = $("#userName").val();
+			var password = $("#password").val();
+			var rePassword = $("#rePassword").val();
+			var emailId = $("#email-id").val();
+			var emailAddr = $("#emailAddrHidden").val();
+			var detailAddr = $("#user-detailAddr").val();
+			// 사용자가 직접메일주소를 입력했을 경우
+			var directlyEmailAddr = $("#email-user-write-box").val();
+			if (password !== rePassword) {
+				alert("입력한 비밀번호가 다릅니다");
+				$("#rePassword").focus();
+				return false;
+			}
 
-        // API서버에 전송할 json생성 (email 선택시)
-        var jsonData = {
-          userName: name,
-          userPassword: password,
-          userEmailId: emailId,
-          userEmailAddr: directlyEmailAddr,
-          userAddr: addr.value,
-          userDetailAddr: detailAddr,
-        };
-        if (emailAddr != "") {
-          // directlyEmailAddr = "";
-          jsonData = {
-            userName: name,
-            userPassword: password,
-            userEmailId: emailId,
-            userEmailAddr: emailAddr,
-            userAddr: addr.value,
-            userDetailAddr: detailAddr,
-          };
-        }
+			// API서버에 전송할 json생성 (email 선택시)
+			var jsonData = {
+				userName : name,
+				userPassword : password,
+				userEmailId : emailId,
+				userEmailAddr : directlyEmailAddr,
+				userAddr : addr.value,
+				userDetailAddr : detailAddr,
+			};
+			if (emailAddr != "") {
+				// directlyEmailAddr = "";
+				jsonData = {
+					userName : name,
+					userPassword : password,
+					userEmailId : emailId,
+					userEmailAddr : emailAddr,
+					userAddr : addr.value,
+					userDetailAddr : detailAddr,
+				};
+			}
 
-        var regExpName = /^[가-힣]{2,4}$/;
-        if (!regExpName.test(name)) {
-          alert("이름은 한글로 2~4글자 이내입니다");
-          return false;
-        }
+			var regExpName = /^[가-힣]{2,4}$/;
+			if (!regExpName.test(name)) {
+				alert("이름은 한글로 2~4글자 이내입니다");
+				return false;
+			}
 
-        var regExpPw = /^(?=.*\d)(?=.*[a-zA-Z])[0-9a-zA-Z]{8,16}$/;
-        if (!regExpPw.test(password)) {
-          alert("비밀번호는 8 ~ 16자 영문, 숫자 조합입니다");
-          return false;
-        }
-        var result = confirm("회원정보를 수정하시겠습니까?");
-        if (result) {
-          $.ajax({
-            url: "http://localhost:8080/api/v1/re/my/info",
-            type: "PATCH",
-            contentType: "application/json",
-            dataType: "json",
-            data: JSON.stringify(jsonData),
-            success: function (response) {
-              if (response > 0) {
-                alert("회원정보수정이 완료 되었습니다.");
-                location.replace("/tas/my/info");
-              }
-            },
-            error: function (request, status, error) {
-              console.log("에러 내용은 : " + error);
-            },
-          });
-        }
-        if (!result) {
-          alert("회원정보수정이 취소 되었습니다");
-          emailAddr = "";
-          return false;
-        }
-      }
-    </script>
-  </body>
+			var regExpPw = /^(?=.*\d)(?=.*[a-zA-Z])[0-9a-zA-Z]{8,16}$/;
+			if (!regExpPw.test(password)) {
+				alert("비밀번호는 8 ~ 16자 영문, 숫자 조합입니다");
+				return false;
+			}
+			var result = confirm("회원정보를 수정하시겠습니까?");
+			if (result) {
+				$.ajax({
+					url : "http://localhost:8080/api/v1/re/my/info",
+					type : "PATCH",
+					contentType : "application/json",
+					dataType : "json",
+					data : JSON.stringify(jsonData),
+					success : function(response) {
+						if (response > 0) {
+							alert("회원정보수정이 완료 되었습니다.");
+							location.replace("/tas/my/info");
+						}
+					},
+					error : function(request, status, error) {
+						console.log("에러 내용은 : " + error);
+					},
+				});
+			}
+			if (!result) {
+				alert("회원정보수정이 취소 되었습니다");
+				emailAddr = "";
+				return false;
+			}
+		}
+		// 회원탈퇴 버튼 js 추가
+		$('#secession-btn').click(
+				function() {
+					var result = confirm("탈퇴하시겠습니까?");
+					if (result) {
+						var popup = window.open("popup/secessionPopup.html",
+								"password-check",
+								"width=470px, height=200px, left=100, top=50");
+					}
+				})
+		// 로그인 여부(session) 확인
+		if("<%out.print(request.getSession().getAttribute("userId"));%>" !== "null"){
+			console.log("session있음")
+			$('#loginTag').css("display","none");
+			$('#infoTag').css("display","block");
+		}
+		else{
+			$('#loginTag').css("display","block");
+			$('#infoTag').css("display","none");
+			console.log("session없음")
+		}
+	</script>
+</body>
 </html>

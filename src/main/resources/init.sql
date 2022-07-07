@@ -28,6 +28,7 @@ CREATE TABLE IF NOT EXISTS tas_user( -- user 테이블
 	user_email_id VARCHAR(100) NOT NULL COMMENT '회원 이메일 ID',
 	user_email_addr VARCHAR(100) NOT NULL COMMENT '회원 이메일 ADDR',
 	user_addr VARCHAR(200) NOT NULL COMMENT '회원 주소',
+	user_detail_addr VARCHAR(200) NOT NULL COMMENT '회원 상세 주소',
 	autority VARCHAR(8) NOT NULL COMMENT 'false:user, true:manager',
 	user_status VARCHAR(1) DEFAULT 'y' NOT NULL COMMENT '회원여부'
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

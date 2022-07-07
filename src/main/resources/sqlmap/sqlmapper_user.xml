@@ -35,6 +35,28 @@
 			#{userStatus}
 		)
 	</insert>
+	<insert id="insertAdmin">
+		INSERT INTO tas_user
+		(
+			user_id,
+			user_name,
+			user_password,
+			user_email_id,
+			user_email_addr,
+			autority,
+			user_status
+		)
+		VALUES
+		(
+			#{userId},
+			#{userName},
+			#{userPassword},
+			#{userEmailId},
+			#{userEmailAddr},
+			#{autority},
+			#{userStatus}
+		)
+	</insert>
 	
 	<select id="selectUserOne" resultType="UserVO">
 		SELECT 
@@ -83,4 +105,13 @@
 			user_status = #{userStatus}
 		WHERE user_id = #{userId}
 	</update>
+	
+	<select id="selectMyInfoUserInfo" resultType="map">
+		SELECT 
+			user_id AS userId,
+			user_name AS userName,
+			user_gender AS userGender
+		FROM tas_user
+		WHERE user_id = #{userId}
+	</select>
 </mapper>

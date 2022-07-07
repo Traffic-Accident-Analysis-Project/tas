@@ -1,202 +1,215 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>T.A.S 마이 페이지</title>
-    <link rel="stylesheet" href="/resources/static/css/myPage.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
-  <body>
-    <div class="container">
-      <div class="top-background-color">
-        <header>
-          <div class="circle-01"></div>
-          <div class="circle-02"></div>
-          <div class="circle-03"></div>
-          <div class="row top">
-            <a href="/tas/main">home</a>
-            <i
-              class="fa-solid fa-house-chimney"
-              style="color: #eaeaea; margin-left: 5px; margin-top: 3px"
-            ></i>
-            <select name="lang-selbox" id="">
-              <option value="korea">한글</option>
-              <option value="eng">English</option>
-            </select>
-          </div>
-          <div class="row header-category">
-            <div class="logo">
-              <a href="/tas/main">
-                <img src="/resources/static/images/T.A.S-logo.png" alt="" />
-              </a>
-            </div>
-            <div class="row category">
-              <div class="category-link dropdown">
-                <div class="link-button">통계 자료실</div>
-                <div class="dropdown-content">
-                  <a href="statisticalData/law.html">법규 위반</a>
-                  <a href="statisticalData/alcohol.html">음주 정도</a>
-                  <a href="statisticalData/roadType.html">도로 종류</a>
-                  <a href="statisticalData/accidentType.html">사고 유형</a>
-                  <a href="statisticalData/cityType.html">시도 별</a>
-                </div>
-              </div>
-              <div class="category-link service-link">
-                <a href="/tas/intro">서비스 소개</a>
-              </div>
-              <div class="category-link client-link">
-                <a href="/service/center">고객 센터</a>
-              </div>
-              <div class="category-link login-link">
-                <a href="/login">로그인</a>
-              </div>
-            </div>
-          </div>
-        </header>
-      </div>
-      <!-- header end -->
-      <div class="bottom-background-color">
-        <div class="my-page-wrap">
-          <div class="row-space my-page-user-id-wrap">
-            <label for="user-id">사용자 ID</label>
-            <div class="my-page-item my-page-user-id">jyg12770</div>
-          </div>
-          <hr style="width: 32%; margin-top: 0.5%; margin-left: 8%" />
-          <div class="row-space my-page-user-id-wrap">
-            <label for="user-name">사용자 이름</label>
-            <div class="my-page-item my-page-user-name">정지유</div>
-          </div>
-          <hr style="width: 32%; margin-top: 0.5%; margin-left: 8%" />
-          <div class="row-space my-page-user-id-wrap">
-            <label for="user-gendel">성별</label>
-            <div class="my-page-item my-page-user-gender">여성</div>
-          </div>
-          <hr style="width: 32%; margin-top: 0.5%; margin-left: 8%" />
-          <div class="my-page-btn">
-            <button id="re-my-info-btn" type="button">내 정보 수정</button>
-            <button id="secession-btn" type="button">회원 탈퇴</button>
-          </div>
-          <div class="my-write">
-            <div class="my-write-board-header">
-              <p>내 문의</p>
-            </div>
-            <table>
-              <thead>
-                <tr>
-                  <th>글 번호</th>
-                  <th>작성자</th>
-                  <th>문의 유형</th>
-                  <th>작성 날짜</th>
-                  <th>조회 수</th>
-                </tr>
-              </thead>
-              <tbody id="boardData">
-                <tr>
-                  <td>1</td>
-                  <td>현상원</td>
-                  <td>점심시간이 너무 짧아요!</td>
-                  <td>2022-05-19</td>
-                  <td><span class="cnt-high">8320</span></td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>현상원</td>
-                  <td>학원에 커피기계가 없어요!</td>
-                  <td>2022-05-18</td>
-                  <td><span class="cnt-middle">1200</span></td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>현상원</td>
-                  <td>너무 졸려요...</td>
-                  <td>2022-05-19</td>
-                  <td><span class="cnt-row">5</span></td>
-                </tr>
-                <tr>
-                  <td>4</td>
-                  <td>현상원</td>
-                  <td>안녕하세요!</td>
-                  <td>2022-05-19</td>
-                  <td><span class="cnt-row">22</span></td>
-                </tr>
-              </tbody>
-            </table>
-            <div class="pagination">
-              <a href="#">Previous</a>
-              <a href="#">1</a>
-              <a href="#">2</a>
-              <a href="#">3</a>
-              <a href="#">4</a>
-              <a href="#">5</a>
-              <a href="#">Next</a>
-            </div>
-          </div>
-        </div>
-        <footer>
-          <div class="footer-img">
-            <img src="/resources/static/images/T.A.S-logo.png" alt="" />
-          </div>
-          <div class="footer-info">
-            <p>이용약관 | 개인정보처리방침 | 운영 관리 방침</p>
-            <p>email : jyg12770@google.com | email : skwjdtn3171@naver.com</p>
-            <p>
-              (우)34838 대전 중구 중앙로 121번길 20 | 대표전화 : 042-222-2402
-            </p>
-          </div>
-          <div class="footer-btn">
-            <button
-              type="button"
-              style="cursor: pointer"
-              onclick="window.scrollTo({top:0, left:0, behavior:'smooth'});"
-            >
-              top
-            </button>
-            <i class="fa-solid fa-angle-up"></i>
-          </div>
-        </footer>
-      </div>
-    </div>
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
-    <script src="index.js"></script>
-    <script>
-      $("#re-my-info-btn").on("click", function () {
-        location.href = "/tas/my/info/update";
-      });
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>T.A.S 마이 페이지</title>
+<link rel="stylesheet" href="/resources/static/css/myPage.css" />
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+	integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+	crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+	<div class="container">
+		<div class="top-background-color">
+			<header>
+				<div class="circle-01"></div>
+				<div class="circle-02"></div>
+				<div class="circle-03"></div>
+				<div class="row top">
+					<a href="/tas/main">home</a> <i class="fa-solid fa-house-chimney"
+						style="color: #eaeaea; margin-left: 5px; margin-top: 3px"></i>
+					<select name="lang-selbox" id="">
+						<option value="korea">한글</option>
+						<option value="eng">English</option>
+					</select>
+				</div>
+				<div class="row header-category">
+					<div class="logo">
+						<a href="/tas/main"> <img
+							src="/resources/static/images/T.A.S-logo.png" alt="" />
+						</a>
+					</div>
+					<div class="row category">
+						<div class="category-link dropdown">
+							<div class="link-button">통계 자료실</div>
+							<div class="dropdown-content">
+								<a href="/law">법규 위반</a> <a
+									href="/alcohol">음주 정도</a> <a
+									href="/road">도로 종류</a> <a
+									href="/accident">사고 유형</a> <a
+									href="/city">시도 별</a>
+							</div>
+						</div>
+						<div class="category-link service-link">
+							<a href="/tas/intro">서비스 소개</a>
+						</div>
+						<div class="category-link client-link">
+							<a href="/service/center">고객 센터</a>
+						</div>
+						<div class="category-link login-link">
+							<input id="loginSessionHidden" type="hidden" value="" /> 
+							<a id="loginTag" href="/login">로그인</a> 
+							<a id="infoTag" style="display: none" href="/tas/my/info">마이페이지</a>
+						</div>
+					</div>
+				</div>
+			</header>
+		</div>
+		<!-- header end -->
+		<div class="bottom-background-color">
+			<div class="my-page-wrap">
+				<div class="row-space my-page-user-id-wrap">
+					<label for="user-id">사용자 ID</label>
+					<div class="my-page-item my-page-user-id">jyg12770</div>
+				</div>
+				<hr style="width: 32%; margin-top: 0.5%; margin-left: 8%" />
+				<div class="row-space my-page-user-id-wrap">
+					<label for="user-name">사용자 이름</label>
+					<div class="my-page-item my-page-user-name">정지유</div>
+				</div>
+				<hr style="width: 32%; margin-top: 0.5%; margin-left: 8%" />
+				<div class="row-space my-page-user-id-wrap">
+					<label for="user-gendel">성별</label>
+					<div class="my-page-item my-page-user-gender">여성</div>
+				</div>
+				<hr style="width: 32%; margin-top: 0.5%; margin-left: 8%" />
+				<div class="my-page-btn">
+					<button id="re-my-info-btn" type="button">내 정보 수정</button>
+					<button id="logout-btn" type="button">로그 아웃</button>
+				</div>
+				<div class="my-write">
+					<div class="my-write-board-header">
+						<p>내 문의</p>
+					</div>
+					<table>
+						<thead>
+							<tr>
+								<th>글 번호</th>
+								<th>작성자</th>
+								<th>문의 유형</th>
+								<th>작성 날짜</th>
+								<th>조회 수</th>
+							</tr>
+						</thead>
+						<tbody id="boardData">
+							<tr>
+								<td>1</td>
+								<td>현상원</td>
+								<td>점심시간이 너무 짧아요!</td>
+								<td>2022-05-19</td>
+								<td><span class="cnt-high">8320</span></td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>현상원</td>
+								<td>학원에 커피기계가 없어요!</td>
+								<td>2022-05-18</td>
+								<td><span class="cnt-middle">1200</span></td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>현상원</td>
+								<td>너무 졸려요...</td>
+								<td>2022-05-19</td>
+								<td><span class="cnt-row">5</span></td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>현상원</td>
+								<td>안녕하세요!</td>
+								<td>2022-05-19</td>
+								<td><span class="cnt-row">22</span></td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="pagination">
+						<a href="#">Previous</a> <a href="#">1</a> <a href="#">2</a> <a
+							href="#">3</a> <a href="#">4</a> <a href="#">5</a> <a href="#">Next</a>
+					</div>
+				</div>
+			</div>
+			<footer>
+				<div class="footer-img">
+					<img src="/resources/static/images/T.A.S-logo.png" alt="" />
+				</div>
+				<div class="footer-info">
+					<p>이용약관 | 개인정보처리방침 | 운영 관리 방침</p>
+					<p>email : jyg12770@google.com | email : skwjdtn3171@naver.com</p>
+					<p>(우)34838 대전 중구 중앙로 121번길 20 | 대표전화 : 042-222-2402</p>
+				</div>
+				<div class="footer-btn">
+					<button type="button" style="cursor: pointer"
+						onclick="window.scrollTo({top:0, left:0, behavior:'smooth'});">
+						top</button>
+					<i class="fa-solid fa-angle-up"></i>
+				</div>
+			</footer>
+		</div>
+	</div>
+	<script type="module"
+		src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule
+		src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+		crossorigin="anonymous"></script>
+	<script src="/resources/static/js/index.js"></script>
+	<script>
+		$("#re-my-info-btn").on("click", function() {
+			location.href = "/tas/my/info/update";
+		});
 
-      $("#secession-btn").on("click",function(){
-        var result = confirm("탈퇴하시겠습니까?")
-        if(result) {
-          var popup = window.open(
-        "/tas/user/secession",
-        "password-check",
-        "width=470px, height=200px, left=100, top=50"
-      );
-        }
-      })
-    </script>
-  </body>
+		// 로그아웃으로 수정
+		$("#logout-btn").on("click", function() {
+			var isLogout = confirm("로그아웃 하시겠습니까?");
+			if (isLogout) {
+				$.ajax({
+					url : "/api/v1/logout",
+					type : "GET",
+					success : function(response) {
+						location.reload();
+						console.log("logout");
+					},
+					error : function(request, status, error) {
+						console.log("에러 내용은 : " + error);
+					},
+				});
+			}
+
+		});
+		
+		// 사용자 정보로 input 값 가져오기
+		$.ajax({
+			url : "/api/v1/user/my/info/id/name/gender",
+			type : "GET",
+			success : function(response) {
+				$('.my-page-item my-page-user-id').val(response.userId);
+				$('.my-page-item my-page-user-name').val(response.userName);
+				$('.my-page-item my-page-user-gender').val(response.userGender);
+			},
+			error : function(request, status, error) {
+				console.log("에러 내용은 : " + error);
+			},
+		});
+		
+		// 로그인 여부(session) 확인
+		if("<%out.print(request.getSession().getAttribute("userId"));%>" !== "null"){
+			console.log("session있음")
+			$('#loginTag').css("display","none");
+			$('#infoTag').css("display","block");
+		}
+		else{
+			$('#loginTag').css("display","block");
+			$('#infoTag').css("display","none");
+			console.log("session없음")
+		}
+	</script>
+</body>
 </html>

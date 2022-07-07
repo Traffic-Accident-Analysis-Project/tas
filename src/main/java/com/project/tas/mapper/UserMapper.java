@@ -17,6 +17,7 @@ public interface UserMapper {
 	 * @date : 2022. 7. 4. comment : 회원가입
 	 */
 	public int insertUsers(UserVO vo);
+	public int insertAdmin(UserVO vo);
 
 	/**
 	 * @author : ji_U
@@ -39,5 +40,8 @@ public interface UserMapper {
 	public int updateMyInfo(UserVO vo);
 	
 	public int updateSecession (UserVO vo);
+	
+	// 마이페이지에서 session의 id로 id, 이름, 성별만 조회
+	public Map<String, Object> selectMyInfoUserInfo(String userId);
 
 }

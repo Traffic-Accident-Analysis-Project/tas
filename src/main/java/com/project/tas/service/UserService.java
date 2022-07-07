@@ -32,6 +32,9 @@ public class UserService {
 		password = passwordEncoder.encode(password);
 		vo.setUserPassword(password);
 		vo.setUserStatus("y");
+		if(vo.getAutority().equals("admin")) {
+			return userMapper.insertAdmin(vo);
+		}
 		return userMapper.insertUsers(vo);
 	}
 
@@ -67,6 +70,9 @@ public class UserService {
 
 		httpSession.setAttribute("userId", user.getUserId());
 		httpSession.setAttribute("userPassword", user.getUserPassword());
+		// 성공 시 session값에 잘 들어갔는지 출력
+//		System.out.println(httpSession.getAttribute("userId"));
+//		System.out.println(httpSession.getAttribute("userPassword"));
 		return true;
 	}
 
@@ -76,18 +82,18 @@ public class UserService {
 
 	public Map<String, Object> getMyInfo(HttpSession session) {
 //		 확인을 위해 String id를 임의로 지정 나중에는 session에서 id가져올것
-//		String id = (String)session.getAttribute("userId");
-		String id = "apple001";
+		String id = (String)session.getAttribute("userId");
+//		String id = "apple001";
 		return userMapper.selectMyInfo(id);
 	}
 
 	@Transactional(rollbackFor = { Exception.class })
 	public int updateMyInfo(UserVO vo, HttpSession session) {
 		// session에서 가져온 id담기
-//		String userId = (String)session.getAttribute("userId");
-//		vo.setUserId(userId);
-		String id = "apple001";
-		vo.setUserId(id);
+		String userId = (String)session.getAttribute("userId");
+		vo.setUserId(userId);
+//		String id = "apple001";
+//		vo.setUserId(id);
 
 		// 바뀐비밀번호 다시 인코딩
 		String password = vo.getUserPassword();
@@ -100,11 +106,11 @@ public class UserService {
 	@Transactional(rollbackFor = { Exception.class })
 	public int updateSecession(UserVO vo, HttpSession session) {
 		// session에서 가져온 id담기
-//		String userId = (String)session.getAttribute("userId");
-//		vo.setUserId(userId);
+		String userId = (String)session.getAttribute("userId");
+		vo.setUserId(userId);
 		
-		String id = "apple001";
-		vo.setUserId(id);
+//		String id = "apple001";
+//		vo.setUserId(id);
 		
 		// 사용자 입력 pw
 		String inputPassword = vo.getUserPassword();
@@ -122,6 +128,13 @@ public class UserService {
 		
 		vo.setUserStatus("n");
 		return userMapper.updateSecession(vo);
+	}
+	
+	// 마이페이지에서 session의 id로 id, 이름, 성별만 조회
+	@Transactional(rollbackFor = { Exception.class })
+	public Map<String, Object> getMyInfoUserInfo(HttpSession session) {
+		String userId = (String)session.getAttribute("userId");
+		return userMapper.selectMyInfoUserInfo(userId);
 	}
 
 }

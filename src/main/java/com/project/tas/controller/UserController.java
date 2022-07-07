@@ -1,5 +1,7 @@
 package com.project.tas.controller;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,6 +19,12 @@ public class UserController {
 	public String callLoginPage() {
 		return "login";
 	}
+	// 로그아웃
+//	@GetMapping("/logout")
+//	public String callLoginout(HttpSession httpSession) {
+//		httpSession.invalidate();
+//		return "login";
+//	}
 	
 	// 관리자 / 일반회원 선택
 	@GetMapping("tas/join/select")
@@ -46,6 +54,7 @@ public class UserController {
 		return "myPage";
 	}
 	
+	// 회원 수정 페이지
 	@GetMapping("/tas/my/info/update")
 	public String callUpdateMyInfo() {
 		return "reMyInfo";

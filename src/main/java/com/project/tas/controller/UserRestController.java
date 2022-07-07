@@ -38,6 +38,12 @@ public class UserRestController {
 	public int callSaveUsers(@RequestBody UserVO vo) {
 		return userService.setUsers(vo);
 	}
+	// 관리자 회원가입
+	@CrossOrigin
+	@PostMapping("/admin")
+	public int callSaveAdmin(@RequestBody UserVO vo) {
+		return userService.setUsers(vo);
+	}
 
 	// 관리자코드 체크
 	@CrossOrigin
@@ -45,12 +51,18 @@ public class UserRestController {
 	public boolean callAdminPassword(@PathVariable("adminPassword") String adminPassword) {
 		return userService.getAdminPasswordCheck(adminPassword);
 	}
-
+	
+	// Login : 정보 일치하면 session에 저장
 	@CrossOrigin
 	@PostMapping("/login")
 	public boolean callIsLogin(@RequestBody UserVO vo, HttpSession httpSession) {
 		boolean isLogin = userService.isUser(vo, httpSession);
 		return isLogin;
+	}
+	@CrossOrigin
+	@GetMapping("/logout")
+	public void callLogout(HttpSession httpSession) {
+		httpSession.invalidate();
 	}
 
 	@GetMapping("/user/map")
@@ -75,5 +87,12 @@ public class UserRestController {
 	@PatchMapping("/user/secession")
 	public int callUserSecession(@RequestBody UserVO vo, HttpSession session) {
 		return userService.updateSecession(vo, session);
+	}
+	
+	// 마이페이지에서 session의 id로 id, 이름, 성별만 조회
+	@CrossOrigin
+	@GetMapping("/user/my/info/id/name/gender")
+	public Map<String, Object> callMyInfoUserInfo(HttpSession session){
+		return userService.getMyInfoUserInfo(session);
 	}
 }

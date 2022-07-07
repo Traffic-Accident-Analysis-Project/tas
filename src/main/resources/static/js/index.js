@@ -351,9 +351,9 @@ $.ajax({
   type: "GET",
   dataType: "json",
   success: function (response) {
-    console.log(response[1]);
-    console.log(response[2]);
-    console.log(response[3]);
+    //console.log(response[1]);
+    //console.log(response[2]);
+    //console.log(response[3]);
   },
 });
 // accident : 사고유형별 Data
@@ -362,9 +362,9 @@ $.ajax({
   type: "GET",
   dataType: "json",
   success: function (response) {
-    console.log(response[1]);
-    console.log(response[2]);
-    console.log(response[3]);
+    //console.log(response[1]);
+    //console.log(response[2]);
+    //console.log(response[3]);
   },
 });
 // city : 시도별 Data
@@ -373,9 +373,9 @@ $.ajax({
   type: "GET",
   dataType: "json",
   success: function (response) {
-    console.log(response[1]);
-    console.log(response[2]);
-    console.log(response[3]);
+    //console.log(response[1]);
+    //console.log(response[2]);
+    //console.log(response[3]);
   },
 });
 // road : 도로별/요일별 Data
@@ -384,9 +384,9 @@ $.ajax({
   type: "GET",
   dataType: "json",
   success: function (response) {
-    console.log(response[1]);
-    console.log(response[2]);
-    console.log(response[3]);
+    //console.log(response[1]);
+    //console.log(response[2]);
+    //console.log(response[3]);
   },
 });
 // alcohol : 음주측정별 Data
@@ -395,8 +395,8 @@ $.ajax({
   type: "GET",
   dataType: "json",
   success: function (response) {
-    console.log(response[1]);
-    console.log(response[2]);
-    console.log(response[3]);
+    //console.log(response[1]);
+    //console.log(response[2]);
+    //console.log(response[3]);
   },
 });
