@@ -190,9 +190,10 @@
 			url : "/api/v1/user/my/info/id/name/gender",
 			type : "GET",
 			success : function(response) {
-				$('.my-page-item my-page-user-id').val(response.userId);
-				$('.my-page-item my-page-user-name').val(response.userName);
-				$('.my-page-item my-page-user-gender').val(response.userGender);
+				console.log($('.my-page-item my-page-user-id'))
+				$('.my-page-item my-page-user-id').text(response.userId);
+				$('.my-page-item my-page-user-name').text(response.userName);
+				$('.my-page-item my-page-user-gender').text(response.userGender);
 			},
 			error : function(request, status, error) {
 				console.log("에러 내용은 : " + error);
