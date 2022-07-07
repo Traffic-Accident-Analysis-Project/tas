@@ -25,12 +25,12 @@ public class TasContoller {
 	// 메인
 	@GetMapping("/tas/main/eng")
 	public String tasMainEng(HttpSession session) {
-		return "index";
+		return "index/eng";
 	}
 
 	// 서비스 소개
 	@GetMapping("/tas/intro/eng")
 	public String tasIntroEng() {
-		return "introService";
+		return "introService/eng";
 	}
 }
