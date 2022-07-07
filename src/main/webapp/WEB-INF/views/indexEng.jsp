@@ -76,7 +76,7 @@
 			<p>Introduce for Traffic Accident Statistics</p>
 			<div class="row main-emoji-wrap">
 				<div class="main-emoji-item">
-            <h3>TAS Production Background</h3>
+            <h3>TAS Production <br>Background</h3>
             <div class="emoji">
               <i class="fa-regular fa-lightbulb fa-6x"></i>
             </div>
@@ -89,7 +89,7 @@
           </div>
           <div class="main-emoji-item">
             <div class="emoji">
-              <h3>TAS Production Process</h3>
+              <h3>TAS Production <br>Process</h3>
               <a
                 href="https://github.com/Traffic-Accident-Analysis-Project"
                 style="color: white"
@@ -104,24 +104,24 @@
           </div>
           <div class="main-emoji-item">
             <div class="emoji">
-              <h3>TAS의 목표</h3>
+              <h3>TAS<br>Objective</h3>
               <i class="fa-regular fa-lightbulb fa-6x"> </i>
             </div>
             <div class="emoji-text-wrap">
-              <p>사용자 맞춤형 그래프, 차트, <br> 지도를 제공하고</p>
-              <p>엑셀 다운로드를 제공하는 등</p>
-              <p>수요자 맞춤형 <br> 교통사고 통계서비스를 제공하는 것입니다</p>
+              <p>Provide custom graphs, charts and maps</p>
+              <p>Providing Excel downloads, etc.</p>
+              <p>Customized to the consumer<br> To provide traffic accident statistics service</p>
             </div>
           </div>
           <div class="main-emoji-item">
             <div class="emoji">
-              <h3>TAS의 발전방향</h3>
+              <h3>TAS Development <br>Direction</h3>
               <i class="fa-regular fa-lightbulb fa-6x"></i>
             </div>
             <div class="emoji-text-wrap">
-              <p>TAS는 고객센터를 통해 <br> 고객의 소리를 지속적으로 듣고</p>
-              <p>설문조사를 통한 니즈파악으로</p>
-              <p>현재보다 더 나은 서비스를 제공할 것입니다</p>
+              <p>TAS continuously listens to customers' voices <br> through the customer center</p>
+              <p>By identifying needs through surveys</p>
+              <p>We will provide a better service than the present</p>
             </div>
           </div>
 			</div>
@@ -132,18 +132,18 @@
 					<!-- Slides -->
 					<div class="swiper-slide">
 						<div class="swiper-text-wrap">
-							<h2>2016년 교통사고 통계</h2>
+							<h2>2016 Traffic Statistics</h2>
 							<div class="swiper-card-wrap">
 								<div class="swiper-card">
-									<div class="swiper-card-name">사고 건수</div>
+									<div class="swiper-card-name">Number ofAccidents</div>
 									<div id="swiper-accidents-cnt">441,834</div>
 								</div>
 								<div class="swiper-card">
-									<div class="swiper-card-name">사망자 수</div>
+									<div class="swiper-card-name">Number of Deaths</div>
 									<div id="swiper-dead-cnt">8,584</div>
 								</div>
 								<div class="swiper-card">
-									<div class="swiper-card-name">부상자 수</div>
+									<div class="swiper-card-name">Number of Injured</div>
 									<div id="swiper-injury-cnt">663,440</div>
 								</div>
 							</div>
@@ -154,18 +154,18 @@
 					</div>
 					<div class="swiper-slide">
 						<div class="swiper-text-wrap">
-							<h2>2017년 교통사고 통계</h2>
+							<h2>2017 Traffic Statistics</h2>
 							<div class="swiper-card-wrap">
 								<div class="swiper-card">
-									<div class="swiper-card-name">사고 건수</div>
+									<div class="swiper-card-name">Number ofAccidents</div>
 									<div id="swiper-accidents-cnt">432,670</div>
 								</div>
 								<div class="swiper-card">
-									<div class="swiper-card-name">사망자 수</div>
+									<div class="swiper-card-name">Number of Deaths</div>
 									<div id="swiper-dead-cnt">8,370</div>
 								</div>
 								<div class="swiper-card">
-									<div class="swiper-card-name">부상자 수</div>
+									<div class="swiper-card-name">Number of Injured</div>
 									<div id="swiper-injury-cnt">645,658</div>
 								</div>
 							</div>
@@ -176,18 +176,18 @@
 					</div>
 					<div class="swiper-slide">
 						<div class="swiper-text-wrap">
-							<h2>2018년 교통사고 통계</h2>
+							<h2>2018 Traffic Statistics</h2>
 							<div class="swiper-card-wrap">
 								<div class="swiper-card">
-									<div class="swiper-card-name">사고 건수</div>
+									<div class="swiper-card-name">Number ofAccidents</div>
 									<div id="swiper-accidents-cnt">434,296</div>
 								</div>
 								<div class="swiper-card">
-									<div class="swiper-card-name">사망자 수</div>
+									<div class="swiper-card-name">Number of Deaths</div>
 									<div id="swiper-dead-cnt">7,562</div>
 								</div>
 								<div class="swiper-card">
-									<div class="swiper-card-name">부상자 수</div>
+									<div class="swiper-card-name">Number of Injured</div>
 									<div id="swiper-injury-cnt">646,074</div>
 								</div>
 							</div>
@@ -197,18 +197,18 @@
 					</div>
 					<div class="swiper-slide">
 						<div class="swiper-text-wrap">
-							<h2>2019년 교통사고 통계</h2>
+							<h2>2019 Traffic Statistics</h2>
 							<div class="swiper-card-wrap">
 								<div class="swiper-card">
-									<div class="swiper-card-name">사고 건수</div>
+									<div class="swiper-card-name">Number ofAccidents</div>
 									<div id="swiper-accidents-cnt">459,200</div>
 								</div>
 								<div class="swiper-card">
-									<div class="swiper-card-name">사망자 수</div>
+									<div class="swiper-card-name">Number of Deaths</div>
 									<div id="swiper-dead-cnt">6,698</div>
 								</div>
 								<div class="swiper-card">
-									<div class="swiper-card-name">부상자 수</div>
+									<div class="swiper-card-name">Number of Injured</div>
 									<div id="swiper-injury-cnt">683,424</div>
 								</div>
 							</div>
@@ -219,18 +219,18 @@
 					</div>
 					<div class="swiper-slide">
 						<div class="swiper-text-wrap">
-							<h2>2020년 교통사고 통계</h2>
+							<h2>2020 Traffic Statistics</h2>
 							<div class="swiper-card-wrap">
 								<div class="swiper-card">
-									<div class="swiper-card-name">사고 건수</div>
+									<div class="swiper-card-name">Number ofAccidents</div>
 									<div id="swiper-accidents-cnt">419,308</div>
 								</div>
 								<div class="swiper-card">
-									<div class="swiper-card-name">사망자 수</div>
+									<div class="swiper-card-name">Number of Deaths</div>
 									<div id="swiper-dead-cnt">6,162</div>
 								</div>
 								<div class="swiper-card">
-									<div class="swiper-card-name">부상자 수</div>
+									<div class="swiper-card-name">Number of Injured</div>
 									<div id="swiper-injury-cnt">612,388</div>
 								</div>
 							</div>
@@ -252,7 +252,7 @@
 		<div class="main-section">
 			<div class="main-graph-section">
 				<!-- <img src="img/임시이미지.png" alt="" /> -->
-				<h1>교통사고 통계자료 그래프</h1>
+				<h1>Traffic Statistics Gragh</h1>
 				<div class="canvas-wrapper">
 					<div class="canvas-item no1">
 						<canvas id="histogram" width="500" height="500"></canvas>
@@ -267,16 +267,16 @@
 			</div>
 			<div class="main-user-board-list-section">
 				<div class="main-user-board-header">
-					<p>고객문의</p>
+					<p>Service Center</p>
 				</div>
 				<table>
 					<thead>
 						<tr>
-							<th>글 번호</th>
-							<th>작성자</th>
-							<th>문의 유형</th>
-							<th>작성 날짜</th>
-							<th>조회 수</th>
+							<th>No</th>
+							<th>Writer</th>
+							<th>Question Type</th>
+							<th>Create Date</th>
+							<th>Views</th>
 						</tr>
 					</thead>
 					<tbody id="boardData">
@@ -327,9 +327,15 @@
 				<img src="/resources/static/images/T.A.S-logo.png" alt="" />
 			</div>
 			<div class="footer-info">
-				<p>이용약관 | 개인정보처리방침 | 운영 관리 방침</p>
-				<p>email : jyg12770@google.com | email : skwjdtn3171@naver.com</p>
-				<p>(우)34838 대전 중구 중앙로 121번길 20 | 대표전화 : 042-222-2402</p>
+				<p>
+	              Terms of Service | privacy policy | Operational management policy
+	            </p>
+	            <p>email : jyg12770@google.com | email : skwjdtn3171@naver.com</p>
+	            <p>
+	              (Zip code)34838 20, Jungang-ro 121beon-gil, Jung-gu, Daejeon,
+	              Republic of Korea
+	            </p>
+	            <p>Main Phone : 042-222-2402</p>
 			</div>
 			<div class="footer-btn">
 				<button type="button" style="cursor: pointer"
@@ -381,7 +387,7 @@
 			.getContext("2d");
 	var contextPieChart = document.getElementById("pieChart").getContext("2d");
 	$.ajax({
-		url : "http://localhost:8080/api/v1/accident",
+		url : "/api/v1/accident",
 		type : "GET",
 		dataType : "json",
 		success : function(response) {
@@ -465,21 +471,21 @@
 							"12", ],
 					datasets : [ {
 						//데이터
-						label : "사고 건수", //차트 제목
+						label : "Number of Accidents", //차트 제목
 						fill : false, // line 형태일 때, 선 안쪽을 채우는지 안채우는지
 						data : dataAccidents,
 						backgroundColor : "rgba(255, 99, 132, 0.2)",
 						borderColor : "rgba(255, 99, 132, 1)",
 						borderWidth : 1, //경계선 굵기
 					}, {
-						label : "사망자 수",
+						label : "Number of Deaths",
 						fill : false,
 						data : dataDeath,
 						backgroundColor : "rgba(54, 162, 235, 0.2)",
 						borderColor : "rgba(54, 162, 235, 1)",
 						borderWidth : 1,
 					}, {
-						label : "부상자 수",
+						label : "Number of Injured",
 						fill : false,
 						data : dataInjured,
 						backgroundColor : "rgba(255, 206, 86, 0.2)",
@@ -495,7 +501,7 @@
 						},
 						subtitle : {
 							display : true,
-							text : "월별 히스토그램",
+							text : "Histogram by Month",
 							color : "skyblue",
 						},
 					},
@@ -507,7 +513,7 @@
 	// Line Chart for Law
 	$
 			.ajax({
-				url : "http://localhost:8080/api/v1/accident",
+				url : "/api/v1/accident",
 				type : "GET",
 				dataType : "json",
 				success : function(response) {
@@ -615,21 +621,21 @@
 									"2016", "2017", "2018", "2019", "2020", ],
 							datasets : [ {
 								//데이터
-								label : "사고 건수", //차트 제목
+								label : "Number of Accidents", //차트 제목
 								fill : false, // line 형태일 때, 선 안쪽을 채우는지 안채우는지
 								data : dataAccidents,
 								backgroundColor : "rgba(255, 99, 132, 0.2)",
 								borderColor : "rgba(255, 99, 132, 1)",
 								borderWidth : 1, //경계선 굵기
 							}, {
-								label : "사망자 수",
+								label : "Number of Deaths",
 								fill : false,
 								data : dataDeath,
 								backgroundColor : "rgba(54, 162, 235, 0.2)",
 								borderColor : "rgba(54, 162, 235, 1)",
 								borderWidth : 1,
 							}, {
-								label : "부상자 수",
+								label : "Number of Injured",
 								fill : false,
 								data : dataInjured,
 								backgroundColor : "rgba(255, 206, 86, 0.2)",
@@ -646,7 +652,7 @@
 								},
 								subtitle : {
 									display : true,
-									text : "년도별 그래프",
+									text : "Line Chart by Year",
 									color : "skyblue",
 								},
 							},
@@ -655,7 +661,7 @@
 				},
 			});
 	$.ajax({
-		url : "http://localhost:8080/api/v1/city",
+		url : "/api/v1/city",
 		type : "GET",
 		dataType : "json",
 		success : function(response) {
@@ -723,13 +729,27 @@
 						type : "doughnut", // 차트의 형태
 						data : {
 							// 차트에 들어갈 데이터
-							labels : [ "서울", "부산", "대구", "인천", "광주", "대전",
-									"울산", "경기", "강원", "충북", "충남", "전북", "전남",
-									"경북", "경남", "제주", "세종", ],
+							labels : [ "seoul",
+				                "busan",
+				                "daegu",
+				                "incheon",
+				                "gwangju",
+				                "daejeon",
+				                "ulsan",
+				                "kyeongki",
+				                "kangwon",
+				                "chungbuk",
+				                "chungnam",
+				                "jeonbuk",
+				                "jeonnam",
+				                "kyeongbuk",
+				                "kyeongnam",
+				                "jeju",
+				                "sejong", ],
 							datasets : [
 									{
 										//데이터
-										label : "사고 건수", //차트 제목
+										label : "Number of Accidents", //차트 제목
 										data : data,
 										backgroundColor : [
 										// "rgb(255,0,0)",
@@ -778,7 +798,7 @@
 								},
 								subtitle : {
 									display : true,
-									text : "시도별 그래프",
+									text : "Pie Chart by City",
 									color : "skyblue",
 								},
 							},
