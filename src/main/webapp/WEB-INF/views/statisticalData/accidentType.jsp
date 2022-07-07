@@ -205,7 +205,7 @@
                 </div>
               </div>
               <div class="excel-down-button">
-                <button type="button">Excel Downlod</button>
+                <a href="/accident/type/excel">Excel Downlod</a>
               </div>
             </div>
           </div>

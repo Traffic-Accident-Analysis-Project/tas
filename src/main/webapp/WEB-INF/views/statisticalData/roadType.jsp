@@ -189,7 +189,7 @@
                 </div>
               </div>
               <div class="excel-down-button">
-                <button type="button">Excel Downlod</button>
+				<a href="/road/type/excel">Excel Downlod</a>
               </div>
             </div>
           </div>
