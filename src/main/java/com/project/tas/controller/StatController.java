@@ -7,11 +7,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class StatController {
 //	@Autowired StatService statService;
 	
-	// Hello world
-	@GetMapping("/home")
-	public String callIndex() {
-		return "index";
-	}
 	// 사고유형
 	@GetMapping("/accident")
 	public String callAccidentPage() {
