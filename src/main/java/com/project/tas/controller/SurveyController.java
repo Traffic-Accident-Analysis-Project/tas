@@ -10,4 +10,10 @@ public class SurveyController {
 	public String callSurveyPage() {
 		return "survey";
 	}
+	
+	//영어페이지
+	@GetMapping("/survey/eng")
+	public String callSurveyPageEng() {
+		return "survey";
+	}
 }
