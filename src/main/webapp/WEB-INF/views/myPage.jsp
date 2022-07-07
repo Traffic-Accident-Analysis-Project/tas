@@ -67,24 +67,25 @@
 			<div class="my-page-wrap">
 				<div class="row-space my-page-user-id-wrap">
 					<label for="user-id">사용자 ID</label>
-					<div class="my-page-item my-page-user-id">jyg12770</div>
+					<div class="my-page-item my-page-user-id"></div>
 				</div>
 				<hr style="width: 32%; margin-top: 0.5%; margin-left: 8%" />
 				<div class="row-space my-page-user-id-wrap">
 					<label for="user-name">사용자 이름</label>
-					<div class="my-page-item my-page-user-name">정지유</div>
+					<div class="my-page-item my-page-user-name"></div>
 				</div>
 				<hr style="width: 32%; margin-top: 0.5%; margin-left: 8%" />
 				<div class="row-space my-page-user-id-wrap">
 					<label for="user-gendel">성별</label>
-					<div class="my-page-item my-page-user-gender">여성</div>
+					<div class="my-page-item my-page-user-gender"></div>
 				</div>
 				<hr style="width: 32%; margin-top: 0.5%; margin-left: 8%" />
 				<div class="my-page-btn">
 					<button id="re-my-info-btn" type="button">내 정보 수정</button>
 					<button id="logout-btn" type="button">로그 아웃</button>
 				</div>
-				<div class="my-write">
+				 
+				<!--<div class="my-write">
 					<div class="my-write-board-header">
 						<p>내 문의</p>
 					</div>
@@ -133,7 +134,7 @@
 						<a href="#">Previous</a> <a href="#">1</a> <a href="#">2</a> <a
 							href="#">3</a> <a href="#">4</a> <a href="#">5</a> <a href="#">Next</a>
 					</div>
-				</div>
+				</div>-->
 			</div>
 			<footer>
 				<div class="footer-img">
@@ -174,8 +175,7 @@
 					url : "/api/v1/logout",
 					type : "GET",
 					success : function(response) {
-						location.reload();
-						console.log("logout");
+						location.href = "/login";
 					},
 					error : function(request, status, error) {
 						console.log("에러 내용은 : " + error);
@@ -190,10 +190,15 @@
 			url : "/api/v1/user/my/info/id/name/gender",
 			type : "GET",
 			success : function(response) {
-				console.log($('.my-page-item my-page-user-id'))
-				$('.my-page-item my-page-user-id').text(response.userId);
-				$('.my-page-item my-page-user-name').text(response.userName);
-				$('.my-page-item my-page-user-gender').text(response.userGender);
+				$('.my-page-user-id').text(response.userId);
+				$('.my-page-user-name').text(response.userName);
+				$('.my-page-user-gender').text(response.userGender);
+				if(response.userGender == "m"){
+					$('.my-page-user-gender').text("남성");
+				}
+				if(response.userGender == "f"){
+					$('.my-page-user-gender').text("여성");
+				}
 			},
 			error : function(request, status, error) {
 				console.log("에러 내용은 : " + error);
@@ -202,14 +207,12 @@
 		
 		// 로그인 여부(session) 확인
 		if("<%out.print(request.getSession().getAttribute("userId"));%>" !== "null"){
-			console.log("session있음")
 			$('#loginTag').css("display","none");
 			$('#infoTag').css("display","block");
 		}
 		else{
 			$('#loginTag').css("display","block");
 			$('#infoTag').css("display","none");
-			console.log("session없음")
 		}
 	</script>
 </body>

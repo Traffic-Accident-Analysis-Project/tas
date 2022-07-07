@@ -77,12 +77,12 @@
 						onchange="emailAddrVal(this.value)">
 						<option value="">이메일주소</option>
 						<option value="email-user-write">직접입력</option>
-						<option value="@gmail">@gmail.com</option>
-						<option value="@google">@google.com</option>
-						<option value="@naver">@naver.com</option>
-						<option value="@hanmail">@hanmail.net</option>
-						<option value="@daum">@daum.net</option>
-						<option value="@hotmail">@hotmail.com</option>
+						<option value="@gmail.com">@gmail.com</option>
+						<option value="@google.com">@google.com</option>
+						<option value="@naver.com">@naver.com</option>
+						<option value="@hanmail.net">@hanmail.net</option>
+						<option value="@daum.net">@daum.net</option>
+						<option value="@hotmail.com">@hotmail.com</option>
 					</select>
 				</div>
 				<input id="email-user-write-box" type="text" style="display: none"
@@ -284,14 +284,12 @@
 				})
 		// 로그인 여부(session) 확인
 		if("<%out.print(request.getSession().getAttribute("userId"));%>" !== "null"){
-			console.log("session있음")
 			$('#loginTag').css("display","none");
 			$('#infoTag').css("display","block");
 		}
 		else{
 			$('#loginTag').css("display","block");
 			$('#infoTag').css("display","none");
-			console.log("session없음")
 		}
 	</script>
 </body>

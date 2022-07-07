@@ -264,7 +264,7 @@ footer button {
   width: 40%;
 }
 .my-page-btn button {
-  margin: 5% 0 0 2%;
+  margin: 5% 0 10% 2%;
   background-color: transparent;
   color: var(--light-grey);
   font-weight: 800;
