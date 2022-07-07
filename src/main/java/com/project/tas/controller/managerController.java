@@ -24,14 +24,14 @@ public class managerController {
 	// 영어페이지
 	@GetMapping("/manager/main/eng")
 	public String callMainPageEng() {
-		return "manager/managerMain";
+		return "manager/managerMainEng";
 	}
 	@GetMapping("/manager/logs/eng")
 	public String callLogsPageEng() {
-		return "manager/managerLogs";
+		return "manager/managerLogsEng";
 	}
 	@GetMapping("/manager/logs/popup/eng")
 	public String callLogsPopupPageEng() {
-		return "manager/managerLogPopup";
+		return "manager/managerLogPopupEng";
 	}
 }
