@@ -69,7 +69,7 @@
       <!-- header end -->
       <div class="bottom-background-color">
         <div class="main-login-section">
-          <h2>로그인</h2>
+          <h2>Login</h2>
           <!-- <hr style="margin-top : 5%"> -->
           <div class="total-wrap">
             <div class="row-column id-pw-ptag-wrap">

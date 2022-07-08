@@ -61,7 +61,9 @@
 	<select id="selectUserOne" resultType="UserVO">
 		SELECT 
 			user_id AS userId,
-			user_password AS userPassword
+			user_password AS userPassword,
+			autority,
+			user_status AS userStatus 
 		FROM tas_user
 		WHERE 
 			user_id = #{userId}

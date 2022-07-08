@@ -149,7 +149,7 @@
       };
 
       $.ajax({
-        url: "http://localhost:8080/api/v1/login",
+        url: "/api/v1/login",
         type: "POST",
         contentType: "application/json", // 서버에 json타입으로 보낼 예정(요청)
         dataType: "json", // 서버에 결과를 json으로 응답 받겠다
@@ -179,19 +179,22 @@
           userId: userIdVal,
           userPassword: userPasswordVal,
         };
-
+		
         $.ajax({
-          url: "http://localhost:8080/api/v1/login",
+          url: "/api/v1/login",
           type: "POST",
           contentType: "application/json", // 서버에 json타입으로 보낼 예정(요청)
           dataType: "json", // 서버에 결과를 json으로 응답 받겠다
           data: JSON.stringify(jsonData), // 이걸 안쓰면 jsonType이 아닌 문자로 인식
           success: function (response) {
             if (response) {
-              location.href = "/tas/main"; //페이지 이동
+            	if("<%out.print(request.getSession().getAttribute("autority"));%>".equals("admin")){
+            		location.href = "/manager/main"; // admin이면 manager page로 이동
+            	}
+              	location.href = "/tas/main"; //페이지 이동
             } else {
-              alert("회원정보를 확인 해 주세요");
-              return false;
+              	alert("회원정보를 확인 해 주세요");
+              	return false;
             }
           },
         });

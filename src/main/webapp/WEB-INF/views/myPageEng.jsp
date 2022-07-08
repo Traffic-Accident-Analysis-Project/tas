@@ -83,6 +83,7 @@
 				<div class="my-page-btn">
 					<button id="re-my-info-btn" type="button">Edit My Information</button>
 					<button id="logout-btn" type="button">Logout</button>
+					<button id="admin-page-btn" type="button" style="display:none" >Admin Page</button>
 				</div>
 				 
 				<!--<div class="my-write">
@@ -169,6 +170,14 @@
 		crossorigin="anonymous"></script>
 	<script src="/resources/static/js/index.js"></script>
 	<script>
+		if("<%out.print(request.getSession().getAttribute("autority"));%>" == "admin"){
+			$('#logout-btn').css("display","none");
+			$('#admin-page-btn').css("display","block");
+		}
+		$('#admin-page-btn').click(function(){
+			location.href = "/manager/main";
+		})
+		
 		$("#re-my-info-btn").on("click", function() {
 			location.href = "/tas/my/info/update/eng";
 		});

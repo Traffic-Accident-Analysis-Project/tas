@@ -70,6 +70,7 @@ public class UserService {
 
 		httpSession.setAttribute("userId", user.getUserId());
 		httpSession.setAttribute("userPassword", user.getUserPassword());
+		httpSession.setAttribute("autority", user.getAutority());
 		// 성공 시 session값에 잘 들어갔는지 출력
 //		System.out.println(httpSession.getAttribute("userId"));
 //		System.out.println(httpSession.getAttribute("userPassword"));
