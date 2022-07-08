@@ -103,10 +103,10 @@ function getBoardList(pageNum, pageSize) {
     "&pageSize=" +
     pageSize;
   // 검색기능
-  var keyword = $('#keyword').val();
+  /*var keyword = $('#keyword').val();
   if(keyword != 'null'){
       controllerUrl = "/api/v1/board/search?writer="+keyword+"&pageNum="+pageNum+"&pageSize="+pageSize;
-  }
+  }*/
   var result = {};
   $.ajax({
     url: controllerUrl,
@@ -196,12 +196,9 @@ getBoardList(1, 10);
 // 고객센터 팝업창 띄우기 함수(상세조회) - JS
 		// 생성된 Board List tr 에 onclick 함수로 추가함.
 		function getBoardByNo(boardNo) {
-		  // $(".popup").css("display", "block");
-		  var popup = window.open(
-		          "popup/serviceCenterMainPopup.html",
-		          "popup",
-		          "width=800px, height=1000px, left=100, top=50"
-		        )
+		  $(".popup").css("display", "block");
+		  $(".main-popup").css("display", "block");
+		  
 		  // ajax 작성
 		  $.ajax({
 		    url: "/api/v1/board/boardNo/" + boardNo,
