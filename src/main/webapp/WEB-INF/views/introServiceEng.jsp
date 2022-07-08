@@ -98,12 +98,12 @@ After that, a new law on children's protection areas called the 'Minshik Act' wa
 								<span>Histogram</span>
 							</p>
 							<p>
-								<span>Pie Chart</span>provide
+								<span>Pie Chart   </span>provide
 							</p>
 							<br>
 							<p>Excel file</p>
 							<p>
-								<span>by Category</span>provide
+								<span>by Category   </span>provide
 							</p>
 							<br> <br> <i class="fa-solid fa-car fa-7x"></i>
 						</div>

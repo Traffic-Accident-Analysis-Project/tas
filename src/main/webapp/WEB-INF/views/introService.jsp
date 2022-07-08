@@ -95,12 +95,12 @@
 								<span>막대 그래프</span>
 							</p>
 							<p>
-								<span>원형 그래프</span>제공
+								<span>원형 그래프   </span>제공
 							</p>
 							<br>
 							<p>카테고리별</p>
 							<p>
-								<span>엑셀파일</span>제공
+								<span>엑셀파일   </span>제공
 							</p>
 							<br> <br> <i class="fa-solid fa-car fa-7x"></i>
 						</div>

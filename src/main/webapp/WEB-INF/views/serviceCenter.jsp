@@ -17,6 +17,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
   </head>
   <body>
     <div class="container">
@@ -302,7 +305,9 @@
 		    }
 		    
 		});
-		
+		$(function() {
+			$('.main-popup').draggable();
+		});
 
     </script>
   </body>
