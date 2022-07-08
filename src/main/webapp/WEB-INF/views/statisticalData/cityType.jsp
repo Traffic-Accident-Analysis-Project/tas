@@ -29,8 +29,8 @@
 				<div class="circle-03"></div>
 				<div class="row top">
 					<a href="/tas/main">home</a> <i class="fa-solid fa-house-chimney"
-						style="color: #eaeaea; margin-left: 5px; margin-top: 3px"></i> 
-					<select name="lang-selbox" id="language-select">
+						style="color: #eaeaea; margin-left: 5px; margin-top: 3px"></i> <select
+						name="lang-selbox" id="language-select">
 						<option value="korea">한글</option>
 						<option value="eng">영어</option>
 					</select>
@@ -46,8 +46,8 @@
 							<div class="link-button">통계 자료실</div>
 							<div class="dropdown-content">
 								<a href="/law">법규 위반</a> <a href="/alcohol">음주 정도</a> <a
-									href="/road">도로 종류</a> <a href="/accident">사고
-									유형</a> <a href="/city">시도 별</a>
+									href="/road">도로 종류</a> <a href="/accident">사고 유형</a> <a
+									href="/city">시도 별</a>
 							</div>
 						</div>
 						<div class="category-link service-link">
@@ -57,9 +57,9 @@
 							<a href="/service/center">고객 센터</a>
 						</div>
 						<div class="category-link login-link">
-							<input id="loginSessionHidden" type="hidden" value="" /> 
-							<a id="loginTag" href="/login">로그인</a> 
-							<a id="infoTag" style="display: none" href="/tas/my/info">마이페이지</a>
+							<input id="loginSessionHidden" type="hidden" value="" /> <a
+								id="loginTag" href="/login">로그인</a> <a id="infoTag"
+								style="display: none" href="/tas/my/info">마이페이지</a>
 						</div>
 					</div>
 				</div>
@@ -427,6 +427,10 @@
 										var accident_cnt = 0;
 										var dead_cnt = 0;
 										var injury_cnt = 0;
+										if(len==0){
+								            alert("검색결과가 없습니다.")
+								            return false;
+								          }
 										for (var i = 0; i < len; i++) {
 											accident_cnt += response[i].사고건수;
 
@@ -806,17 +810,16 @@
 	});
 	// Excel 설문
 	$("#excelDown").on("click", function () {
-	  if("<%out.print(request.getSession().getAttribute("userId"));%>" == "null"){
-		  alert("로그인이 필요합니다.")
-		  location.href="/login"
-		  return false;
-	  }
-	  var popup = window.open(
-	    "/survey",
-	    "survey",
-	    "width=1000px, height=1200px, left=100, top=50"
-	  );
-	  location.href="/city/type/excel"
-	});
+	  if("<%out.print(request.getSession().getAttribute("userId"));%>
+	" == "null") {
+							alert("로그인이 필요합니다.")
+							location.href = "/login"
+							return false;
+						}
+						var popup = window
+								.open("/survey", "survey",
+										"width=1000px, height=1200px, left=100, top=50");
+						location.href = "/city/type/excel"
+					});
 </script>
 </html>

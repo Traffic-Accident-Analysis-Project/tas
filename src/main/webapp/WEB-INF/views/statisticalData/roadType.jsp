@@ -604,6 +604,10 @@
           var accident_cnt = 0;
           var dead_cnt = 0;
           var injury_cnt = 0;
+          if(len==0){
+              alert("검색결과가 없습니다.")
+              return false;
+            }
           for (var i = 0; i < len; i++) {
             accident_cnt += response[i].사고건수;
 

@@ -193,7 +193,7 @@ header {
   position: absolute;
   display: flex;
   flex-direction: column;
-  top: -115%;
+  top: -100%;
   width: 95%;
   margin: 0 2.5%;
   color: white;
@@ -236,17 +236,16 @@ header {
   margin-left: 50.5%;
 }
 .login-btn-wrap button {
-  margin-right: 1%;
-  border: none;
   background-color: transparent;
   color: var(--light-grey);
   font-weight: 900;
   border-radius: 5px;
   border: 1px solid var(--light-grey);
   font-size: 13px;
+  width: 80px;
+  margin-right: 1%;
   padding: 5px;
   cursor: pointer;
-  width: 80px;
 }
 .login-btn-wrap button:hover {
   transition: 0.1s;

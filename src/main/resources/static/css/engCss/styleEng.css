@@ -291,13 +291,11 @@ header {
   margin: -10px 2%;
 }
 .statistical-page-right-section button {
-  border: none;
   background-color: transparent;
-  color: var(--dark-grey);
+  color: var(--main-blue);
   font-weight: 900;
   border-radius: 5px;
-  border: 1px solid var(--light-grey);
-  box-shadow: var(--button-shadow);
+  border: 1px solid var(--main-blue);
   font-size: 13px;
   padding: 5px;
   cursor: pointer;
@@ -316,12 +314,11 @@ header {
 }
 .excel-down-button a {
   text-align: center;
-  border: none;
-  background-color: transparent;
-  color: var(--dark-grey);
+ background-color: transparent;
+  color: var(--main-blue);
+  font-weight: 900;
   border-radius: 5px;
-  border: 1px solid var(--light-grey);
-  box-shadow: var(--button-shadow);
+  border: 1px solid var(--main-blue);
   font-size: 13px;
   padding: 10px 15px;
   cursor: pointer;
