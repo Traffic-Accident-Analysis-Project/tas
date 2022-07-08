@@ -285,15 +285,20 @@ textarea {
   margin: 25px 43%;
 }
 .write-button-wrap button {
+  background-color: transparent;
+  color: var(--light-grey);
+  font-weight: 900;
+  border-radius: 5px;
+  border: 1px solid var(--light-grey);
+  font-size: 13px;
+  text-align: center;
+  width: 60px;
+  height: 40px;
   cursor: pointer;
-  background-color: var(--light-grey);
-  border-radius: 3px;
-  color: var(--dark-grey);
-  border: none;
-  width: 50px;
-  height: 30px;
+  padding : 1%;
 }
 .write-button-wrap button:hover {
+  border:none;
   background-color: var(--main-blue);
   color: var(--light-grey);
 }
