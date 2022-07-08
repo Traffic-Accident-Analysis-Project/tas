@@ -138,8 +138,7 @@
 <script src="/resources/static/js/index.js"></script>
 <script type="text/javascript">
 	 	// 로그인 여부(session) 확인
-		if("<%out.print(request.getSession().getAttribute("userId"));%>
-	" !== "null") {
+		if("<%out.print(request.getSession().getAttribute("userId"));%>" !== "null") {
 		console.log("session있음")
 		$('#loginTag').css("display", "none");
 		$('#infoTag').css("display", "block");
