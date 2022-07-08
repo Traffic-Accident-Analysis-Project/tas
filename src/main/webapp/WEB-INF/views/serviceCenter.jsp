@@ -20,10 +20,10 @@
   </head>
   <body>
     <div class="container">
-      <!-- popup for delete -->
+       <!-- popup for delete -->
       <div class="main-pw-confirm-popup delete">
         <div class="pw-confirm-top">
-          <button class="popup-close" type="button"></button>
+          <button class="popup-close-pw-del" type="button"></button>
         </div>
         <p>비밀번호를 입력 해 주세요</p>
         <div class="pw-confirm-wrap">
@@ -34,7 +34,7 @@
       <!-- popup for update -->
       <div class="main-pw-confirm-popup update">
         <div class="pw-confirm-top">
-          <button class="popup-close" type="button"></button>
+          <button class="popup-close-pw-upd" type="button"></button>
         </div>
         <p>비밀번호를 입력 해 주세요</p>
         <div class="pw-confirm-wrap">
@@ -301,6 +301,8 @@
 		    }
 		    
 		});
+		
+
     </script>
   </body>
 </html>
