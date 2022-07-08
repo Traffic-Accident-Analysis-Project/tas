@@ -1030,7 +1030,7 @@ $.ajax({
 	  var popup = window.open(
 	    "/survey",
 	    "survey",
-	    "width=1000px, height=1200px, left=100, top=50"
+	    "width=900px, height=1200px, left=100, top=50"
 	  );
 	  location.href="/accident/type/excel"
 	});
