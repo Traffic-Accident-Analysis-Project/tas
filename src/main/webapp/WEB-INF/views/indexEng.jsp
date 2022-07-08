@@ -832,7 +832,9 @@
 	    }
 	    
 	});
-
+	$('tbody').click(function(){
+      location.href = ("/service/center/eng");
+    })
 	
 </script>
 </html>

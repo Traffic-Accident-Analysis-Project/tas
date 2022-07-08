@@ -810,7 +810,9 @@
 	    }
 	    
 	});
-
+	$('tbody').click(function(){
+      location.href = ("/service/center");
+    })
 	
 </script>
 </html>
