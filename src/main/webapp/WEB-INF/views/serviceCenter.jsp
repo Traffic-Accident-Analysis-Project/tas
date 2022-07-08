@@ -280,6 +280,11 @@
       crossorigin="anonymous"
     ></script>
     <script src="/resources/static/js/index.js"></script>
+    <link rel="stylesheet"
+		href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" />
+	<script type="text/javascript"
+		src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <script type="text/javascript">
 	 	// 로그인 여부(session) 확인
 		if("<%out.print(request.getSession().getAttribute("userId"));%>" !== "null"){
@@ -308,7 +313,9 @@
 		$(function() {
 			$('.main-popup').draggable();
 		});
-
+		$(function() {
+			$('.main-pw-confirm-popup').draggable();
+		});
     </script>
   </body>
 </html>
