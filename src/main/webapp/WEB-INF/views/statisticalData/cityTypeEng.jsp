@@ -436,7 +436,6 @@
 									type : "GET",
 									dataType : "json",
 									success : function(response) {
-										console.log(response);
 										var len = response.length;
 										var accident_cnt = 0;
 										var dead_cnt = 0;

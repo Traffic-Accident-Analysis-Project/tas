@@ -92,7 +92,6 @@ $(".service-write-registration").on("click", function () {
           // 저장 후 고객센터 페이지로 이동
           location.href = "/HTML&CSS/service_center.html";
         }
-        console.log(response);
     }
 })
 });
@@ -233,7 +232,6 @@ $('#btn-passwordForDelete').click(function(){
     success : function (response){
       boardPassword = response.boardPassword;
       boardNo = response.boardNo;
-      console.log(boardPassword)
       if($('#passwordForDelete').val() != boardPassword){
         alert("비밀번호가 틀렸습니다");
         $('#passwordForDelete').val("");
@@ -287,7 +285,6 @@ $('#btn-passwordForUpdate').click(function(){
     success : function (response){
       boardPassword = response.boardPassword;
       boardNo = response.boardNo;
-      console.log(boardPassword)
       if($('#passwordForUpdate').val() != boardPassword){
         alert("비밀번호가 틀렸습니다");
         $('#passwordForUpdate').val("");

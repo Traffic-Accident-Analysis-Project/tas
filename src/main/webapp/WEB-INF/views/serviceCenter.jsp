@@ -288,14 +288,12 @@
     <script type="text/javascript">
 	 	// 로그인 여부(session) 확인
 		if("<%out.print(request.getSession().getAttribute("userId"));%>" !== "null"){
-			console.log("session있음")
 			$('#loginTag').css("display","none");
 			$('#infoTag').css("display","block");
 		}
 		else{
 			$('#loginTag').css("display","block");
 			$('#infoTag').css("display","none");
-			console.log("session없음")
 		}
 		// 언어 선택
 		$("#language-select").on("change", function(){

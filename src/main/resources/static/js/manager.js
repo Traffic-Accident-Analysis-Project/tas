@@ -93,7 +93,6 @@ $(".logout").on("click", function () {
 		url : "/api/v1/logout",
 		type : "GET",
 		success : function(response) {
-			console.log("성공")
 			location.href = "/login";
 		},
 		error : function(request, status, error) {
@@ -243,7 +242,6 @@ function getLogsBoardList(pageNum, pageSize) {
     success: function (response) {
       var len = response.list.length;
       var html = "";
-      console.log(response)
       if (len > 0) {
         for (var i = 0; i < len; i++) {
           html +=

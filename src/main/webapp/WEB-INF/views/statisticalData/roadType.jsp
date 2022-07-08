@@ -599,7 +599,6 @@
         type: "GET",
         dataType: "json",
         success: function (response) {
-          console.log(response);
           var len = response.length;
           var accident_cnt = 0;
           var dead_cnt = 0;
@@ -789,7 +788,6 @@
         var dataAccidents = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
         var dataDeath = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
         var dataInjured = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-        console.log(response[0]);
         for (var i = 0; i < response.length; i++) {
           if (response[i].month != "all") continue;
           if (response[i].시점 == 2005) {

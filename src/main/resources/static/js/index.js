@@ -91,7 +91,6 @@ $(".service-write-registration").on("click", function () {
         // 저장 후 고객센터 페이지로 이동
         location.href = "/service/center";
       }
-      console.log(response);
     },
   });
 });*/
@@ -439,7 +438,6 @@ $("#btn-passwordForDelete").click(function () {
     success: function (response) {
       boardPassword = response.boardPassword;
       boardNo = response.boardNo;
-      console.log(boardPassword);
       if ($("#passwordForDelete").val() != boardPassword) {
         alert("비밀번호가 틀렸습니다");
         $("#passwordForDelete").val("");
@@ -490,7 +488,6 @@ $("#btn-passwordForUpdate").click(function () {
     success: function (response) {
       boardPassword = response.boardPassword;
       boardNo = response.boardNo;
-      console.log(boardPassword);
       if ($("#passwordForUpdate").val() != boardPassword) {
         alert("비밀번호가 틀렸습니다");
         $("#passwordForUpdate").val("");
@@ -543,9 +540,6 @@ $.ajax({
   type: "GET",
   dataType: "json",
   success: function (response) {
-    //console.log(response[1]);
-    //console.log(response[2]);
-    //console.log(response[3]);
   },
 });
 // accident : 사고유형별 Data
@@ -554,9 +548,6 @@ $.ajax({
   type: "GET",
   dataType: "json",
   success: function (response) {
-    //console.log(response[1]);
-    //console.log(response[2]);
-    //console.log(response[3]);
   },
 });
 // city : 시도별 Data
@@ -565,9 +556,6 @@ $.ajax({
   type: "GET",
   dataType: "json",
   success: function (response) {
-    //console.log(response[1]);
-    //console.log(response[2]);
-    //console.log(response[3]);
   },
 });
 // road : 도로별/요일별 Data
@@ -576,9 +564,6 @@ $.ajax({
   type: "GET",
   dataType: "json",
   success: function (response) {
-    //console.log(response[1]);
-    //console.log(response[2]);
-    //console.log(response[3]);
   },
 });
 // alcohol : 음주측정별 Data
@@ -587,8 +572,5 @@ $.ajax({
   type: "GET",
   dataType: "json",
   success: function (response) {
-    //console.log(response[1]);
-    //console.log(response[2]);
-    //console.log(response[3]);
   },
 });

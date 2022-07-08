@@ -142,7 +142,6 @@
 			type : "GET",
 			dataType : "json",
 			success : function(response) {
-				//console.log(response);
 				$("#email-user-write-box").css("display", "block");
 				$("input[id=userName]").attr("value", response.user_name);
 				$("input[id=email-id]").attr("value", response.user_email_id);
