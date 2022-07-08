@@ -23,7 +23,7 @@
 			<div class="row top">
 				<a href="/tas/main/eng">home</a> <i class="fa-solid fa-house-chimney"
 					style="color: #eaeaea; margin-left: 5px; margin-top: 3px"></i> <select
-					name="lang-selbox" id="">
+					name="lang-selbox" id="language-select">
 					<option value="eng">English</option>
 					<option value="korea">Korean</option>
 				</select>
@@ -819,7 +819,19 @@
 		console.log("session없음")
 	}
 	
-	
+	// 언어 선택
+	$("#language-select").on("change", function(){
+	    if($('#language-select option:selected').text() == "Korean"){
+	    	var result = confirm("Do you want to go to the Korean page?");
+	    	if(result){
+	    		location.href='/tas/main'
+	    	}
+	    	else{
+	    		$('#language-select option:eq(0)').prop("selected", true);
+	    	}
+	    }
+	    
+	});
 
 	
 </script>

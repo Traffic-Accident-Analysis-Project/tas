@@ -811,11 +811,11 @@
 		},
 	});
 	// 로그인 여부(session) 확인
-	if("<%out.print(request.getSession().getAttribute("userId"));%>
-	" !== "null") {
+	if("<%out.print(request.getSession().getAttribute("userId"));%>" !== "null") {
 		$('#loginTag').css("display", "none");
 		$('#infoTag').css("display", "block");
-	} else {
+	} 
+	else {
 		$('#loginTag').css("display", "block");
 		$('#infoTag').css("display", "none");
 	}

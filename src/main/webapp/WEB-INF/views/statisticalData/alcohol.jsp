@@ -31,7 +31,7 @@
               class="fa-solid fa-house-chimney"
               style="color: #eaeaea; margin-left: 5px; margin-top: 3px"
             ></i>
-            <select name="lang-selbox" id="">
+            <select name="lang-selbox" id="language-select">
               <option value="korea">한글</option>
               <option value="eng">영어</option>
             </select>
@@ -993,5 +993,18 @@ $.ajax({
 		$('#loginTag').css("display","block");
 		$('#infoTag').css("display","none");
 	}
+	// 언어 선택
+	$("#language-select").on("change", function(){
+	    if($('#language-select option:selected').text() == "영어"){
+	    	var result = confirm("영문페이지로 이동하시겠습니까?");
+	    	if(result){
+	    		location.href='/tas/main/eng'
+	    	}
+	    	else{
+	    		$('#language-select option:eq(0)').prop("selected", true);
+	    	}
+	    }
+	    
+	});
   </script>
 </html>
