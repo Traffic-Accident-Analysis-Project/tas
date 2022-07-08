@@ -261,28 +261,28 @@ textarea {
   margin-right: 61px;
 }
 .writer-wrap label {
-  margin-right: 76.7px;
+  margin-right: 100.7px;
 }
 .e-mail-wrap label {
-  margin-right: 79px;
+  margin-right: 100.5px;
 }
 .text-area-wrap label {
-  margin-right: 93px;
+  margin-right: 79px;
 }
 .password-checkbox-wrap label:nth-child(1) {
-  margin-right: 40px;
+  margin-right: 65px;
 }
 .pw-input {
   margin-top: 5px;
 }
 .pw-input label:nth-child(1) {
-  margin-right: 60px;
+  margin-right: 80px;
 }
 .repw-input {
   margin-top: 10px;
 }
 .repw-input label:nth-child(1) {
-  margin-right: 23px;
+  margin-right: 20px;
 }
 .write-button-wrap {
   margin: 25px 43%;
