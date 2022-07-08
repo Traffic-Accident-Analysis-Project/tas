@@ -191,7 +191,7 @@
                 </div>
               </div>
               <div class="excel-down-button">
-				<a href="/road/type/excel">Excel Downlod</a>
+				<a id="excelDown" href="/road/type/excel">Excel Downlod</a>
               </div>
             </div>
           </div>

@@ -178,7 +178,7 @@
 									<canvas id="pieChart"></canvas>
 									<canvas id="new-pieChart" style="display: none"></canvas>
 								</div>
-								<a href="/city/type/excel">Excel Downlod</a>
+								<a id="excelDown" href="/city/type/excel">Excel Downlod</a>
 							</div>
 						</div>
 					</div>
