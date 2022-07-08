@@ -229,18 +229,18 @@ header {
   background-color: transparent;
 }
 .search-wrap button {
+  background-color: transparent;
+  color: var(--light-grey);
+  font-weight: 900;
+  border-radius: 5px;
+  border: 1px solid var(--light-grey);
+  font-size: 13px;
+  padding : 1%;
+  text-decoration: none;
   cursor: pointer;
   margin-top: 13px;
-  height: 30px;
-  width: 50px;
-  background-color: var(--light-grey);
-  font-size: 15px;
-  font-weight: 600;
-  text-decoration: none;
-  color: var(--main-blue);
-  text-align: center;
-  border-radius: 2px;
-  border: none;
+  height: 35px;
+  width: 70px;
 }
 .search-wrap button:hover {
   border: none;
@@ -248,20 +248,21 @@ header {
   color: var(--light-grey);
 }
 .service-write-btn {
-  background-color: var(--light-grey);
-  margin: 50px 0 12px;
-  font-size: 15px;
+  background-color: transparent;
+  color: var(--light-grey);
   font-weight: 900;
-  text-decoration: none;
-  color: var(--main-blue);
-  padding: 10px 0;
+  border-radius: 5px;
   border: 1px solid var(--light-grey);
+  font-size: 13px;
   text-align: center;
+  text-decoration: none;
+  padding: 10px 0;
   height: 40px;
-  border-radius: 2px;
+  margin: 50px 0 12px;
   width: 80px;
 }
 .service-write-btn:hover {
+  border:none;
   background-color: var(--main-blue);
   color: var(--light-grey);
 }
