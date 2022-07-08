@@ -73,16 +73,17 @@
 					<div class="intro-main-text">
 						<p>Currently, hundreds of traffic accident drivers are pouring in in Korea every day.</p>
 						<p>In 2019, there was an accident involving a child, Min-sik Kim, which caused a stir in the Republic of Korea.</p>
-						<p>어린이보호구역에서 일어난 이 사고는 김민식군이 동생의 손을 잡고</p>
-						<p>횡단보도를 건너던 중 속도를 줄이지 않고 오는 SUV차량에 치여 숨지는 사고였습니다.</p>
-						<p>김민식군의 부모님은 다시는 이런일이 일어나지 않도록 청와대 국민청원 게시판에 글을 올렸고</p>
-						<p>그 후 일명 '민식이 법'이라는 어린이보호구역에 대한 법도 새로 제정되었습니다.</p>
+						<p>This accident, which took place in a children's protection area, was caused by Kim Min-sik holding his brother's hand.</p>
+						<p>While crossing the crosswalk, he was hit by an SUV that did not slow down and died.</p>
+						<p>Kim Min-sik's parents posted a message on the Blue House public petition bulletin board to prevent this from happening again.</p>
+						<p>
+After that, a new law on children's protection areas called the 'Minshik Act' was also enacted.</p>
 						<br> <br>
-						<p>이처럼 세상에 큰 영향을 주는 교통사고도 있지만,</p>
-						<p>대부분은 TV나 신문에 보도되지 못합니다.</p>
-						<p>이에 저희 T.A.S는 한 눈에 볼 수 있는 시각화 자료와</p>
-						<p>사용자가 원하는 데이터를 볼 수 있는 서비스를 제공,</p>
-						<p>갈수록 늘어나는 교통사고에대한 경각심을 주기위해 만들어졌습니다.</p>
+						<p>There are traffic accidents that have such a big impact on the world,</p>
+						<p>Most are not reported on TV or in newspapers.</p>
+						<p>Therefore, T.A.S provides visualization materials that can be viewed </p>
+						<p>at a glance and services that allow users to view the data they want.</p>
+						<p>It was created to raise awareness about the increasing number of traffic accidents.</p>
 					</div>
 				</div>
 				<div class="row intro-right-wrap">
@@ -91,18 +92,18 @@
 					</div>
 					<div class="right-text-wrap">
 						<div class="right-text-item">
-							<h1>제공 서비스</h1>
-							<p>사용자가 선택한 데이터의</p>
+							<h1>Service Provided</h1>
+							<p>user-selected data's</p>
 							<p>
-								<span>막대 그래프</span>
+								<span>Histogram</span>
 							</p>
 							<p>
-								<span>원형 그래프</span>제공
+								<span>Pie Chart</span>provide
 							</p>
 							<br>
-							<p>카테고리별</p>
+							<p>Excel file</p>
 							<p>
-								<span>엑셀파일</span>제공
+								<span>by Category</span>provide
 							</p>
 							<br> <br> <i class="fa-solid fa-car fa-7x"></i>
 						</div>
@@ -115,9 +116,15 @@
 					<img src="/resources/static/images/T.A.S-logo.png" alt="" />
 				</div>
 				<div class="footer-info">
-					<p>이용약관 | 개인정보처리방침 | 운영 관리 방침</p>
-					<p>email : jyg12770@google.com | email : skwjdtn3171@naver.com</p>
-					<p>(우)34838 대전 중구 중앙로 121번길 20 | 대표전화 : 042-222-2402</p>
+					<p>
+		              Terms of Service | privacy policy | Operational management policy
+		            </p>
+		            <p>email : jyg12770@google.com | email : skwjdtn3171@naver.com</p>
+		            <p>
+		              (Zip code)34838 20, Jungang-ro 121beon-gil, Jung-gu, Daejeon,
+		              Republic of Korea
+		            </p>
+	            <p>Main Phone : 042-222-2402</p>
 				</div>
 				<div class="footer-btn">
 					<button type="button" style="cursor: pointer"
