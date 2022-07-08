@@ -191,7 +191,7 @@
                 </div>
               </div>
               <div class="excel-down-button">
-				<a id="excelDown" href="/road/type/excel">Excel Downlod</a>
+				<a id="excelDown">Excel Downlod</a>
               </div>
             </div>
           </div>
@@ -959,6 +959,20 @@
 	    	}
 	    }
 	    
+	});
+	// Excel 설문
+	$("#excelDown").on("click", function () {
+	  if("<%out.print(request.getSession().getAttribute("userId"));%>" == "null"){
+		  alert("로그인이 필요합니다.")
+		  location.href="/login"
+		  return false;
+	  }
+	  var popup = window.open(
+	    "/survey",
+	    "survey",
+	    "width=1000px, height=1200px, left=100, top=50"
+	  );
+	  location.href="/road/type/excel"
 	});
   </script>
 </html>

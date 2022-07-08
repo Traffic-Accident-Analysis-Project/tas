@@ -14,14 +14,14 @@ $('.popup-close').on('click',function(){
   $('.pw-confirm-popup').css('display','none');
   $('.main-pw-confirm-popup').css('display','none');
 })
-
+/*
 $("#excelDown").on("click", function () {
   var popup = window.open(
     "/survey",
     "survey",
     "width=1000px, height=1200px, left=100, top=50"
   );
-});
+});*/
 
 $("#excelDownEng").on("click", function () {
   var popup = window.open(
