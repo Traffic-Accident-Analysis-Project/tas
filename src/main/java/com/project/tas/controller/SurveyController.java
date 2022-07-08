@@ -8,12 +8,12 @@ public class SurveyController {
 	
 	@GetMapping("/survey")
 	public String callSurveyPage() {
-		return "survey";
+		return "popup/survey";
 	}
 	
 	//영어페이지
 	@GetMapping("/survey/eng")
 	public String callSurveyPageEng() {
-		return "surveyEng";
+		return "popup/surveyEng";
 	}
 }

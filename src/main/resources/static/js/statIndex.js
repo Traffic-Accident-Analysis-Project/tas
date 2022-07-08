@@ -15,6 +15,22 @@ $('.popup-close').on('click',function(){
   $('.main-pw-confirm-popup').css('display','none');
 })
 
+$("#excelDown").on("click", function () {
+  var popup = window.open(
+    "/survey",
+    "survey",
+    "width=1000px, height=1200px, left=100, top=50"
+  );
+});
+
+$("#excelDownEng").on("click", function () {
+  var popup = window.open(
+    "/survey/eng",
+    "survey",
+    "width=1000px, height=1200px, left=100, top=50"
+  );
+});
+
 // 고객센터문의 글쓰기 등록 눌렀을 때 -JS
 $(".service-write-registration").on("click", function () {
   // 빈칸 확인

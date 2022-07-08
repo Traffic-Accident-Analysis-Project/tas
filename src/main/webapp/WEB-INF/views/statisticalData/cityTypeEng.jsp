@@ -9,7 +9,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>T.A.S by City</title>
-<link rel="stylesheet" href="/resources/static/css/style.css" />
+<link rel="stylesheet" href="/resources/static/css/styleStatEng.css" />
 <link rel="stylesheet" href="/resources/static/css/cityType.css" />
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
@@ -28,11 +28,12 @@
 				<div class="circle-02"></div>
 				<div class="circle-03"></div>
 				<div class="row top">
-					<a href="/tas/main/eng">home</a> <i class="fa-solid fa-house-chimney"
+					<a href="/tas/main/eng">home</a> <i
+						class="fa-solid fa-house-chimney"
 						style="color: #eaeaea; margin-left: 5px; margin-top: 3px"></i> <select
 						name="lang-selbox" id="">
 						<option value="eng">English</option>
-              			<option value="korea">Korean</option>
+						<option value="korea">Korean</option>
 					</select>
 				</div>
 				<div class="row header-category">
@@ -45,11 +46,10 @@
 						<div class="category-link dropdown">
 							<div class="link-button">Statistics Reference</div>
 							<div class="dropdown-content">
-								<a href="/law/eng">Violation of Law</a> 
-								<a href="/alcohol/eng">Degree of Drinking</a> 
-								<a href="/road/eng">Road Type</a> 
-								<a href="/accident/eng">Accident Type</a> 
-								<a href="/city/eng">By City</a>
+								<a href="/law/eng">Violation of Law</a> <a href="/alcohol/eng">Degree
+									of Drinking</a> <a href="/road/eng">Road Type</a> <a
+									href="/accident/eng">Accident Type</a> <a href="/city/eng">By
+									City</a>
 							</div>
 						</div>
 						<div class="category-link service-link">
@@ -59,9 +59,9 @@
 							<a href="/service/center/eng">Service Center</a>
 						</div>
 						<div class="category-link login-link">
-							<input id="loginSessionHidden" type="hidden" value="" /> 
-							<a id="loginTag" href="/login/eng">Login</a> 
-							<a id="infoTag" style="display: none" href="/tas/my/info/eng">MyPage</a>
+							<input id="loginSessionHidden" type="hidden" value="" /> <a
+								id="loginTag" href="/login/eng">Login</a> <a id="infoTag"
+								style="display: none" href="/tas/my/info/eng">MyPage</a>
 						</div>
 					</div>
 				</div>
@@ -76,9 +76,12 @@
 				<div class="city-by-category-main-section">
 					<div class="city-main-left-section-map">
 						<div class="map-btn-wrap">
-							<button class="map-btn accidents-btn" type="button">Number of Accidents</button>
-							<button class="map-btn dead-btn" type="button">Number of Deaths</button>
-							<button class="map-btn injury-btn" type="button">Number of Injured</button>
+							<button class="map-btn accidents-btn" type="button">Number
+								of Accidents</button>
+							<button class="map-btn dead-btn" type="button">Number of
+								Deaths</button>
+							<button class="map-btn injury-btn" type="button">Number
+								of Injured</button>
 						</div>
 						<!-- kakao map -->
 						<div id="map" style="width: 100%; height: 700px"></div>
@@ -116,41 +119,41 @@
 									<option value="전체">all</option>
 									<option value="월별전체">all by month</option>
 									<option value="1월">Jen</option>
-				                    <option value="2월">Feb</option>
-				                    <option value="3월">Mar</option>
-				                    <option value="4월">Apr</option>
-				                    <option value="5월">May</option>
-				                    <option value="6월">Jun</option>
-				                    <option value="7월">Jul</option>
-				                    <option value="8월">Aug</option>
-				                    <option value="9월">Sep</option>
-				                    <option value="10월">Oct</option>
-				                    <option value="11월">Nov</option>
-				                    <option value="12월">Dec</option>
+									<option value="2월">Feb</option>
+									<option value="3월">Mar</option>
+									<option value="4월">Apr</option>
+									<option value="5월">May</option>
+									<option value="6월">Jun</option>
+									<option value="7월">Jul</option>
+									<option value="8월">Aug</option>
+									<option value="9월">Sep</option>
+									<option value="10월">Oct</option>
+									<option value="11월">Nov</option>
+									<option value="12월">Dec</option>
 								</select>
 							</div>
 							<div class="city-type-sel city-type">
 								<input type="hidden" id="cityTypeHidden" /> <select
 									name="city-type" id="city-type" onchange="cityType(this.value)">
 									<option value="">Choose City</option>
-				                    <option value="전체">All</option>
-				                    <option value="서울">Seoul</option>
-				                    <option value="부산">Busan</option>
-				                    <option value="대구">Daegu</option>
-				                    <option value="인천">Incheon</option>
-				                    <option value="광주">Gwangju</option>
-				                    <option value="대전">Daejeon</option>
-				                    <option value="세종">Sejong</option>
-				                    <option value="울산">Ulsan</option>
-				                    <option value="경기">Kyeongki</option>
-				                    <option value="강원">Kangwon</option>
-				                    <option value="충북">Chungbuk</option>
-				                    <option value="충남">Chungnam</option>
-				                    <option value="전북">Jeonbuk</option>
-				                    <option value="전남">Jeonnam</option>
-				                    <option value="경북">Kyeongbuk</option>
-				                    <option value="경남">Kyeongnam</option>
-				                    <option value="제주">Jeju</option>
+									<option value="전체">All</option>
+									<option value="서울">Seoul</option>
+									<option value="부산">Busan</option>
+									<option value="대구">Daegu</option>
+									<option value="인천">Incheon</option>
+									<option value="광주">Gwangju</option>
+									<option value="대전">Daejeon</option>
+									<option value="세종">Sejong</option>
+									<option value="울산">Ulsan</option>
+									<option value="경기">Kyeongki</option>
+									<option value="강원">Kangwon</option>
+									<option value="충북">Chungbuk</option>
+									<option value="충남">Chungnam</option>
+									<option value="전북">Jeonbuk</option>
+									<option value="전남">Jeonnam</option>
+									<option value="경북">Kyeongbuk</option>
+									<option value="경남">Kyeongnam</option>
+									<option value="제주">Jeju</option>
 								</select>
 							</div>
 							<button id="lookUpByLaw" type="button">Load</button>
@@ -179,7 +182,7 @@
 									<canvas id="pieChart"></canvas>
 									<canvas id="new-pieChart" style="display: none"></canvas>
 								</div>
-								<a href="/city/type/excel">Excel Downlod</a>
+								<a id="excelDownEng" href="/city/type/excel">Excel Downlod</a>
 							</div>
 						</div>
 					</div>
@@ -190,12 +193,12 @@
 					<img src="/resources/static/images/T.A.S-logo.png" alt="" />
 				</div>
 				<div class="footer-info">
-					<p>Terms of Service | privacy policy | Operational management policy</p>
-		            <p>email : jyg12770@google.com | email : skwjdtn3171@naver.com</p>
-		            <p>
-		              (Zip code)34838 20, Jungang-ro 121beon-gil, Jung-gu, Daejeon, Republic of Korea 
-		            </p>
-		            <p>Main Phone : 042-222-2402</p>
+					<p>Terms of Service | privacy policy | Operational management
+						policy</p>
+					<p>email : jyg12770@google.com | email : skwjdtn3171@naver.com</p>
+					<p>(Zip code)34838 20, Jungang-ro 121beon-gil, Jung-gu,
+						Daejeon, Republic of Korea</p>
+					<p>Main Phone : 042-222-2402</p>
 				</div>
 				<div class="footer-btn">
 					<button type="button" style="cursor: pointer"
@@ -808,13 +811,13 @@
 		},
 	});
 	// 로그인 여부(session) 확인
-	if("<%out.print(request.getSession().getAttribute("userId"));%>" !== "null"){
-		$('#loginTag').css("display","none");
-		$('#infoTag').css("display","block");
-	}
-	else{
-		$('#loginTag').css("display","block");
-		$('#infoTag').css("display","none");
+	if("<%out.print(request.getSession().getAttribute("userId"));%>
+	" !== "null") {
+		$('#loginTag').css("display", "none");
+		$('#infoTag').css("display", "block");
+	} else {
+		$('#loginTag').css("display", "block");
+		$('#infoTag').css("display", "none");
 	}
 </script>
 </html>

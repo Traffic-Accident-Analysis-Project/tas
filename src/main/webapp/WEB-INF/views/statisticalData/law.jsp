@@ -198,7 +198,7 @@
                 </div>
               </div>
               <div class="excel-down-button">
-	            <a href="/law/excel">Excel Downlod</a>
+	            <a id="excelDown" href="/law/excel">Excel Downlod</a>
               </div>
             </div>
           </div>
