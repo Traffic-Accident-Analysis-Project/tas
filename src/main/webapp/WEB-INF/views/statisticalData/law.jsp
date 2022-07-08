@@ -963,7 +963,7 @@
 	    "survey",
 	    "width=1000px, height=1200px, left=100, top=50"
 	  );
-	  location.href="/law/type/excel"
+	  location.href="/law/excel"
 	});
   </script>
 </html>

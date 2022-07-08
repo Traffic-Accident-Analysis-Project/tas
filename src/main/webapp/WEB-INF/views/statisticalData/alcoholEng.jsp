@@ -184,7 +184,7 @@
             </div>
           </div>
           <div class="excel-down-button">
-            <a id="excelDownEng" href="/alcohol/type/excel">Excel Downlod</a>
+            <a id="excelDownEng">Excel Downlod</a>
           </div>
         </div>
       </div>
@@ -1008,6 +1008,20 @@ $.ajax({
 	    	}
 	    }
 	    
+	});
+	// Excel 설문
+	$("#excelDownEng").on("click", function () {
+	  if("<%out.print(request.getSession().getAttribute("userId"));%>" == "null"){
+		  alert("Login is required.")
+		  location.href="/login"
+		  return false;
+	  }
+	  var popup = window.open(
+	    "/survey",
+	    "survey",
+	    "width=1000px, height=1200px, left=100, top=50"
+	  );
+	  location.href="/alcohol/type/excel"
 	});
   </script>
 </html>
