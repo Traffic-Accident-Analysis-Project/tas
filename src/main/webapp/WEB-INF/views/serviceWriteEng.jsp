@@ -210,5 +210,72 @@
 		    }
 		    
 		});
+	// 고객센터문의 글쓰기 등록 눌렀을 때 -JS
+	$(".service-write-registration").on("click", function () {
+	  // 빈칸 확인
+	  if (
+	    $("#service-category option:selected").text() == "Please select an inquiry type"
+	  ) {
+	    alert("Please select an inquiry type");
+	    return false;
+	  }
+	  if ($("#writerValue").val() == "") {
+	    alert("Please enter the writer");
+	    $("#writerValue").focus();
+	    return false;
+	  }
+	  if ($("#emailValue").val() == "") {
+	    alert("Please enter your e-mail"); // email 형식에 맞게 확인하는 로직구현 필요
+	    $("#emailValue").focus();
+	    return false;
+	  }
+	  if ($("#textValue").val() == "") {
+	    alert("Please enter main text");
+	    $("#textValue").focus();
+	    return false;
+	  }
+	  if ($(".pw-or-not-y").is(":checked")) {
+	    // password 확인
+	    var password = $(".service-write-pw").val();
+	    var rePassword = $(".service-write-re-pw").val();
+	    if (password != rePassword) {
+	      alert("Please confirm your password");
+	      return false;
+	    }
+	  }
+	  // json data 생성
+	  var boardCategory = $("#service-category option:selected").text();
+	  var boardWriter = $("#writerValue").val();
+	  var boardEmail = $("#emailValue").val();
+	  var boardContent = $("#textValue").val();
+	  var boardPassword = $(".service-write-pw").val();
+	  var isBoardSecurity = $(".pw-or-not-y").is(":checked");
+
+	  var jsonData = {
+	    boardCategory: boardCategory,
+	    boardWriter: boardWriter,
+	    boardEmail: boardEmail,
+	    boardContent: boardContent,
+	    boardPassword: boardPassword,
+	    isBoardSecurity: isBoardSecurity,
+	  };
+	  //ajax
+	  $.ajax({
+	    url: "/api/v1/board",
+	    type: "POST",
+	    contentType: "application/json", // 서버에 json type으로 보낼 예정(요청)
+	    dataType: "json", // 서버 결과를 json으로 응답 받겠다.
+	    data: JSON.stringify(jsonData),
+	    success: function (response) {
+	      // 전송 한 data가 DB에 저장되었으면 alert
+	      if (response > 0) {
+	        alert("Save is complete.");
+	        // 저장 후 고객센터 페이지로 이동
+	        location.href = "/service/center/eng";
+	      }
+	      console.log(response);
+	    },
+	  });
+	});
   </script>
 </html>

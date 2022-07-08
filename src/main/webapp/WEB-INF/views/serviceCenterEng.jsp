@@ -182,8 +182,9 @@
             <h2>Service Center</h2>
             <div class="row search-wrap">
               <label for="writer_search">Writer</label>
-              <input id="keyword" name="wirter_search" type="text" placeholder="Please enter the Writer">
-              <button type="button">Search</button>
+              <input id="searchBar" name="wirter_search" type="text" placeholder="Please enter the Writer">
+              <input id="keyword" type="hidden" value="null">
+              <button id="search-btn" type="button">Search</button>
             </div>
             <a href="/tas/service/write/eng" class="service-write-btn">Writing</a>
           </div>

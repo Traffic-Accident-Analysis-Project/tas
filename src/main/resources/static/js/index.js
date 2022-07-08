@@ -27,6 +27,7 @@ $(".service-write-cencel").on("click", function () {
     location.href = "/service/center";
   }
 });
+/*
 // 고객센터문의 글쓰기 등록 눌렀을 때 -JS
 $(".service-write-registration").on("click", function () {
   // 빈칸 확인
@@ -93,7 +94,7 @@ $(".service-write-registration").on("click", function () {
       console.log(response);
     },
   });
-});
+});*/
 
 // 게시판 리스트 가져오는 함수(main, service-center) - JS
 function getBoardList(pageNum, pageSize) {
