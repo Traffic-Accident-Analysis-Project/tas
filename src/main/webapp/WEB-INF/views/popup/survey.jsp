@@ -71,9 +71,6 @@
 	left: 10%;
 	width: 800px;
 	height: 850px;
-	position: fixed;
-	z-index: 5;
-	cursor: move;
 	border: 2px solid black;
 	border-radius: 5%;
 }
@@ -219,9 +216,9 @@
 </body>
 </html>
 <script>
-	$(function() {
-		$(".survey-popup").draggable();
-	});
+	//$(function() {
+	//	$(".survey-popup").draggable();
+	// });
 	var surveyGender = "";
 	var surveyOld = "";
 	var surveyQ1 = "";
@@ -410,8 +407,8 @@
 			success : function(response) {
 				if (response > 0) {
 					alert("설문조사에 참여해주셔서 감사합니다.")
-					//opener.location.href = '../joinAdmin.html';
-					//self.close();
+					opener.location.href = '/tas/main';
+					self.close();
 				}
 			}
 		})

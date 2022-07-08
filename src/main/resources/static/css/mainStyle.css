@@ -164,7 +164,7 @@ header::before {
   border-bottom: 3px solid var(--light-grey);
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
-  padding: 8px;
+  padding-bottom: 8px;
 }
 .header-text-wrap {
   z-index: 1;

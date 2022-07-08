@@ -184,10 +184,11 @@ header {
   padding: 8px;
 }
 .login-link a:hover {
+  z-index: 1;
   border-bottom: 3px solid var(--light-grey);
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
-  padding: 8px;
+  padding-bottom: 8px;
 }
 footer {
   position: absolute;
