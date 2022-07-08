@@ -95,11 +95,11 @@ function getBoardList(pageNum, pageSize) {
     pageNum +
     "&pageSize=" +
     pageSize;
-  // 검색기능은 추후 추가사항
-  // var keyword = $('#keyword').val();
-  // if(keyword != 'null'){
-  //     controllerUrl = "http://localhost:8080/api/v1/board/search?writer="+keyword+"&pageNum="+pageNum+"&pageSize="+pageSize;
-  // }
+  // 검색기능
+  var keyword = $('#keyword').val();
+  if(keyword != 'null'){
+      controllerUrl = "/api/v1/board/search?writer="+keyword+"&pageNum="+pageNum+"&pageSize="+pageSize;
+  }
   var result = {};
   $.ajax({
     url: controllerUrl,

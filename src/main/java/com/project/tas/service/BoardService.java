@@ -27,6 +27,12 @@ public class BoardService {
 		PageHelper.startPage(pageNum, pageSize);
 		return boardMapper.selectBoardAllList();
 	}
+	// R 검색
+	@Transactional(rollbackFor = {Exception.class})
+	public List<Map<String,Object>> getSearchBoardAllList(int pageNum, int pageSize, String writer) {
+		PageHelper.startPage(pageNum, pageSize);
+		return boardMapper.selectSearchBoardAllList(writer);
+	}
 	// D
 	@Transactional(rollbackFor = {Exception.class})
 	public int getRemoveBoard(int boardNo) {

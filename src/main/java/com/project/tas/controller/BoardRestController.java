@@ -40,6 +40,16 @@ public class BoardRestController {
 		List<Map<String,Object>> list = boardService.getBoardAllList(pageNum, pageSize);
 		return new PageInfo<Map<String,Object>>(list);
 	}
+	// 고객센터 조회 (R) 검색기능
+	@CrossOrigin
+	@GetMapping("/board/search")
+	// 리턴타입을 List > PageInfo
+	public PageInfo<Map<String,Object>> callSearchBoardAllList(@RequestParam("pageNum") int pageNum,
+			@RequestParam("pageSize") int pageSize, @RequestParam("writer") String writer) {
+		List<Map<String,Object>> list = boardService.getSearchBoardAllList(pageNum, pageSize, writer);
+		return new PageInfo<Map<String,Object>>(list);
+	}
+	
 	// 고객센터 삭제 (D)
 	@CrossOrigin
 	@DeleteMapping("/board/boardNo/{no}")

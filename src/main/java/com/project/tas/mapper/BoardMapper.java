@@ -29,6 +29,7 @@ public interface BoardMapper {
 	 * comment : select mapper
 	 */
 	public List<Map<String,Object>> selectBoardAllList();
+	public List<Map<String,Object>> selectSearchBoardAllList(String writer);
 	/**
 	 * @param boardNo
 	 * @return

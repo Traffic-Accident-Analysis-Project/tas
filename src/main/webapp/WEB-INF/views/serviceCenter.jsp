@@ -182,7 +182,7 @@
             <h2>고객 센터</h2>
             <div class="row search-wrap">
               <label for="writer_search">작성자 </label>
-              <input name="wirter_search" type="text" placeholder="작성자를 입력해주세요">
+              <input id="keyword" name="wirter_search" type="text" placeholder="작성자를 입력해주세요">
               <button type="button">검색</button>
             </div>
             <a href="/tas/service/write" class="service-write-btn">글 작성</a>
