@@ -67,10 +67,9 @@
 }
 
 .survey-popup {
-	top: 5%;
-	left: 10%;
+	margin: 1% auto;
 	width: 800px;
-	height: 850px;
+	height: 950px;
 	border: 2px solid black;
 	border-radius: 5%;
 }

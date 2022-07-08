@@ -1027,11 +1027,11 @@ $.ajax({
 	$("#excelDownEng").on("click", function () {
 	  if("<%out.print(request.getSession().getAttribute("userId"));%>" == "null"){
 		  alert("Login is required.")
-		  location.href="/login"
+		  location.href="/login/eng"
 		  return false;
 	  }
 	  var popup = window.open(
-	    "/survey",
+	    "/survey/eng",
 	    "survey",
 	    "width=1000px, height=1200px, left=100, top=50"
 	  );

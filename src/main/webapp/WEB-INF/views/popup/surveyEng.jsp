@@ -59,13 +59,11 @@
       .survey-popup {
         top: 5%;
         left: 10%;
-        width: 800px;
+        width: auto;
         height: 920px;
-        position: fixed;
-        z-index: 5;
-        cursor: move;
         border: 2px solid black;
         border-radius: 5%;
+        margin : 20px auto;
       }
       .survey-popup button {
         position: absolute;
@@ -199,9 +197,6 @@
   </body>
 </html>
 <script>
-  $(function () {
-    $(".survey-popup").draggable();
-  });
   var surveyGender = "";
   var surveyOld = "";
   var surveyQ1 = "";
