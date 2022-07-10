@@ -157,6 +157,7 @@
 		AND
 		시도별 = #{city}
 	</select>
+	
 	<!-- 월=월별전체 시도o -->
 	<select id="selectCityAllMonthData" resultType="map">
 		SELECT
@@ -219,6 +220,8 @@
 		월별 !=
 		'전체'
 	</select>
+	
+	
 	<!-- 도로종류별 -->
 	<select id="selectAllRoadData" resultType="map">
 		SELECT
