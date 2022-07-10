@@ -166,15 +166,15 @@ footer button {
 }
 .label .left {
   text-align: center;
-  background-color: #4fcd6a;
+  background-color: var(--middel-grey);
   color: white;
   font-weight: 800;
-  padding-top: 5%;
+  padding: 5%;
   font-size: 15px;
   display: inline-block;
   border-radius: 50%;
-  width: 33px;
-  height: 33px;
+  width: auto;
+  height: auto;
   overflow: hidden;
   vertical-align: top;
 }
@@ -184,8 +184,8 @@ footer button {
   background-color: #458acb;
   color: white;
   display: inline-block;
-  height: 70px;
-  width: 70px;
+  height: 76px;
+  width: 76px;
   border-radius: 50%;
   font-size: 18px;
   padding-top: 22%;
