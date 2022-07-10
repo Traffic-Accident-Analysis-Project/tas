@@ -612,7 +612,7 @@
           var dead_cnt = 0;
           var injury_cnt = 0;
           if(len==0){
-              alert("검색결과가 없습니다.")
+              alert("No results were found for your search.")
               return false;
             }
           for (var i = 0; i < len; i++) {
