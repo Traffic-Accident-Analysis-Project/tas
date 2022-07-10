@@ -8,6 +8,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class TasContoller {
+	
+	@GetMapping("/team/teacher/main")
+	public String teamTeacher() {
+		return "firstMain";
+	}
 
 	// 메인
 	@GetMapping("/tas/main")
