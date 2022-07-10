@@ -295,6 +295,7 @@ header {
   width: 80px;
 }
 .excel-down-button {
+  text-align : center;
   display: flex;
   justify-content: right;
 }
