@@ -809,8 +809,7 @@
 	});
 	// Excel 설문
 	$("#excelDown").on("click", function () {
-	  if("<%out.print(request.getSession().getAttribute("userId"));%>
-	" == "null") {
+	  if("<%out.print(request.getSession().getAttribute("userId"));%>" == "null") {
 							alert("로그인이 필요합니다.")
 							location.href = "/login"
 							return false;
