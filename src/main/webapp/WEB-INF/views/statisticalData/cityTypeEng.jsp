@@ -441,7 +441,7 @@
 										var dead_cnt = 0;
 										var injury_cnt = 0;
 										if(len==0){
-								            alert("검색결과가 없습니다.")
+								            ("No results were found for your search.")
 								            return false;
 								          }
 										for (var i = 0; i < len; i++) {
@@ -472,7 +472,7 @@
 										if (cityTypeHidden == "전체") {
 											for (var i = 0; i < len; i++) {
 												var content = '<div class ="label"><span class="left">'
-														+ response[i].시도별
+														+ response[i].region
 														+ '</span><span class="center">'
 														+ response[i].사고건수
 														+ '</span><span class="right"></span></div>';
@@ -496,7 +496,7 @@
 										// 커스텀 오버레이에 표시할 내용입니다
 										// HTML 문자열 또는 Dom Element 입니다
 										var content = '<div class ="label"><span class="left">'
-												+ response[0].시도별
+												+ response[0].region
 												+ '</span><span class="center">'
 												+ response[0].사고건수
 												+ '</span><span class="right"></span></div>';
@@ -524,7 +524,7 @@
 															if (cityTypeHidden == "전체") {
 																for (var i = 0; i < len; i++) {
 																	var content = '<div class ="label"><span class="left">'
-																			+ response[i].시도별
+																			+ response[i].region
 																			+ '</span><span class="center">'
 																			+ response[i].사고건수
 																			+ '</span><span class="right"></span></div>';
@@ -545,7 +545,7 @@
 																}
 															}
 															var content = '<div class ="label"><span class="left">'
-																	+ response[0].시도별
+																	+ response[0].region
 																	+ '</span><span class="center">'
 																	+ response[0].사고건수
 																	+ '</span><span class="right"></span></div>';
@@ -571,7 +571,7 @@
 															if (cityTypeHidden == "전체") {
 																for (var i = 0; i < len; i++) {
 																	var content = '<div class ="label"><span class="left">'
-																			+ response[i].시도별
+																			+ response[i].region
 																			+ '</span><span class="center">'
 																			+ response[i].사망자수
 																			+ '</span><span class="right"></span></div>';
@@ -592,7 +592,7 @@
 																}
 															}
 															var content = '<div class ="label"><span class="left">'
-																	+ response[0].시도별
+																	+ response[0].region
 																	+ '</span><span class="center">'
 																	+ response[0].사망자수
 																	+ '</span><span class="right"></span></div>';
@@ -618,7 +618,7 @@
 															if (cityTypeHidden == "전체") {
 																for (var i = 0; i < len; i++) {
 																	var content = '<div class ="label"><span class="left">'
-																			+ response[i].시도별
+																			+ response[i].region
 																			+ '</span><span class="center">'
 																			+ response[i].부상자수
 																			+ '</span><span class="right"></span></div>';
@@ -639,7 +639,7 @@
 																}
 															}
 															var content = '<div class ="label"><span class="left">'
-																	+ response[0].시도별
+																	+ response[0].region
 																	+ '</span><span class="center">'
 																	+ response[0].부상자수
 																	+ '</span><span class="right"></span></div>';
