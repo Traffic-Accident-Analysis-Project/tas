@@ -28,9 +28,9 @@ spring:
       initialization-mode: always
       schema: classpath:init.sql
       driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://여기에 아마존 서버 주소:3306/dw?useUnicode=true&charaterEncoding=utf-8&serverTimezone=UTC
+      url: jdbc:mysql://tas-database.cfwwo9ev8nzu.ap-northeast-2.rds.amazonaws.com:3306/dw?useUnicode=true&charaterEncoding=utf-8&serverTimezone=UTC
       username: admin
-      password: 비밀번호
+      password: 1q2w3e4r!
    # JSP 경로 설정
    mvc: 
       view: 
@@ -47,8 +47,8 @@ spring:
       driver-class-name: com.mysql.cj.jdbc.Driver
       url: jdbc:mysql://localhost:3306/dw?useUnicode=true&charaterEncoding=utf-8&serverTimezone=UTC
       username: root
-      #password: 2188
-      password: 5191 
+      password: 2188
+      #password: 5191 
    # JSP 경로 설정
    mvc: 
       view: 
