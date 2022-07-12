@@ -19,7 +19,7 @@ pagehelper:
 # 개발 버전 설정
 spring: 
    profiles:
-      active: dev # 이것만 운영/개발로 수정하며 사용
+      active: env # 이것만 운영/개발로 수정하며 사용
 # 여기까지는 공통yaml파일
 ---
 spring:

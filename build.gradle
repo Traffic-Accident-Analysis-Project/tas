@@ -2,6 +2,12 @@ plugins {
 	id 'org.springframework.boot' version '2.6.8'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
+	id 'war'
+}
+bootWar{
+	archiveBaseName= 'tas'
+	archiveFileName='tas.war'
+	archiveVersion= '0.0.1'
 }
 
 group = 'com.project'
@@ -37,7 +43,8 @@ dependencies {
 	implementation 'javax.servlet:jstl'
 	//excel
 	implementation group: 'org.apache.poi', name: 'poi-ooxml', version: '5.2.2'
-	
+	//deploy
+	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 }
 
 tasks.named('test') {
