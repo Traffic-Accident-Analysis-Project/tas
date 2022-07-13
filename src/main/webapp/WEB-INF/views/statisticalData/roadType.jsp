@@ -281,7 +281,7 @@
       $("#lineChart-new-road").css("display", "block");
       $.ajax({
         url:
-          "http://localhost:8080/api/v1/road/year/" +
+          "/api/v1/road/year/" +
           yearHidden +
           "/month/월별전체/week/" +
           roadWeekHidden +
@@ -422,7 +422,7 @@
       });
       $.ajax({
         url:
-          "http://localhost:8080/api/v1/road/week/" +
+          "/api/v1/road/week/" +
           roadWeekHidden +
           "/road/" +
           roadNameHidden,
@@ -588,7 +588,7 @@
       // option으로 선택한 값에대한 data받아오는 ajax
       $.ajax({
         url:
-          "http://localhost:8080/api/v1/road/year/" +
+          "/api/v1/road/year/" +
           yearHidden +
           "/month/" +
           monthHidden +
@@ -633,7 +633,7 @@
       .getContext("2d");
     // histogram for Accident
     $.ajax({
-      url: "http://localhost:8080/api/v1/road",
+      url: "/api/v1/road",
       type: "GET",
       dataType: "json",
       success: function (response) {
@@ -779,7 +779,7 @@
       .getContext("2d");
     // Line Chart for Accident
     $.ajax({
-      url: "http://localhost:8080/api/v1/road",
+      url: "/api/v1/road",
       type: "GET",
       dataType: "json",
       success: function (response) {

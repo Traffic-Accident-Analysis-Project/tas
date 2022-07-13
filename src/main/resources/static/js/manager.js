@@ -15,7 +15,7 @@ $(".btn-success").on("click", function () {
   else {
     var jsonData = {};
     $.ajax({
-      url: "http://localhost:8080/api/v1/board/boardNo/" + $("#number").val(),
+      url: "/api/v1/board/boardNo/" + $("#number").val(),
       type: "GET",
       dataType: "json",
       success: function (response) {
@@ -39,7 +39,7 @@ $(".btn-success").on("click", function () {
 // 수정 함수
 function updateBoardByNo(boardNo, jsonData) {
   $.ajax({
-    url: "http://localhost:8080/api/v1/board/boardNo/" + boardNo,
+    url: "/api/v1/board/boardNo/" + boardNo,
     type: "PATCH",
     contentType: "application/json",
     dataType: "json",
@@ -70,7 +70,7 @@ $(".btn-delete").on("click", function () {
 // 삭제함수
 function deleteBoardByNo(boardNo) {
   $.ajax({
-    url: "http://localhost:8080/api/v1/board/boardNo/" + boardNo,
+    url: "/api/v1/board/boardNo/" + boardNo,
     type: "DELETE",
     contentType: "application/json",
     dataType: "json",
@@ -105,14 +105,14 @@ $(".logout").on("click", function () {
 // 관리자페이지 고객센터 리스트 불러오기
 function getBoardList(pageNum, pageSize) {
   var controllerUrl =
-    "http://localhost:8080/api/v1/board?pageNum=" +
+    "/api/v1/board?pageNum=" +
     pageNum +
     "&pageSize=" +
     pageSize;
   // 검색기능은 추후 추가사항
   // var keyword = $('#keyword').val();
   // if(keyword != 'null'){
-  //     controllerUrl = "http://localhost:8080/api/v1/board/search?writer="+keyword+"&pageNum="+pageNum+"&pageSize="+pageSize;
+  //     controllerUrl = "/api/v1/board/search?writer="+keyword+"&pageNum="+pageNum+"&pageSize="+pageSize;
   // }
   var result = {};
   $.ajax({
@@ -206,7 +206,7 @@ function getBoardByNo(boardNo) {
   $(".main-popup").css("display", "block");
   // ajax 작성
   $.ajax({
-    url: "http://localhost:8080/api/v1/board/boardNo/" + boardNo,
+    url: "/api/v1/board/boardNo/" + boardNo,
     type: "GET",
     dataType: "json",
     success: function (response) {
@@ -230,7 +230,7 @@ getLogsBoardList(1, 10);
 // 관리자페이지 고객센터 리스트 불러오기
 function getLogsBoardList(pageNum, pageSize) {
   var controllerUrl =
-    "http://localhost:8080/api/v1/logs?pageNum=" +
+    "/api/v1/logs?pageNum=" +
     pageNum +
     "&pageSize=" +
     pageSize;

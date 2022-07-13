@@ -339,7 +339,7 @@
       $("#lineChart-new-accident").css("display", "block");
       $.ajax({
         url:
-          "http://localhost:8080/api/v1/accident/year/" +
+          "/api/v1/accident/year/" +
           yearHidden +
           "/month/월별전체/type/" +
           PersonCarHidden +
@@ -480,7 +480,7 @@
       })
       $.ajax({
         url:
-          "http://localhost:8080/api/v1/accident/type/" +
+          "/api/v1/accident/type/" +
           PersonCarHidden +
           "/motion/" +
           accidentTypeHidden,
@@ -647,7 +647,7 @@
       // option으로 선택한 값에대한 data받아오는 ajax
       $.ajax({
         url:
-          "http://localhost:8080/api/v1/accident/year/" +
+          "/api/v1/accident/year/" +
           yearHidden +
           "/month/" +
           monthHidden +
@@ -692,7 +692,7 @@
     .getContext("2d");
     // histogram for Accident
 $.ajax({
-  url: "http://localhost:8080/api/v1/accident",
+  url: "/api/v1/accident",
   type: "GET",
   dataType: "json",
   success: function (response) {
@@ -838,7 +838,7 @@ $.ajax({
     .getContext("2d");
     // Line Chart for Accident
 $.ajax({
-  url: "http://localhost:8080/api/v1/accident",
+  url: "/api/v1/accident",
   type: "GET",
   dataType: "json",
   success: function (response) {

@@ -331,7 +331,7 @@
       $("#lineChart-new-alcohol").css("display", "block");
       $.ajax({
         url:
-          "http://localhost:8080/api/v1/alcohol/year/" +
+          "/api/v1/alcohol/year/" +
           yearHidden +
           "/month/월별전체/drink/" +
           alcoholOrNotHidden +
@@ -472,7 +472,7 @@
       });
       $.ajax({
         url:
-          "http://localhost:8080/api/v1/alcohol/drink/" +
+          "/api/v1/alcohol/drink/" +
           alcoholOrNotHidden +
           "/degree/" +
           degreeHidden,
@@ -637,7 +637,7 @@
       // option으로 선택한 값에대한 data받아오는 ajax
       $.ajax({
         url:
-          "http://localhost:8080/api/v1/alcohol/year/" +
+          "/api/v1/alcohol/year/" +
           yearHidden +
           "/month/" +
           monthHidden +
@@ -681,7 +681,7 @@
     .getContext("2d");
     // histogram for Accident
 $.ajax({
-  url: "http://localhost:8080/api/v1/alcohol",
+  url: "/api/v1/alcohol",
   type: "GET",
   dataType: "json",
   success: function (response) {
@@ -827,7 +827,7 @@ var contextAlcoholLineChart = document
     .getContext("2d");
     // Line Chart for Accident
 $.ajax({
-  url: "http://localhost:8080/api/v1/alcohol",
+  url: "/api/v1/alcohol",
   type: "GET",
   dataType: "json",
   success: function (response) {

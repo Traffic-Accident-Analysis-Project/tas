@@ -281,7 +281,7 @@
 						$("#new-pieChart").css("display", "block");
 						$
 								.ajax({
-									url : "http://localhost:8080/api/v1/city/year/"
+									url : "/api/v1/city/year/"
 											+ yearHidden
 											+ "/month/"
 											+ monthHidden,
@@ -413,7 +413,7 @@
 						// option으로 선택한 값에대한 data받아오는 ajax
 						$
 								.ajax({
-									url : "http://localhost:8080/api/v1/city/year/"
+									url : "/api/v1/city/year/"
 											+ yearHidden
 											+ "/month/"
 											+ monthHidden
@@ -654,7 +654,7 @@
 	var contextNewPieChart = document.getElementById("new-pieChart")
 			.getContext("2d");
 	$.ajax({
-		url : "http://localhost:8080/api/v1/city",
+		url : "/api/v1/city",
 		type : "GET",
 		dataType : "json",
 		success : function(response) {

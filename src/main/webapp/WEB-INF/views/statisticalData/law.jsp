@@ -281,7 +281,7 @@
       $("#lineChart-new-law").css("display", "block");
       $.ajax({
         url:
-          "http://localhost:8080/api/v1/law/year/" +
+          "/api/v1/law/year/" +
           yearHidden +
           "/month/월별전체/violation/" +
           violationHidden,
@@ -420,7 +420,7 @@
         },
       });
       $.ajax({
-        url: "http://localhost:8080/api/v1/law/violation/" + violationHidden,
+        url: "/api/v1/law/violation/" + violationHidden,
         type: "GET",
         dataType: "json",
         success: function (response) {
@@ -582,7 +582,7 @@
       // option으로 선택한 값에대한 data받아오는 ajax
       $.ajax({
         url:
-          "http://localhost:8080/api/v1/law/year/" +
+          "/api/v1/law/year/" +
           yearHidden +
           "/month/" +
           monthHidden +
@@ -625,7 +625,7 @@
       .getContext("2d");
     // histogram for law
     $.ajax({
-      url: "http://localhost:8080/api/v1/accident",
+      url: "/api/v1/accident",
       type: "GET",
       dataType: "json",
       success: function (response) {
@@ -771,7 +771,7 @@
       .getContext("2d");
     // Line Chart for Law
     $.ajax({
-      url: "http://localhost:8080/api/v1/accident",
+      url: "/api/v1/accident",
       type: "GET",
       dataType: "json",
       success: function (response) {
