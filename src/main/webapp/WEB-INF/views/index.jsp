@@ -379,7 +379,7 @@
 			.getContext("2d");
 	var contextPieChart = document.getElementById("pieChart").getContext("2d");
 	$.ajax({
-		url : "http://localhost:8080/api/v1/accident",
+		url : "/api/v1/accident",
 		type : "GET",
 		dataType : "json",
 		success : function(response) {
@@ -505,7 +505,7 @@
 	// Line Chart for Law
 	$
 			.ajax({
-				url : "http://localhost:8080/api/v1/accident",
+				url : "/api/v1/accident",
 				type : "GET",
 				dataType : "json",
 				success : function(response) {
@@ -653,7 +653,7 @@
 				},
 			});
 	$.ajax({
-		url : "http://localhost:8080/api/v1/city",
+		url : "/api/v1/city",
 		type : "GET",
 		dataType : "json",
 		success : function(response) {
